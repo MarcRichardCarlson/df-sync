@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=Inter:wght@100..900&family=Space+Grotesk:wght@300..700&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=Inter:wght@100..900&family=Space+Grotesk:wght@300..700&display=swap'); */
 
 @tailwind base;
 @tailwind components;
@@ -42,4 +42,13 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+.underline {
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: var(--accent);
 }

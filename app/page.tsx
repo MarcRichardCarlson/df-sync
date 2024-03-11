@@ -1,6 +1,7 @@
 "use client";
 
-import { Hero, CookiesBanner, HomePage, Navbar, Form, Dropdown } from "@/components";
+import { Hero, CookiesBanner, HomePage, Navbar, Form, Dropdown, Footer } from "@/components";
+import { AnimatePresence } from "framer-motion";
 import { useState } from "react";
 
 export default function Home() {
@@ -13,9 +14,12 @@ export default function Home() {
 
   return (
     <main className="overflow-hidden">
-      <Navbar onDropdownToggle={handleDropdownToggle} />
-      {dropdownOpen && <Dropdown isOpen={true} />}
-      <Hero />
+      <Navbar/>
+      <AnimatePresence>
+        {dropdownOpen && <Dropdown isOpen={true} />}
+      </AnimatePresence>
+      <Hero locale={"en"}/>
+      <Footer onDropdownToggle={handleDropdownToggle} />
     </main>
   );
 }

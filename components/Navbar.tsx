@@ -1,38 +1,50 @@
 import React, { useState } from 'react';
-import Utils from './Utils';
+import { initialTabs as tabs } from "./nav-items";
+import { motion, AnimatePresence } from "framer-motion";
 
-interface NavbarProps {
-    onDropdownToggle: () => void;
-}
+const Navbar = () => {
+    const [selectedTab, setSelectedTab] = useState(tabs[0]);
 
-const Navbar: React.FC<NavbarProps> = ({ onDropdownToggle }) => {
-
-  return (
-    <nav className="bg-white border-gray-200 dark:bg-gray-900">
-        <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-            <a href="#" className="flex items-center space-x-3 rtl:space-x-reverse">
-            <img src="https://flowbite.com/docs/images/logo.svg" className="h-8" alt="Digital fans Logo" />
-            <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">DF Sync</span>
-            </a>
-            <div className="hidden w-full md:block md:w-auto" id="navbar-default">
-            <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
-                <li>
-                    <a href="#" className="block py-2 px-3 text-gray-900 rounded md:p-0 dark:text-white hover:text-slate-300" aria-current="page">Home</a>
+    return (
+        <div className="w-full flex items-center bg-slate-800 py-6 px-6 md:px-24 z-50">
+            <nav className='w-full flex justify-between items-center'>
+                <a href="#" className="flex items-center space-x-3 rtl:space-x-reverse">
+                    <img src="https://flowbite.com/docs/images/logo.svg" className="h-8" alt="Digital fans Logo" />
+                    <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">DF Sync</span>
+                </a>
+            <ul className='flex justify-between items-center gap-8'>
+                {tabs.map((item) => (
+                <li
+                    key={item.label}
+                    className={`${item === selectedTab ? "selected" : ""} relative cursor-pointer hover:text-slate-400 text-lg`}
+                    onClick={() => setSelectedTab(item)}
+                >
+                    {`${item.label}`}
+                    {item === selectedTab ? (
+                    <motion.div className="absolute bottom--1 left-0 right-0 h-1 w-full bg-indigo-500" layoutId="underline" />
+                    ) : null}
                 </li>
-                <li>
-                    <a href="#" className="block py-2 px-3 text-gray-900 rounded md:p-0 dark:text-white hover:text-slate-300">About</a>
-                </li>
-                <li>
-                    <a href="#" className="block py-2 px-3 text-gray-900 rounded md:p-0 dark:text-white hover:text-slate-300">Contact</a>
-                </li>
+                ))}
             </ul>
-            </div>
 
-            <Utils onDropdownToggle={onDropdownToggle}/>
+            <div className='cursor-pointer'>
+                <AnimatePresence mode="wait">
+                    <motion.div
+                    key={selectedTab ? selectedTab.label : "empty"}
+                    initial={{ y: 10, opacity: 0 }}
+                    animate={{ y: 0, opacity: 1 }}
+                    exit={{ y: -10, opacity: 0 }}
+                    transition={{ duration: 0.1 }}
+                    >
+                    {selectedTab ? selectedTab.icon : ""}
+                    </motion.div>
+                </AnimatePresence>
+            </div>
+            </nav>
         </div>
-    </nav>
-  );
+    );
 }
 
-export default Navbar
+export default Navbar;
+
 

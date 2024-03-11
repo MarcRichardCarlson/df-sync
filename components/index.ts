@@ -5,14 +5,16 @@ import Navbar from "./Navbar"
 import Form from "./Form";
 import Utils from "./Utils";
 import Dropdown from "./Dropdown";
-import LanguageToggle from "./LanguageSlider";
+import LanguageToggle from "./LanguagePicker";
+import Footer from "./Footer";
 
 export {
     Hero,
     CookiesBanner,
     HomePage,
-    Navbar,
+    Footer,
     Form,
+    Navbar,
     Utils,
     Dropdown,
     LanguageToggle,
