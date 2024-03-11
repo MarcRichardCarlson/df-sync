@@ -1,17 +1,21 @@
-import { Hero } from "@/components";
-import CookiesDialogModal from "@/components/Cookies-dialog-modal";
-import HomePage from "@/components/HomePage";
-import Navbar from "@/components/Navbar";
-import Image from "next/image";
+"use client";
+
+import { Hero, CookiesBanner, HomePage, Navbar, Form, Dropdown } from "@/components";
+import { useState } from "react";
 
 export default function Home() {
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+
+  const handleDropdownToggle = () => {
+    setDropdownOpen(!dropdownOpen);
+    console.log("Toggle");
+  };
+
   return (
     <main className="overflow-hidden">
-      <Navbar/>
-      <Hero/>
-      <HomePage/>
-
-      <CookiesDialogModal/>
+      <Navbar onDropdownToggle={handleDropdownToggle} />
+      {dropdownOpen && <Dropdown isOpen={true} />}
+      <Hero />
     </main>
   );
 }
