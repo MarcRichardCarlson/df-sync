@@ -11,6 +11,8 @@ const config: Config = {
       colors: {
         CustomWhite: '#EEEDEB',
         CustomGreen: '#747264',
+        CustomBlack: '#000',
+        CustomHover: '#ACACAB',
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
@@ -21,4 +23,5 @@ const config: Config = {
   },
   plugins: [],
 };
+
 export default config;

@@ -1,5 +1,6 @@
-import { APP_LOCALES } from "../app/constants"
-import { AppLocale } from "../app/locales"
+import { APP_LOCALES } from "@/app/[locale]/constants"
+import { AppLocale } from "@/app/[locale]/locales"
+
 
 export const defaultNS = "common"
 

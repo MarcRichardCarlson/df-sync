@@ -1,10 +1,16 @@
 "use client";
 
-import { Hero, CookiesBanner, HomePage, Navbar, Form, Dropdown, Footer } from "@/components";
+import { Hero, CookiesBanner, HomePage, Navbar, Form, Dropdown, Footer, Marquee } from "@/components/_index";
 import { AnimatePresence } from "framer-motion";
 import { useState } from "react";
+import { AppLocale } from "./locales";
 
-export default function Home() {
+interface AppLocaleProps {
+  locale: AppLocale;
+}
+
+export default function Main({ locale }: AppLocaleProps) {
+
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
   const handleDropdownToggle = () => {
@@ -18,8 +24,9 @@ export default function Home() {
       <AnimatePresence>
         {dropdownOpen && <Dropdown isOpen={true} />}
       </AnimatePresence>
-      <Hero locale={"en"}/>
-      <Footer onDropdownToggle={handleDropdownToggle} />
+      <Hero locale={locale}/>
+      <Marquee/>
+      <Footer locale={locale} onDropdownToggle={handleDropdownToggle}/>
     </main>
   );
 }

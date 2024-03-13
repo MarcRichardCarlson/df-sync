@@ -1,7 +1,7 @@
 "use client";
 
 import React from 'react'
-import Arrow from './Arrow'
+import Arrow from './shared/Arrow'
 
 const HomePage = () => {
   return (

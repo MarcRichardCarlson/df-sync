@@ -6,10 +6,11 @@ import i18next from "i18next"
 import resourcesToBackend from "i18next-resources-to-backend"
 import { initReactI18next, useTranslation as useTranslationOrg } from "react-i18next"
 
-import { APP_LOCALES, withLocaleUriPattern } from "../app/constants"
-import { AppLocale } from "../app/locales"
+
 
 import { getOptions } from "./settings"
+import { APP_LOCALES, withLocaleUriPattern } from "@/app/[locale]/constants"
+import { AppLocale } from "@/app/[locale]/locales"
 
 // determine current locale
 let isServer = typeof window === "undefined"

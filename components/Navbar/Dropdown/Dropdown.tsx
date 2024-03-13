@@ -1,8 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import Profile from './Profile';
-import Toggle from './Toggle';
-import Divider from './Divider';
+import Toggle from '../../shared/Toggle';
+import Divider from '../../shared/XDivider';
 
 interface UtilsProps {
     isOpen: boolean;
