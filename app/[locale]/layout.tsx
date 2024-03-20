@@ -1,10 +1,9 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
 import AppProviders from "./providers";
 import { AppLocale } from "./locales";
-
-const inter = Inter({ subsets: ["latin"] });
+import Navbar from "@/components/Navbar/Navbar";
+import Footer from "@/components/Footer/Footer";
 
 export const metadata: Metadata = {
   title: "Digital fans sync",
@@ -20,8 +19,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`m-0 p-0 ${inter.className}`}>
-        <AppProviders locale={params.locale}>{children}</AppProviders>
+      <body className="m-0 p-0 background-style">
+        <AppProviders locale={params.locale}>
+          <Navbar />
+          {children}
+          <Footer />
+        </AppProviders>
       </body>
     </html>
   );

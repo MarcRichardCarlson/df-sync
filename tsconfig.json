@@ -21,6 +21,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "store/state.js", "store/selectors.js", "components/Questions.jsx", "pages/question.jsx", "pages/summary.jsx", "components/question-form/TextArea.jsx"],
   "exclude": ["node_modules"]
 }

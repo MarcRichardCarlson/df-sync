@@ -1,5 +1,10 @@
-import { AppLocale } from "@/app/locales";
+import { AppLocale } from "../locales";
+import MarqueeScroll from "@/components/Marquee";
 
-export default function about({ params: { locale } }: { params: { locale: AppLocale } }) {
-    return <div>about: ({ locale })</div>
+export default function About(params: { locale: AppLocale }) {
+  return (
+    <div className="relative bottom-1">
+        <MarqueeScroll />
+    </div>
+  );
 }

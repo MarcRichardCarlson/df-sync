@@ -44,10 +44,9 @@ export default function AppLocaleSwitcher() {
           <button
             key={locale}
             className={twMerge(
-              "text-CustomWhite relative cursor-pointer text-lg hover:text-CustomHover uppercase",
+              "text-CustomWhite relative cursor-pointer text-lg hover:text-CustomHover uppercase font-ttcommons",
               locale === activeLocale && "selected"
             )}
-            // className={`${locale === selectedTab ? "selected" : ""} text-CustomWhite relative cursor-pointer text-lg hover:text-CustomHover`}
             onClick={handleClick}
             data-locale={locale}
           >
@@ -55,7 +54,7 @@ export default function AppLocaleSwitcher() {
             {locale === activeLocale && (
               <motion.div
                 className="absolute bottom--1 left-0 right-0 h-1 w-full bg-indigo-500"
-                layoutId="underline"
+                layoutId="languagePickerUnderline"
               />
             )}
           </button>

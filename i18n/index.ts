@@ -2,9 +2,8 @@ import { createInstance } from "i18next"
 import resourcesToBackend from "i18next-resources-to-backend"
 import { initReactI18next } from "react-i18next/initReactI18next"
 
-import type { AppLocale } from "../app/locales"
-
 import { getOptions } from "./settings"
+import { AppLocale } from "@/app/[locale]/locales"
 
 const initI18nNext = async (lng: AppLocale, ns?: string) => {
   const instance = createInstance()

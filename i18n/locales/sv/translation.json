@@ -1,4 +1,13 @@
 { 
-    "hero-title": "Om oss",
-    "nav-home": "Hem" 
+    "nav-home": "Hem", 
+    "nav-about": "Om oss",
+    "nav-contact": "Kontakt",
+
+    "summary-main-title": "Undersökningsresultat",
+    "summary-title": "Sammanfattning av enkät",
+    "summary-text": "Här är sammanfattningen av dina ansträngningar. Är du nöjd med resultatet?",
+    "summary-share-button": "Dela",
+    "summary-contact-button": "Kom i kontakt",
+    "summary-download-button": "Ladda Ner",
+    "summary-discard-button": "Kasta"
 }

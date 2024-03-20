@@ -8,7 +8,7 @@ import { APP_LOCALES, withLocaleUriPattern } from "./app/[locale]/constants"
 
 export const config = {
   matcher:
-    "/((?!api|_static|_next|debug|assets|.well-known|apple|safari|android|mstile|site.webmanifest|browserconfig.xml|sitemap.xml|robots.txt|(?:[a-z]{2})/callbacks).*)",
+  "/((?!api|_static|_next|debug|.well-known|apple|safari|android|mstile|site.webmanifest|browserconfig.xml|sitemap.xml|robots.txt|favicon|(?:[a-z]{2})/callbacks).*)",
 }
 
 export async function middleware(req: NextRequest) {

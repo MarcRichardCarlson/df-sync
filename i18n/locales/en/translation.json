@@ -1,4 +1,13 @@
-{ 
-    "hero-title": "About Us",
-    "nav-home": "Home" 
+{   
+    "nav-home": "Home",
+    "nav-about": "About Us",
+    "nav-contact": "Contact",
+
+    "summary-main-title": "Questionnaire Answers",
+    "summary-title": "Questionnaire Summary",
+    "summary-text": "Here is the summary of your efforts. Are you happy with the results?",
+    "summary-share-button": "Share",
+    "summary-contact-button": "Contact",
+    "summary-download-button": "Download",
+    "summary-discard-button": "Discard"
 }

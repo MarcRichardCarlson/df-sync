@@ -1,4 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=Inter:wght@100..900&family=Space+Grotesk:wght@300..700&display=swap');
+@font-face {
+  font-family: 'TTCommons';
+  src: url('../../public/assets/TTCommonsProVariable.ttf') format('truetype');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'TTCommons';
+  src: url('../../public/assets/TTCommonsProVariable.ttf') format('truetype');
+  font-weight: 700;
+}
 
 @tailwind base;
 @tailwind components;
@@ -8,31 +18,17 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Inter", sans-serif;
+  font-family: "ttcommons", sans-serif;
 }
 
 /*Global styles*/
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
 body {
-  background-color: #000;
-  width: 100%;
-  height: 100%;
-  
-  background-position: cover;
+  background-image: url('../../public/assets/Background.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  width: 100vw;
 }
 
 @layer utilities {
@@ -49,3 +45,21 @@ body {
   height: 1px;
   background: var(--accent);
 }
+
+.color-transition {
+  @apply transition-colors duration-300 ease-in-out;
+}
+
+/* :root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+} */

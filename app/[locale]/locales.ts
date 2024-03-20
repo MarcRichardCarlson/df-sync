@@ -13,7 +13,7 @@ export function getAppLocale(locale?: string | null): AppLocale {
   return "en"
 }
 
-export function toKlarnaLocale(locale?: string | null): "sv-SE" | "en-SE" | "de-DE" | "en-DE" {
+export function toKlarnaLocale(locale?: string | null): "sv-SE" | "en-SE" {
   const fromHeader = locale || headers().get("x-locale")
 
   if (typeof fromHeader !== "string") return "en-SE"
