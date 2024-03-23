@@ -1,16 +1,197 @@
+/*buttons, textarea, range, dropdown, options, textfield*/
+
 export const QUESTIONS = [
+    // {
+    //   category: "Information",
+    //   questions: [
+    //     {
+    //       key: "name",
+    //       type: "textfield",
+    //       title: "Welcome",
+    //       question: "Please enter your full name",
+    //       placeholder: "Enter full name",
+    //     },
+    //     {
+    //       key: "companyName",
+    //       type: "textfield",
+    //       title: "Company Name",
+    //       question: "Please enter your company name",
+    //       placeholder: "Enter company name",
+    //     },
+    //   ],
+    // },
     {
-      category: "Business",
+      category: "Nature of Business",
       questions: [
         {
-          key: "business",
-          type: "textfield",
-          title: "Define Your Business",
-          question: "What kind of business are you building your webpage for?",
-          placeholder: "Ex. Resturant",
+          key: "industry",
+          type: "dropdown",
+          Options: ["Agriculture", "Architecture", "Arts and Entertainment", "Automotive", "Biotechnology", "Construction", "Consulting", "Consumer Goods", "Education", "Energy", "Engineering", "Environmental", "Fashion", "Finance", "Food & Beverage", "Government", "Healthcare", "Hospitality", "Information Technology", "Insurance", "Legal", "Manufacturing", "Marketing", "Media", "Non-Profit", "Pharmaceuticals", "Real Estate", "Retail", "Software", "Sports", "Telecommunications", "Transportation", "Travel", "Utilities", "Other"],
+          maxOptions: 2,
+          title: "Industry",
+          question: "Select your industry from the dropdown list.",
+          placeholder: "Select key design preferences",
+          instruction:"You can select multiple options"
         },
       ],
     },
+
+
+
+    // {
+    //   category: "Purpose and Audience",
+    //   questions: [
+    //     {
+    //       key: "purpose",
+    //       type: "textfield",
+    //       title: "Understanding the Website's Purpose and Target Audience",
+    //       question: "What is the primary goal of your website?",
+    //       placeholder: "Ex. Sell products",
+    //     },
+    //     {
+    //       key: "audience",
+    //       type: "textfield",
+    //       title: "The Website's Purpose and Target Audience",
+    //       question: "What is the primary goal of your website?",
+    //       placeholder: "Ex. Sell products",
+    //     },
+    //   ],
+    // },
+    // {
+    //   category: "Functionality",
+    //   questions: [
+    //     {
+    //       key: "functionality",
+    //       type: "dropdown",
+    //       options: ["Blog", "E-commerce", "Booking System", "Protfolio Gallery", "Event Calendar", "Forums/Community Boards" , "Other"],
+    //       maxOptions: 6,
+    //       title: "Functionality",
+    //       question: "What key functionality do you want on your website?",
+    //       placeholder: "Select key features",
+    //     },
+    //     {
+    //       key: "accounts",
+    //       type: "buttons",
+    //       options: ["Yes", "No"],
+    //       title: "User accounts",
+    //       question: "Will your site require user accounts?",
+    //     },
+    //   ],
+    // },
+    // {
+    //   category: "Design Preferences & Experience",
+    //   questions: [
+    //     {
+    //       key: "preferences",
+    //       type: "dropdown",
+    //       options: ["Modern", "Minimalist", "Traditional", "Classic", "Artistic", "Creative", "Corporate", "Professional", "Other"],
+    //       maxOptions: 6,
+    //       title: "Functionality",
+    //       question: "Do you have any design preferences or existing branding guidelines?",
+    //       placeholder: "Select key design preferences",
+    //       instruction:"You can select multiple options"
+    //     },
+    //     {
+    //       key: "experience",
+    //       type: "options",
+    //       title: "Experience",
+    //       question: "How important is the mobile experience for your website?",
+    //       options: ["Very important", "Somewhat important", "Neutral", "Not important"],
+    //     },
+    //   ],
+    // },
+    // {
+    //   category: "Content Management",
+    //   questions: [
+    //     {
+    //       key: "content",
+    //       type: "options",
+    //       title: "Content",
+    //       question: "How often do you plan to update the content on your website?",
+    //       options: ["Daily", "Weekly", "Monthly", "Occasionally/as needed"],
+    //     },
+    //     {
+    //       key: "management",
+    //       type: "options",
+    //       title: "Management",
+    //       question: "Would you like to be able to update the website yourself without technical help?",
+    //       options: ["Yes", "No", "Unsure"],
+    //     },
+    //   ],
+    // },
+    // {
+    //   category: "Performance and Scalability",
+    //   questions: [
+    //     {
+    //       key: "scalability",
+    //       type: "options",
+    //       title: "Scalability",
+    //       question: "Do you expect a lot of traffic on your website?",
+    //       options: ["Yes", "No", "Unsure"],
+    //     },
+    //     {
+    //       key: "Performance",
+    //       type: "options",
+    //       title: "Performance",
+    //       question: "Is loading speed a critical factor for your website?",
+    //       options: ["Yes", "No", "Unsure"],
+    //     },
+    //   ],
+    // },
+    // {
+    //   category: "Performance and Scalability",
+    //   questions: [
+    //     {
+    //       key: "scalability",
+    //       type: "options",
+    //       title: "Scalability",
+    //       question: "Do you expect a lot of traffic on your website?",
+    //       options: ["Yes", "No", "Unsure"],
+    //     },
+    //     {
+    //       key: "performance",
+    //       type: "options",
+    //       title: "Performance",
+    //       question: "Is loading speed a critical factor for your website?",
+    //       options: ["Yes", "No", "Unsure"],
+    //     },
+    //   ],
+    // },
+    // {
+    //   category: "Security Considerations",
+    //   questions: [
+    //     {
+    //       key: "security",
+    //       type: "dropdown",
+    //       options: ["Payment information", "Yes, personal data", "Yes, company data", "No", "Other sensitive data"],
+    //       maxOptions: 6,
+    //       title: "Security Considerations",
+    //       question: "Will your website handle sensitive information?",
+    //       placeholder: "Select what kind of information",
+    //       instruction:"You can select multiple options"
+    //     },
+    //   ],
+    // },
+
+
+
+    // {
+    //   category: "",
+    //   questions: [
+    //     {
+    //       key: "urgency",
+    //       type: "buttons",
+    //       options: [
+    //         "ASAP - happy to compromise",
+    //         "Hold out for a short period to find a better match",
+    //         "Willing to wait for a strongly appropriate candidate",
+    //       ],
+    //       title: "Urgency",
+    //       question: "How quickly are you looking to fill this role?",
+    //       fieldClassName: "flex-col",
+    //     },
+    //   ],
+    // },
     // {
     //   category: "Seniority",
     //   questions: [
@@ -234,4 +415,3 @@ export const QUESTIONS = [
     //   ],
     // },
   ]
-  
