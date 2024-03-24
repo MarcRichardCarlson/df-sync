@@ -5,12 +5,12 @@ import { useCallback, useState } from "react";
 import { useRouter } from "next/navigation";
 import { useCurrentLocale } from "@/hooks/locale";
 import { useTranslation } from "@/i18n/client";
-import MarqueeScroll from "@/components/Marquee";
 import Image from 'next/image';
 import downloadIcon from "../public/assets/HeroiconsArrowDownTray.svg"
 import shareIcon from "../public/assets/HeroiconsArrowRightOnRectangle.svg"
 import trashIcon from "../public/assets/HeroiconsTrash.svg"
 import contactIcon from "../public/assets/HeroiconsChatBubbleBottomCenterText.svg"
+import Carousel from "@/components/Carousel";
 
 function Summary() {
   const { summary } = useSummaryState();
@@ -72,10 +72,9 @@ function Summary() {
         </div>
 
       </div>
-      <div className="bg-indigo-500 bg-opacity-15 w-full border border-indigo-500 rounded-md min-h-fit">
-        <MarqueeScroll />
-      </div>
-    </QuestionsWrapper>
+      <Carousel />
+
+      </QuestionsWrapper>
   );
 }
 
@@ -233,7 +232,12 @@ function getSummaryValue(key: any, initialValue:any) {
 }
 
 const SUMMARY_ASSIGNMENTS: { [key: string]: string } = {
-  business: "Business",
+  name: "Name",
+  companyName: "Company Name",
+  industry: "Industry"
+  
+
+  /* business: "Business",
   seniority: "Seniority",
   location: "Location",
   core_experience: "Core Experience",
@@ -244,5 +248,5 @@ const SUMMARY_ASSIGNMENTS: { [key: string]: string } = {
   languages: "Language Requirement",
   urgency: "Urgency",
   budget: "Budget",
-  visa_sponsorship: "Overseas visa",
+  visa_sponsorship: "Overseas visa", */
 };

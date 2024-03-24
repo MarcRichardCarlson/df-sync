@@ -1,26 +1,26 @@
 /*buttons, textarea, range, dropdown, options, textfield*/
 
 export const QUESTIONS = [
-    // {
-    //   category: "Information",
-    //   questions: [
-    //     {
-    //       key: "name",
-    //       type: "textfield",
-    //       title: "Welcome",
-    //       question: "Please enter your full name",
-    //       placeholder: "Enter full name",
-    //     },
-    //     {
-    //       key: "companyName",
-    //       type: "textfield",
-    //       title: "Company Name",
-    //       question: "Please enter your company name",
-    //       placeholder: "Enter company name",
-    //     },
-    //   ],
-    // },
-    {
+     /* {
+       category: "Information",
+       questions: [
+         {
+           key: "name",
+           type: "textfield",
+           title: "Welcome",
+           question: "Please enter your full name",
+           placeholder: "Enter full name",
+         },
+         {
+           key: "companyName",
+           type: "textfield",
+           title: "Company Name",
+           question: "Please enter your company name",
+           placeholder: "Enter company name",
+         },
+       ],
+     }, */
+    /* {
       category: "Nature of Business",
       questions: [
         {
@@ -29,12 +29,71 @@ export const QUESTIONS = [
           Options: ["Agriculture", "Architecture", "Arts and Entertainment", "Automotive", "Biotechnology", "Construction", "Consulting", "Consumer Goods", "Education", "Energy", "Engineering", "Environmental", "Fashion", "Finance", "Food & Beverage", "Government", "Healthcare", "Hospitality", "Information Technology", "Insurance", "Legal", "Manufacturing", "Marketing", "Media", "Non-Profit", "Pharmaceuticals", "Real Estate", "Retail", "Software", "Sports", "Telecommunications", "Transportation", "Travel", "Utilities", "Other"],
           maxOptions: 2,
           title: "Industry",
-          question: "Select your industry from the dropdown list.",
-          placeholder: "Select key design preferences",
+          question: "What industry do you operate in? ",
+          placeholder: "Select your industry",
           instruction:"You can select multiple options"
         },
       ],
+    }, */
+    /* {
+      category: "Project",
+      questions: [
+        {
+          key: "project",
+          type: "options",
+          title: "Project details",
+          question: "",
+          options: ["I have an existing project/website i wish to expand", "I want to create a new project/website", "I want create a new project/website based on a current one"],
+        },
+      ],
+    }, */
+    {
+      category: "Type",
+      questions: [
+        {
+          key: "type",
+          type: "dropdown",
+          options: ["Blog", "E-commerce", "Booking System", "Protfolio Gallery", "Event Calendar", "Forums/Community Boards" , "Other"],
+          maxOptions: 6,
+          title: "Functionality",
+          question: "What type of website are you planning to build?",
+          placeholder: "Select key features",
+        },
+        {
+          key: "accounts",
+          type: "buttons",
+          options: ["Yes", "No"],
+          title: "User accounts",
+          question: "Will your site require user accounts?",
+        },
+      ],
     },
+    {
+      category: "Timeline",
+      questions: [
+        {
+          key: "timeline",
+          type: "buttons",
+          Options: ["Less than a month", "1-2 months", "2-3 months", "6+ months"],
+          title: "Timeline",
+          question: "What is the approximate timeline for this project?",
+        },
+      ],
+    },
+    {
+      category: "Budget",
+      questions: [
+        {
+          key: "budget",
+          type: "range",
+          min: 0,
+          max: 500.000,
+          title: "Budget",
+          question: "What is the approximate budget for this project?",
+        },
+      ],
+    },
+
 
 
 

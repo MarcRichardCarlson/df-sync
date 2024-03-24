@@ -14,7 +14,6 @@ import image10 from "../public/assets/srv_1x1_Logo.png";
 import image11 from "../public/assets/svalner_1x1_Logo.png";
 import image12 from "../public/assets/verifone_1x1_Logo.png";
 import image13 from "../public/assets/vw_1x1_Logo.png";
-import QuestionsWrapper from "./QuestionsWrapper";
 
 const MarqueeScroll: React.FC = () => {
   return (
