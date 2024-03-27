@@ -5,34 +5,36 @@ import { Dialog } from '@headlessui/react';
 import QuestionsWrapper from './QuestionsWrapper';
 
 const CookiesBanner = () => {
-  const [isOpen, setIsOpen] = useState(() => {
-    // Initially check if a decision has already been made regarding cookies
+  const [isOpen, setIsOpen] = useState(false);
+
+  useEffect(() => {
+    // Since "use client" should ensure this code runs only on the client,
+    // we safely check localStorage here.
     const decisionMade = localStorage.getItem('cookiesDecision');
-    // If 'accepted', don't show the banner again; otherwise, show it
-    return decisionMade !== 'accepted';
-  });
+    // If 'accepted', don't show the banner; otherwise, show it.
+    // This check is performed once, when the component mounts.
+    setIsOpen(decisionMade !== 'accepted');
+  }, []);
 
   const acceptCookies = () => {
-    // Mark the decision to accept cookies in localStorage
     localStorage.setItem('cookiesDecision', 'accepted');
     setIsOpen(false);
   };
 
   const blockCookies = () => {
-    // Optionally handle the blocking of cookies here
-    // For now, just close the banner without setting 'accepted' in localStorage
+    // Close the banner without setting 'accepted' in localStorage
     setIsOpen(false);
   };
 
-  // Uncomment the next line to clear the decision automatically on component mount
+  //Uncomment the next line to clear the decision automatically on component mount
   // useEffect(() => {
-  //   // localStorage.removeItem('cookiesDecision');
+  //    localStorage.removeItem('cookiesDecision');
   // }, []);
 
   return (
     <Dialog open={isOpen} onClose={() => setIsOpen(false)} className="fixed bottom-0 left-0 w-full text-slate-950 z-50">
       <div className='flex justify-around mt-4 bg-indigo-300 py-6 px-6'>
-        <div className='relative '>
+        <div className='relative w-full'>
           <QuestionsWrapper>
             <span className='flex items-center justify-start'>
                 We use our own cookies as well as third-party cookies on our websites to enhance your experience, analyze our traffic, and for security and marketing. Select "Accept All" to allow them to be used. Read our Cookie Policy.

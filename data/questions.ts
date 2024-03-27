@@ -20,21 +20,21 @@ export const QUESTIONS = [
         },
       ],
     },
-    {
-      category: "Nature of Business",
-      questions: [
-        {
-          key: "industry",
-          type: "dropdown",
-          options: ["Agriculture", "Architecture", "Arts and Entertainment", "Automotive", "Biotechnology", "Construction", "Consulting", "Consumer Goods", "Education", "Energy", "Engineering", "Environmental", "Fashion", "Finance", "Food & Beverage", "Government", "Healthcare", "Hospitality", "Information Technology", "Insurance", "Legal", "Manufacturing", "Marketing", "Media", "Non-Profit", "Pharmaceuticals", "Real Estate", "Retail", "Software", "Sports", "Telecommunications", "Transportation", "Travel", "Utilities", "Other"],
-          maxOptions: 2,
-          title: "Industry",
-          question: "What industry do you operate in? ",
-          instruction:"You can select multiple options",
-          placeholder: "Select your industry",
-        },
-      ],
-    },
+    // {
+    //   category: "Nature of Business",
+    //   questions: [
+    //     {
+    //       key: "industry",
+    //       type: "dropdown",
+    //       options: ["Agriculture", "Architecture", "Arts and Entertainment", "Automotive", "Biotechnology", "Construction", "Consulting", "Consumer Goods", "Education", "Energy", "Engineering", "Environmental", "Fashion", "Finance", "Food & Beverage", "Government", "Healthcare", "Hospitality", "Information Technology", "Insurance", "Legal", "Manufacturing", "Marketing", "Media", "Non-Profit", "Pharmaceuticals", "Real Estate", "Retail", "Software", "Sports", "Telecommunications", "Transportation", "Travel", "Utilities", "Other"],
+    //       maxOptions: 2,
+    //       title: "Industry",
+    //       question: "What industry do you operate in? ",
+    //       instruction:"You can select multiple options",
+    //       placeholder: "Select your industry",
+    //     },
+    //   ],
+    // },
     // {
     //   category: "Project",
     //   questions: [

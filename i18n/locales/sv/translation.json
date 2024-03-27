@@ -13,8 +13,10 @@
     
     "about-blurb-header": "Välkommen till DF Sync",
     "about-blurb-text": "Ge digitala fans möjlighet att göra smartare affärsval. Vår plattform förbinder dig med de insikter.",
+    
     "about-overview-header": "Digitala näringslivet",
     "about-overview-text": "Gör så att ditt digitala näringsliv frodas. Designad specifikt för digitala fans, vår konsultplattform ger oöverträffad vägledning och analys för att hjälpa dig att fatta välgrundade affärsbeslut. Oavsett om du precis har börjat eller vill expandera.",
+    
     "about-description-header": "Om Oss",
     "about-description-text": "DF Sync är mer än en plattform—det är din partner i den digitala åldern, och säkerställer att din väg till framgång är klar och genomförbar. Påbörja din resa med oss och omdefiniera hur du navigerar i den digitala affärsvärlden.",
     "about-description-text-2": "Vår plattform handlar inte bara om rådgivning; den handlar om att erbjuda en anpassad upplevelse som resonans med dina specifika mål och utmaningar. Genom att utnyttja vår avancerade teknologi och professionella nätverk kan du låsa upp ny potential, minska risker och driva dina projekt framåt.",
@@ -27,18 +29,33 @@
 
     "contact-header": "Kontakta oss",
     "contact-header-text": "För förfrågningar eller ytterligare hjälp, vänligen använd vårt kontaktformulär. Vi är engagerade i att erbjuda stöd och att snabbt bemöta dina behov. Dessutom inbjuder vi dig att ansluta till vårt professionella nätverk på sociala medier för de senaste uppdateringarna och möjligheterna till interaktion. Din koppling är värdefull.",
+    
     "contact-title-name": "Namn:",
     "contact-placeholder-name": "Skriv namn..",
+    
     "contact-title-email": "Email:",
     "contact-placeholder-email": "Skriv email..",
+    
     "contact-title-subject": "Ämne:",
     "contact-placeholder-subject": "Skriv ämne..",
+    
     "contact-title-textarea": "Ditt Meddelande:",
     "contact-placeholder-textarea": "Skriv något..",
-    "contact-icon-phone": "Telefon: 070-6323 610",
-    "contact-icon-email": "Email: Marc.Carlson117@gmail.com",
+
+    "contact-input-file": "Ingen fil vald",
+    "contact-input-file-btn": "Välj fil",
+    "contact-send-btn": "Skicka",
+    
+    "contact-icon-phone": "Telefon:",
+    "contact-icon-phone-link": "070-6323 610",
+    "contact-icon-email": "Email:",
+    "contact-icon-email-link": "marc@digitalfans.se",
     "contact-icon-instagram": "Instagram:",
+    "contact-icon-instagram-link": "https://www.instagram.com/marcrcarlson",
     "contact-icon-facebook": "Facebook:",
-    "contact-icon-linkedin": "LinkedIn: https://www.linkedin.com/marcrcarlson",
-    "contact-icon-github": "GitHub: https://github.com/Marccarlson117"
+    "contact-icon-facebook-link": "https://www.facebook.com/marc.carlson/",
+    "contact-icon-linkedin": "LinkedIn:",
+    "contact-icon-linkedin-link": "https://www.linkedin.com/marcrcarlson",
+    "contact-icon-github": "GitHub:",
+    "contact-icon-github-link": "https://github.com/Marccarlson117"
 }

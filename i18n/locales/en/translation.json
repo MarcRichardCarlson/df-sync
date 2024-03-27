@@ -44,11 +44,21 @@
     
     "contact-title-textarea": "Your Message:",
     "contact-placeholder-textarea": "Write something..",
+
+    "contact-input-file": "No file chosen",
+    "contact-input-file-btn": "Choose file",
+    "contact-send-btn": "Send",
     
-    "contact-icon-phone": "Phone: 070-6323 610",
-    "contact-icon-email": "Email: Marc.Carlson117@gmail.com",
-    "contact-icon-instagram": "Instagram: https://www.instagram.com/marcrcarlson",
-    "contact-icon-facebook": "Facebook: https://www.facebook.com/marc.carlson/",
-    "contact-icon-linkedin": "LinkedIn: https://www.linkedin.com/marcrcarlson",
-    "contact-icon-github": "GitHub: https://github.com/Marccarlson117"
+    "contact-icon-phone": "Phone:",
+    "contact-icon-phone-link": "070-6323 610",
+    "contact-icon-email": "Email:",
+    "contact-icon-email-link": "marc@digitalfans.se",
+    "contact-icon-instagram": "Instagram:",
+    "contact-icon-instagram-link": "https://www.instagram.com/marcrcarlson",
+    "contact-icon-facebook": "Facebook:",
+    "contact-icon-facebook-link": "https://www.facebook.com/marc.carlson/",
+    "contact-icon-linkedin": "LinkedIn:",
+    "contact-icon-linkedin-link": "https://www.linkedin.com/marcrcarlson",
+    "contact-icon-github": "GitHub:",
+    "contact-icon-github-link": "https://github.com/Marccarlson117"
 }
