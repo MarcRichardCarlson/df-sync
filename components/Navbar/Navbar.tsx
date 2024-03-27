@@ -51,7 +51,7 @@ const Navbar = () => {
               } font-ttcommons text-CustomWhite relative cursor-pointer text-lg hover:text-CustomHover`}
               onClick={() => setSelectedTab(tab)}
             >
-              <Link href={tab.path}>{t(tab.label)}</Link>
+              <Link href={tab.path} className="p-2">{t(tab.label)}</Link>
 
               {tab === selectedTab ? (
                 <motion.div

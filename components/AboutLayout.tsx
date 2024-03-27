@@ -20,20 +20,20 @@ const AboutLayout = () => {
 
         <div className="flex gap-6">
 
-            <div className="overflow-hidden min-h-48 w-2/5 flex flex-col gap-4 border border-indigo-500 rounded-md bg-CustomWhite bg-opacity-10 px-8 py-6 text-CustomWhite">
-                <span className="text-3xl text-CustomWhite">{t("about-blurb-header")}</span>
+            <div className="overflow-hidden min-h-48 w-2/5 flex flex-col gap-4 border border-indigo-500 rounded-md bg-CustomWhite bg-opacity-10 px-8 py-8 text-CustomWhite">
+                <span className="text-3xl font-semibold text-CustomWhite">{t("about-blurb-header")}</span>
                 <div className="relative">
                     <QuestionsWrapper>
-                        <span>{t("about-blurb-text")}</span>
+                        <span className="text-lg">{t("about-blurb-text")}</span>
                     </QuestionsWrapper>
                 </div>
             </div>
 
-            <div className="overflow-hidden min-h-48 w-full flex flex-col gap-4 border border-indigo-500 rounded-md bg-CustomWhite bg-opacity-10 px-8 py-6 text-CustomWhite">
-                <span className="text-2xl text-CustomWhite">{t("about-overview-header")}</span>
+            <div className="overflow-hidden min-h-48 w-full flex flex-col gap-4 border border-indigo-500 rounded-md bg-CustomWhite bg-opacity-10 px-8 py-8 text-CustomWhite">
+                <span className="text-2xl font-semibold text-CustomWhite">{t("about-overview-header")}</span>
                 <div className="relative">
                     <QuestionsWrapper>
-                        <span>{t("about-overview-text")}</span>
+                        <span className="text-lg">{t("about-overview-text")}</span>
                     </QuestionsWrapper>
                 </div>
             </div>
@@ -42,16 +42,21 @@ const AboutLayout = () => {
 
         <div className="flex w-full gap-6">
             <Image className="w-1/2 rounded-md" src={PlaceholderImage} alt="Share Icon"/>
-            <div className="overflow-hidden w-1/2 flex flex-col gap-4 border border-indigo-500 rounded-md bg-CustomWhite bg-opacity-10 px-8 py-6 text-CustomWhite">
-                <span className="flex gap-6 text-2xl text-CustomWhite">{t("about-description-header")}</span>
-                <div className="relative h-1/2">
+            <div className="overflow-hidden w-1/2 flex flex-col gap-4 border border-indigo-500 rounded-md bg-CustomWhite bg-opacity-10 px-8 py-12 text-CustomWhite">
+                <span className="flex gap-6 text-3xl font-semibold text-CustomWhite">{t("about-description-header")}</span>
+                <div className="relative h-1/3">
                     <QuestionsWrapper>
-                        <span>{t("about-description-text")}</span>
+                        <span className="text-lg">{t("about-description-text")}</span>
                     </QuestionsWrapper>
                 </div>
-                <div className="relative h-1/2">
+                <div className="relative h-1/3">
                     <QuestionsWrapper>
-                        <span>{t("about-description-text-2")}</span>
+                        <span className="text-lg">{t("about-description-text-2")}</span>
+                    </QuestionsWrapper>
+                </div>
+                <div className="relative h-1/3">
+                    <QuestionsWrapper>
+                        <span className="text-lg">{t("about-description-text-3")}</span>
                     </QuestionsWrapper>
                 </div>
             </div>
@@ -62,11 +67,21 @@ const AboutLayout = () => {
         </div>
 
         <div className="flex gap-6">
-            <div className="w-1/2 flex flex-col gap-4 border border-indigo-500 rounded-md bg-CustomWhite bg-opacity-10 px-8 py-6 text-CustomWhite">
-                <span className="text-2xl text-CustomWhite">{t("about-description-footer-header")}</span>
-                <span>{t("about-description-footer-text")}</span>
+            <div className="w-1/2 flex flex-col gap-4 border border-indigo-500 rounded-md bg-CustomWhite bg-opacity-10 px-8 py-12 text-CustomWhite">
+                <span className="text-3xl font-semibold text-CustomWhite">{t("about-additional-header")}</span>
+                <div className="relative h-full">
+                    <QuestionsWrapper>
+                    <span className="text-lg">{t("about-additional-text")}</span>
+                    </QuestionsWrapper>
+                </div>
+                <span className="text-2xl font-semibold text-CustomWhite">{t("about-additional-header-2")}</span>
+                <div className="relative h-full">
+                    <QuestionsWrapper>
+                    <span className="text-lg">{t("about-additional-text-2")}</span>
+                    </QuestionsWrapper>
+                </div>
             </div>
-            <Image className="w-1/2 rounded-md" src={PlaceholderImage2} alt="Share Icon"/>
+            <Image className="w-1/2 rounded-md max-h-[490px]" src={PlaceholderImage2} alt="Share Icon"/>
         </div>
     </div>
   )
