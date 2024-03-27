@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { useState } from 'react';
-import ContactIconSend from "../public/assets/IconoirSend.svg";
+import ContactIconSend from "../../public/assets/IconoirSend.svg";
 
 const SendButton = () => {
   const [isHovered, setIsHovered] = useState(false);

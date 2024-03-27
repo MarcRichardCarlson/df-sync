@@ -10,10 +10,10 @@ import ContactIconInstagram from "../public/assets/SimpleIconsInstagram.svg"
 import ContactIconFacebook from "../public/assets/FeFacebook.svg"
 import ContactIconLinkedIn from "../public/assets/SimpleIconsLinkedin.svg"
 import ContactIconGitHub from "../public/assets/SimpleIconsGithub.svg"
-import QuestionsWrapper from "../../components/QuestionsWrapper";
+import QuestionsWrapper from "./QuestionsWrapper";
 import Link from "next/link";
-import SendButton from "./SendButton";
-import ContactInput from "./ContactInput";
+import SendButton from "../components/contact-form/SendButton";
+import ContactInput from "../components/contact-form/ContactInput";
 
 
 const ContactLayout = () => {

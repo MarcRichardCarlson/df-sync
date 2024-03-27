@@ -2,7 +2,7 @@ import React, { useRef } from 'react'
 import Image from 'next/image';
 import { useTranslation } from "@/i18n/client";
 import { useCurrentLocale } from "@/hooks/locale";
-import ContactIconPapperclip from "../public/assets/HeroiconsPaperClipSolid.svg"
+import ContactIconPapperclip from "../../public/assets/HeroiconsPaperClipSolid.svg"
 
 
 const ContactInput = () => {
