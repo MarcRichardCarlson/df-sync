@@ -150,7 +150,7 @@ function getSummaryValue(key: any, initialValue:any) {
   let value = initialValue;
 
   switch (key) {
-    case "seniority":
+    case "budget":
       value = (
         <div className="flex items-center space-x-3">
           <span className="text-header-4">{`${value.min}-${value.max}PQE`}</span>
@@ -233,9 +233,23 @@ function getSummaryValue(key: any, initialValue:any) {
 
 const SUMMARY_ASSIGNMENTS: { [key: string]: string } = {
   name: "Name",
-  companyName: "Company Name",
-  industry: "Industry"
-  
+  company_name: "Company Name",
+  industry: "Industry",
+  type: "Type",
+  accounts: "Accounts",
+  timeline: "Timeline",
+  budget: "budget",
+  maintenance: "maintenance",
+  current: "Current",
+  domain: "Domain",
+  hosting: "Hosting",
+  content: "Content",
+  updating: "Updating",
+  cms: "Cms",
+  usage: "Usage",
+  selectedCms: "Selected Cms",
+  thirdParty: "Third-party",
+
 
   /* business: "Business",
   seniority: "Seniority",

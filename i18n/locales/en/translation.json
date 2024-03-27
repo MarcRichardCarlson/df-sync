@@ -9,5 +9,30 @@
     "summary-share-button": "Share",
     "summary-contact-button": "Contact",
     "summary-download-button": "Download",
-    "summary-discard-button": "Discard"
+    "summary-discard-button": "Discard",
+
+    "about-blurb-header": "Welcome to DF Sync",
+    "about-blurb-text": "Empowering Digital Fans to Make Smarter Business Choices. Our platform connects you with the insights and expertise needed to navigate your project's challenges, ensuring every decision leads to success.",
+    "about-overview-header": "Digital business",
+    "about-overview-text": "Make sure you're digital business community comes to thrive. Designed specifically for digital fans, our consulting platform provides unparalleled guidance and analytics to help you make informed business decisions. Whether you're just starting or looking to expand, DF Sync equips you with the tools to precisely understand your project's needs, optimizing your strategy for maximum impact. Dive into a world where every choice is backed by expert insight, with DF Sync as your navigator.",
+    "about-description-header": "About us",
+    "about-description-text": "A Consulting Platform for the Digital Business Aficionado. In today's fast-paced digital landscape, making the right business decisions can be the difference between success and stagnation. DF Sync is here to ensure you land on the side of success every time. Our platform is meticulously crafted for digital fans, offering a comprehensive suite of services that covers analytics, expert consultations, and project management tools. With DF Sync, you gain access to a deep well of industry insights. This is allowing you to analyze your business environment accurately, understand your project's unique requirements, and craft strategies that are both innovative and effective.",
+    "about-description-text-2": "Our platform stands out by not just offering advice but by providing a tailored experience that aligns with your specific business goals and challenges. From startups looking to make their mark in the digital world to established enterprises aiming to expand their digital footprint, DF Sync serves as a beacon, guiding you towards wise business decisions and strategic excellence. Leverage our cutting-edge technology and extensive network of professionals to unlock potential, mitigate risks, and drive your projects forward. DF Sync is more than just a platform; it's your partner in navigating the complexities of the digital business landscape, ensuring that every step you take is a step towards unparalleled success. Join us and transform the way you make business decisions in the digital age.",
+
+    "contact-header": "Contact us",
+    "contact-header-text": "For inquiries or further assistance, please utilize our contact form. We are committed to providing support and addressing your needs promptly. Additionally, we invite you to join our professional network on social media for the latest updates and opportunities for engagement. Your connection is valued.",
+    "contact-title-name": "Name:",
+    "contact-placeholder-name": "Write name..",
+    "contact-title-email": "Email:",
+    "contact-placeholder-email": "Write email..",
+    "contact-title-subject": "Subject:",
+    "contact-placeholder-subject": "Write subject..",
+    "contact-title-textarea": "Your Message:",
+    "contact-placeholder-textarea": "Write something..",
+    "contact-icon-phone": "Phone: 070-6323 610",
+    "contact-icon-email": "Email: Marc.Carlson117@gmail.com",
+    "contact-icon-instagram": "Instagram: https://www.instagram.com/marcrcarlson",
+    "contact-icon-facebook": "Facebook: https://www.facebook.com/marc.carlson/",
+    "contact-icon-linkedin": "LinkedIn: https://www.linkedin.com/marcrcarlson",
+    "contact-icon-github": "GitHub: https://github.com/Marccarlson117"
 }

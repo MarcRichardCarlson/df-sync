@@ -2,7 +2,7 @@ import { useState, useCallback, useRef, useEffect } from "react"
 import { Listbox, Transition } from "@headlessui/react"
 
 interface DropDownProps {
-  setValue: (value: string | string[]) => void;
+  setValue: (value: any) => void;
   options: string[];
   placeholder?: string;
   maxOptions?: number;
@@ -13,6 +13,8 @@ const DropDown: React.FC<DropDownProps> = ({ setValue, options, placeholder, max
   const fromSelectedOption = useRef(false)
   const [isOpen, setIsOpen] = useState(false)
   const [selectedOptions, setSelectedOptions] = useState<string[]>([]);
+  console.log(options);
+  
 
   useEffect(() => {
     if (selectedOptions.length === 0) setIsOpen(false)
@@ -97,7 +99,7 @@ const DropDown: React.FC<DropDownProps> = ({ setValue, options, placeholder, max
             <Listbox.Option
               key={option}
               value={option}
-              className="link-transition cursor-pointer px-5 py-3 hover:bg-dark-purple/10"
+              className="link-transition cursor-pointer px-5 py-3 hover:bg-indigo-500 hover:bg-opacity-10"
               onClick={closeHandler}
             >
               {option}

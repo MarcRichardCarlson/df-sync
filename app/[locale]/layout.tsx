@@ -4,6 +4,7 @@ import AppProviders from "./providers";
 import { AppLocale } from "./locales";
 import Navbar from "@/components/Navbar/Navbar";
 import Footer from "@/components/Footer/Footer";
+import CookiesBanner from "@/components/CookiesBanner";
 
 export const metadata: Metadata = {
   title: "Digital fans sync",
@@ -21,9 +22,10 @@ export default function RootLayout({
     <html lang="en">
       <body className="m-0 p-0 background-style">
         <AppProviders locale={params.locale}>
-          <Navbar />
-          {children}
-          <Footer />
+            <Navbar />
+            {children}
+            <CookiesBanner />
+            <Footer />
         </AppProviders>
       </body>
     </html>

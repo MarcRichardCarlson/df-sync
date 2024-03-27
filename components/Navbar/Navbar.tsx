@@ -2,14 +2,30 @@
 
 import { motion, AnimatePresence } from "framer-motion";
 import { initialTabs as tabs } from "./nav-items";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import YDivider from "../YDivider";
 import Link from "next/dist/client/link";
 import { useCurrentLocale } from "@/hooks/locale";
 import { useTranslation } from "@/i18n/client";
 
 const Navbar = () => {
-  const [selectedTab, setSelectedTab] = useState(tabs[0]);
+  // Retrieve the initially selected tab from localStorage 
+  // or default to the first tab if not present
+  const [selectedTab, setSelectedTab] = useState(() => {
+    // Attempt to get the saved tab label from localStorage
+    const savedTabLabel = localStorage.getItem('selectedTab');
+    // If there's a saved tab, return that tab object from your tabs array
+    if (savedTabLabel) {
+      return tabs.find(tab => tab.label === savedTabLabel) || tabs[0];
+    }
+    // Default to the first tab if nothing is saved
+    return tabs[0];
+  });
+
+  useEffect(() => {
+    localStorage.setItem('selectedTab', selectedTab.label);
+  }, [selectedTab]);
+
   const locale = useCurrentLocale();
   const { t } = useTranslation(locale, "translation");
 

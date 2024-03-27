@@ -9,5 +9,30 @@
     "summary-share-button": "Dela",
     "summary-contact-button": "Kom i kontakt",
     "summary-download-button": "Ladda Ner",
-    "summary-discard-button": "Kasta"
+    "summary-discard-button": "Kasta",
+    
+    "about-blurb-header": "Välkommen till DF Sync",
+    "about-blurb-text": "Ge digitala fans möjlighet att göra smartare affärsval. Vår plattform förbinder dig med de insikter och expertis som behövs för att navigera i ditt projekts utmaningar, vilket säkerställer att varje beslut leder till framgång.",
+    "about-overview-header": "Digitala näringslivet",
+    "about-overview-text": "Gör så att ditt digitala näringsliv frodas. Designad specifikt för digitala fans, vår konsultplattform ger oöverträffad vägledning och analys för att hjälpa dig att fatta välgrundade affärsbeslut. Oavsett om du precis har börjat eller vill expandera, utrustar DF ​​Sync dig med verktygen för att exakt förstå ditt projekts behov och optimera din strategi för maximal effekt. Dyk in i en värld där alla val stöds av expertinsikter, med DF Sync som din navigator.",
+    "about-description-header": "Om Oss",
+    "about-description-text": "En Consulting Platform for the Digital Business Aficionado. I dagens snabba digitala landskap kan att fatta rätt affärsbeslut vara skillnaden mellan framgång och stagnation. DF Sync är här för att säkerställa att du landar på sidan av framgång varje gång. Vår plattform är noggrant utformad för digitala fans och erbjuder en omfattande svit av tjänster som täcker analyser, expertkonsultationer och projektledningsverktyg. Med DF Sync får du tillgång till en djup brunn av branschinsikter, så att du kan analysera din affärsmiljö exakt, förstå ditt projekts unika krav och skapa strategier som är både innovativa och effektiva. ",
+    "about-description-text-2": "Vår plattform utmärker sig genom att inte bara erbjuda råd utan genom att tillhandahålla en skräddarsydd upplevelse som överensstämmer med dina specifika affärsmål och utmaningar. Från nystartade företag som vill göra sina avtryck i den digitala världen till etablerade företag som siktar på att utöka sitt digitala fotavtryck, DF Sync fungerar som en ledstjärna som guidar dig mot kloka affärsbeslut och strategisk excellens. Dra nytta av vår banbrytande teknik och omfattande nätverk av proffs för att låsa upp potential, minska risker och driva dina projekt framåt. DF Sync är mer än bara en plattform; det är din partner för att navigera i komplexiteten i det digitala affärslandskapet, vilket säkerställer att varje steg du tar är ett steg mot oöverträffad framgång. Gå med oss ​​och förvandla ditt sätt att fatta affärsbeslut i den digitala tidsåldern.",
+
+    "contact-header": "Kontakta oss",
+    "contact-header-text": "För förfrågningar eller ytterligare hjälp, vänligen använd vårt kontaktformulär. Vi är engagerade i att erbjuda stöd och att snabbt bemöta dina behov. Dessutom inbjuder vi dig att ansluta till vårt professionella nätverk på sociala medier för de senaste uppdateringarna och möjligheterna till interaktion. Din koppling är värdefull.",
+    "contact-title-name": "Namn:",
+    "contact-placeholder-name": "Skriv namn..",
+    "contact-title-email": "Email:",
+    "contact-placeholder-email": "Skriv email..",
+    "contact-title-subject": "Ämne:",
+    "contact-placeholder-subject": "Skriv ämne..",
+    "contact-title-textarea": "Ditt Meddelande:",
+    "contact-placeholder-textarea": "Skriv något..",
+    "contact-icon-phone": "Telefon: 070-6323 610",
+    "contact-icon-email": "Email: Marc.Carlson117@gmail.com",
+    "contact-icon-instagram": "Instagram:",
+    "contact-icon-facebook": "Facebook:",
+    "contact-icon-linkedin": "LinkedIn: https://www.linkedin.com/marcrcarlson",
+    "contact-icon-github": "GitHub: https://github.com/Marccarlson117"
 }

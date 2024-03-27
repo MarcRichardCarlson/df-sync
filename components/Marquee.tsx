@@ -23,44 +23,44 @@ const MarqueeScroll: React.FC = () => {
           <Image
             src={image1}
             alt="energy logo"
-            style={{ objectFit: "cover", marginLeft: "4rem" }}
+            style={{ objectFit: "cover", filter: "brightness(0) invert(1)", marginLeft: "4rem" }}
           />
           <Image
             src={image2}
             alt="crypto-now logo"
-            style={{ objectFit: "cover" }}
+            style={{ objectFit: "cover", filter: "brightness(0) invert(1)" }}
           />
           <Image
             src={image3}
             alt="gb-glass logo"
-            style={{ objectFit: "cover" }}
+            style={{ objectFit: "cover", filter: "brightness(0) invert(1)" }}
           />
-          <Image src={image4} alt="mcd logo" style={{ objectFit: "cover" }} />
-          <Image src={image5} alt="mtg logo" style={{ objectFit: "cover" }} />
+          <Image src={image4} alt="mcd logo" style={{ objectFit: "cover", filter: "brightness(0) invert(1)" }} />
+          <Image src={image5} alt="mtg logo" style={{ objectFit: "cover", filter: "brightness(0) invert(1)" }} />
           <Image
             src={image6}
             alt="object-vision logo"
-            style={{ objectFit: "cover" }}
+            style={{ objectFit: "cover", filter: "brightness(0) invert(1)" }}
           />
-          <Image src={image7} alt="qx logo" style={{ objectFit: "cover" }} />
+          <Image src={image7} alt="qx logo" style={{ objectFit: "cover", filter: "brightness(0) invert(1)" }} />
           <Image
             src={image8}
             alt="skanska logo"
-            style={{ objectFit: "cover" }}
+            style={{ objectFit: "cover", filter: "brightness(0) invert(1)" }}
           />
-          <Image src={image9} alt="smile logo" style={{ objectFit: "cover" }} />
-          <Image src={image10} alt="srv logo" style={{ objectFit: "cover" }} />
+          <Image src={image9} alt="smile logo" style={{ objectFit: "cover", filter: "brightness(0) invert(1)" }} />
+          <Image src={image10} alt="srv logo" style={{ objectFit: "cover", filter: "brightness(0) invert(1)" }} />
           <Image
             src={image11}
             alt="svalner logo"
-            style={{ objectFit: "cover" }}
+            style={{ objectFit: "cover", filter: "brightness(0) invert(1)" }}
           />
           <Image
             src={image12}
             alt="verifone logo"
-            style={{ objectFit: "cover" }}
+            style={{ objectFit: "cover", filter: "brightness(0) invert(1)" }}
           />
-          <Image src={image13} alt="vw logo" style={{ objectFit: "cover" }} />
+          <Image src={image13} alt="vw logo" style={{ objectFit: "cover", filter: "brightness(0) invert(1)" }} />
         </div>
       </Marquee>
     </div>

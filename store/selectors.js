@@ -2,6 +2,9 @@ import { shallow } from "zustand/shallow"
 
 import { useAppStore, useQuestionStore } from "./state"
 
+// Defines custom hooks, managing various parts of application and question states using zustand. 
+// Each hook selectively retrieves state slices or actions, ensuring component re-renders are optimized with shallow comparison.
+
 export const useAppState = () => useAppStore(({ status }) => ({ status }), shallow)
 
 export const useQuestionState = () =>
@@ -21,13 +24,10 @@ export const useQuestionData = () =>
 
 export const useQuestionActions = () =>
   useQuestionStore(
-    ({ initState, next, confirm, saveDraft, editDraft, deleteDraft }) => ({
+    ({ initState, next, confirm}) => ({
       initState,
       next,
       confirm,
-      saveDraft,
-      editDraft,
-      deleteDraft,
     }),
     shallow,
   )

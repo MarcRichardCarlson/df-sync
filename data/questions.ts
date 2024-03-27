@@ -1,40 +1,197 @@
 /*buttons, textarea, range, dropdown, options, textfield*/
 
 export const QUESTIONS = [
-     /* {
-       category: "Information",
-       questions: [
-         {
-           key: "name",
-           type: "textfield",
-           title: "Welcome",
-           question: "Please enter your full name",
-           placeholder: "Enter full name",
-         },
-         {
-           key: "companyName",
-           type: "textfield",
-           title: "Company Name",
-           question: "Please enter your company name",
-           placeholder: "Enter company name",
-         },
-       ],
-     }, */
-    /* {
+    {
+      category: "Information",
+      questions: [
+        // {
+        //   key: "name",
+        //   type: "textfield",
+        //   title: "Welcome",
+        //   question: "Please enter your full name",
+        //   placeholder: "Enter full name",
+        // },
+        {
+          key: "company_name",
+          type: "textfield",
+          title: "Company Name",
+          question: "Please enter your company name",
+          placeholder: "Enter company name",
+        },
+      ],
+    },
+    {
       category: "Nature of Business",
       questions: [
         {
           key: "industry",
           type: "dropdown",
-          Options: ["Agriculture", "Architecture", "Arts and Entertainment", "Automotive", "Biotechnology", "Construction", "Consulting", "Consumer Goods", "Education", "Energy", "Engineering", "Environmental", "Fashion", "Finance", "Food & Beverage", "Government", "Healthcare", "Hospitality", "Information Technology", "Insurance", "Legal", "Manufacturing", "Marketing", "Media", "Non-Profit", "Pharmaceuticals", "Real Estate", "Retail", "Software", "Sports", "Telecommunications", "Transportation", "Travel", "Utilities", "Other"],
+          options: ["Agriculture", "Architecture", "Arts and Entertainment", "Automotive", "Biotechnology", "Construction", "Consulting", "Consumer Goods", "Education", "Energy", "Engineering", "Environmental", "Fashion", "Finance", "Food & Beverage", "Government", "Healthcare", "Hospitality", "Information Technology", "Insurance", "Legal", "Manufacturing", "Marketing", "Media", "Non-Profit", "Pharmaceuticals", "Real Estate", "Retail", "Software", "Sports", "Telecommunications", "Transportation", "Travel", "Utilities", "Other"],
           maxOptions: 2,
           title: "Industry",
           question: "What industry do you operate in? ",
+          instruction:"You can select multiple options",
           placeholder: "Select your industry",
-          instruction:"You can select multiple options"
         },
       ],
-    }, */
+    },
+    // {
+    //   category: "Project",
+    //   questions: [
+    //     {
+    //       key: "type",
+    //       type: "dropdown",
+    //       options: ["Blog", "E-commerce", "Booking System", "Protfolio Gallery", "Event Calendar", "Forums/Community Boards" , "Other"],
+    //       maxOptions: 6,
+    //       title: "Functionality",
+    //       question: "What type of website are you planning to build?",
+    //       placeholder: "Select key features",
+    //     },
+    //     {
+    //       key: "accounts",
+    //       type: "buttons",
+    //       options: ["Yes", "No"],
+    //       title: "User accounts",
+    //       question: "Will your site require user accounts?",
+    //     },
+    //     {
+    //       key: "timeline",
+    //       type: "buttons",
+    //       Options: ["Less than a month", "1-2 months", "2-3 months", "6+ months"],
+    //       title: "Timeline",
+    //       question: "What is the approximate timeline for this project?",
+    //     },
+    //     {
+    //       key: "budget",
+    //       type: "range",
+    //       min: 0,
+    //       max: 500.000,
+    //       title: "Budget",
+    //       question: "What is the approximate budget for this project?",
+    //     },
+    //     {
+    //       key: "maintenance",
+    //       type: "buttons",
+    //       title: "Maintenance and Support",
+    //       Options: ["None", "Minimal", "Moderate", "Significant"],
+    //       question: "How much ongoing maintenance do you expect to need?",
+    //     }
+    //   ],
+    // },
+    // {
+    //   category: "About",
+    //   questions: [
+    //     {
+    //       key: "about",
+    //       type: "textarea",
+    //       placeholder: "Type here...",
+    //       optional: true,
+    //       title: "About",
+    //       instruction: "This is optional..",
+    //       question: "Here you can write details about yopur project that we might need to know.",
+    //       options: ["I have an existing project/website i wish to expand", "I want to create a new project/website", "I want create a new project/website based on a current one"],
+    //     },
+    //   ]
+    // },
+    // {
+    //   category: "Current project",
+    //   questions: [
+    //     {
+    //       key: "current",
+    //       type: "buttons",
+    //       Options: ["Yes", "No"],
+    //       title: "Current Project",
+    //       question: "Do you have a current project?",
+    //     },
+    //     {
+    //       key: "domain",
+    //       type: "textfield",
+    //       title: "Domain",
+    //       placeholder: "Enter domain...",
+    //       question: "Do you have a domain for the project?",
+    //       instruction: "This is optional..",
+    //       optional: true,
+    //     },
+    //     {
+    //       key: "hosting",
+    //       type: "textfield",
+    //       title: "Hosting",
+    //       placeholder: "Enter hosting service...",
+    //       question: "What hosting service are you using?",
+    //       instruction: "This is optional..",
+    //       optional: true,
+    //     }
+    //   ]
+    // },
+    // {
+    //   category: "Content",
+    //   questions: [
+    //     {
+    //       key: "content",
+    //       type: "buttons",
+    //       Options: ["Yes", "No"],
+    //       title: "Content",
+    //       question: "Do you have any existing content?",
+    //     },
+    //     {
+    //       key: "updating",
+    //       type: "buttons",
+    //       title: "Content update",
+    //       Options: ["Often", "Never","Every 1-2 months", "Every 2-3 months", "Every 3-6 months"],
+    //       question: "How often will the content be updated?",
+    //     },
+    //   ]
+    // },
+    // {
+    //   category: "CMS",
+    //   questions: [
+    //     {
+    //       key: "cms",
+    //       type: "buttons",
+    //       Options: ["Yes", "No"],
+    //       title: "CMS",
+    //       question: "Do you have an existing cms?",
+    //     },
+    //     {
+    //       key: "usage",
+    //       type: "buttons",
+    //       Options: ["Yes", "No"],
+    //       title: "CMS Usage",
+    //       question: "Is there any particular cms you would want to use?",
+    //     },
+    //     {
+    //       key: "selectedCms",
+    //       type: "textfield",
+    //       title: "Select CMS",
+    //       question: "Please enter youre desired cms",
+    //       placeholder: "Enter cms...",
+    //     }
+    //   ]
+    // },
+    // {
+    //   category: "Third-party",
+    //   questions: [
+    //     {
+    //       key: "thirdParty",
+    //       type: "textarea",
+    //       placeholder: "(e.g., payment gateways, CRM systems, hubspots)",
+    //       optional: true,
+    //       title: "About",
+    //       instruction: "This is optional..",
+    //       question: "Are there any integrations required with third-party services?",
+    //     },
+    //   ]
+    // }
+    
+    
+
+
+
+
+
+
+
+
     /* {
       category: "Project",
       questions: [
@@ -47,53 +204,6 @@ export const QUESTIONS = [
         },
       ],
     }, */
-    {
-      category: "Type",
-      questions: [
-        {
-          key: "type",
-          type: "dropdown",
-          options: ["Blog", "E-commerce", "Booking System", "Protfolio Gallery", "Event Calendar", "Forums/Community Boards" , "Other"],
-          maxOptions: 6,
-          title: "Functionality",
-          question: "What type of website are you planning to build?",
-          placeholder: "Select key features",
-        },
-        {
-          key: "accounts",
-          type: "buttons",
-          options: ["Yes", "No"],
-          title: "User accounts",
-          question: "Will your site require user accounts?",
-        },
-      ],
-    },
-    {
-      category: "Timeline",
-      questions: [
-        {
-          key: "timeline",
-          type: "buttons",
-          Options: ["Less than a month", "1-2 months", "2-3 months", "6+ months"],
-          title: "Timeline",
-          question: "What is the approximate timeline for this project?",
-        },
-      ],
-    },
-    {
-      category: "Budget",
-      questions: [
-        {
-          key: "budget",
-          type: "range",
-          min: 0,
-          max: 500.000,
-          title: "Budget",
-          question: "What is the approximate budget for this project?",
-        },
-      ],
-    },
-
 
 
 
