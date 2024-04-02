@@ -10,21 +10,14 @@ import {
   useQuestionActions,
   useQuestionData,
 } from "../store/selectors";
-import { QUESTIONS_STATUS, useQuestionStore } from "../store/state";
+import { QUESTIONS_STATUS } from "../store/state";
 import Summary from "./summary";
 import { createAssignment } from "../api/assignments";
-import { useShallow } from "zustand/react/shallow";
 
 const Questions = () => {
   const { status } = useAppState();
   const { initState } = useQuestionActions();
-  const { questions, categoryIndex, questionIndex } = useQuestionStore(
-    useShallow(({ questions, categoryIndex, questionIndex }) => ({
-      questions,
-      categoryIndex,
-      questionIndex,
-    }))
-  );
+  const { questions, categoryIndex, questionIndex } = useQuestionData();
 
   console.log({ questionIndex, q: questions[questionIndex] });
 

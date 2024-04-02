@@ -86,6 +86,18 @@ function ConfirmationForm() {
   const { confirm } = useQuestionActions();
   const router = useRouter();
 
+  const handleDownload = async () => {
+    const res = await fetch('/api/summary');
+    const blob = await res.blob();
+    const url = window.URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'DfSyncSummary.pdf'; // Or the filename you sent from the server
+    document.body.appendChild(a);
+    a.click();
+    window.URL.revokeObjectURL(url);
+  };
+
   const confirmHandler = useCallback(async () => {
     const isSuccess = await confirm(satisfaction);
     if (isSuccess) {
@@ -127,7 +139,7 @@ function ConfirmationForm() {
       <div className="bg-indigo-500 w-full h-16 absolute bottom-0 left-0 flex justify-between items-center px-3">
         <button
           className="flex items-center gap-2 border border-CustomWhite rounded-md px-6 py-2 font-bold uppercase tracking-[2.8px] hover:bg-indigo-900 hover:bg-opacity-50"
-          onClick={confirmHandler}
+          onClick={handleDownload}
         > <Image width={18} height={18} src={downloadIcon} alt="Download Icon"/>
           {t("summary-download-button")}
         </button>
@@ -236,31 +248,34 @@ const SUMMARY_ASSIGNMENTS: { [key: string]: string } = {
   company_name: "Company Name",
   industry: "Industry",
   type: "Type",
-  accounts: "Accounts",
+  type_of_work: "Type Of Work",
+  audience: "Audience",
   timeline: "Timeline",
-  budget: "budget",
-  maintenance: "maintenance",
-  current: "Current",
+  specific_date: "Specific Date",
+  specific_date_input: "Specific Date Input",
+  budget: "Budget",
+  brief: "brief",
+  current_project: "Current Project",
   domain: "Domain",
   hosting: "Hosting",
   content: "Content",
   updating: "Updating",
   cms: "Cms",
   usage: "Usage",
-  selectedCms: "Selected Cms",
-  thirdParty: "Third-party",
-
-
-  /* business: "Business",
-  seniority: "Seniority",
-  location: "Location",
-  core_experience: "Core Experience",
-  niche_experience: "Niches Experience",
-  preferred_background: "Background Experience",
-  in_house_experience_preference: "In-house experience",
-  sector_experience: "Sectors",
-  languages: "Language Requirement",
-  urgency: "Urgency",
-  budget: "Budget",
-  visa_sponsorship: "Overseas visa", */
+  selected_cms: "Selected Cms",
+  third_party: "Third-party",
+  ecom: "E-commerce",
+  desired_ecom: "Desired E-commerce",
+  payment_services: "Payment Services",
+  template: "Template",
+  components_modules: "Components Modules",
+  accounts: "Accounts",
+  hosting_package: "Hosting Package",
+  seo: "SEO",
+  seo_marketing: "SEO Marketing",
+  maintenance: "maintenance",
+  internal_resources: "Internal Resources",
+  other: "Other",
+  refrences: "Refrences",
+  estimation: "Estimation",
 };

@@ -12,9 +12,9 @@ const Textarea = ({ setValue, placeholder }: TextareaProps) => {
     <div>
       <textarea
         ref={textAreaRef}
-        rows={1}
+        rows={5}
         cols={50}
-        className="w-full rounded-md border border-indigo-500 bg-white px-6 py-6 outline-none"
+        className="w-full rounded-md border border-indigo-500 bg-white text-CustomBlack px-6 py-6 outline-none"
         placeholder={placeholder}
         onBlur={() => {
           if (textAreaRef.current !== null) {

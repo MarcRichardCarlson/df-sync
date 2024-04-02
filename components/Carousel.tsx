@@ -2,8 +2,6 @@
 import { Carousel } from 'react-responsive-carousel';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import Image from 'next/image';
-import ArrowLeft from "../public/assets/IcBaselineKeyboardArrowLeft.svg";
-import ArrowRight from "../public/assets/IcBaselineKeyboardArrowRight.svg";
 import image1 from "../public/assets/amazon-web-services-2.svg";
 import image2 from "../public/assets/angular-icon-1.svg";
 import image3 from "../public/assets/azure-2.svg";
@@ -31,7 +29,8 @@ const SummaryCarousel = () => {
 
   return (
 
-    <Carousel className='w-full'>
+    <Carousel className='w-full flex flex-col gap-8
+    '>
       <Image src={image1} alt="crypto-now logo" style={{ objectFit: "contain", height: "80px", width: "80px"}} />
       <Image src={image2} alt="crypto-now logo" style={{ objectFit: "contain", height: "80px", width: "80px"}} />
       <Image src={image3} alt="crypto-now logo" style={{ objectFit: "contain", height: "80px", width: "80px"}} />

@@ -16,12 +16,12 @@ const Dot = ({ index, activeIndex, isTransitioning, title }: DotProps) => {
     useEffect(() => {
         /*Current dot*/
         if (index === activeIndex) {
-            setWrapperBarWidth(100);
+            setWrapperBarWidth(8);
             setWhiteBarStyle({ width: 32, backgroundColor: "#6366F1" });
             setTitleOpacity(1);
 
             if (isTransitioning) {
-                setWhiteBarStyle((prevStyle) => ({ ...prevStyle, width: 90 }));
+                setWhiteBarStyle((prevStyle) => ({ ...prevStyle, width: 32 }));
             }
         }
         /*Previous dots*/
@@ -33,7 +33,7 @@ const Dot = ({ index, activeIndex, isTransitioning, title }: DotProps) => {
         /*Comming dots*/
         else {
             setWrapperBarWidth(8);
-            setWhiteBarStyle({ width: 32 , backgroundColor: "#EEEDEB" });
+            setWhiteBarStyle({ width: 32, backgroundColor: "rgba(238, 237, 235, 0.5)" });
             setTitleOpacity(0);
         }
     }, [index, activeIndex, isTransitioning]);

@@ -51,10 +51,10 @@ function Button({ text, clickHandler, activeOptions }: ButtonProps) {
   return (
     <button
       className={classNames(
-        "group overflow-hidden !rounded-md text-left text-pre-title-link-small uppercase transition hover:border hover:border-bright-red hover:bg-gradient-border",
+        "group overflow-hidden !rounded-md text-left text-pre-title-link-small uppercase transition border border-transparent bg-opacity-10 bg-CustomWhite hover:bg-indigo-500 hover:bg-opacity-50",
         {
           "gradient-border": !isActive,
-          "border border-bright-red bg-gradient-border": isActive,
+          "border border-indigo-500": isActive,
         },
       )}
       onClick={() => clickHandler(text)}
@@ -62,7 +62,7 @@ function Button({ text, clickHandler, activeOptions }: ButtonProps) {
       <span
         className={classNames("inline-block w-full px-4 py-3", {
           "bg-gradient-border": !isActive,
-          "bg-bright-red/[0.15]": isActive,
+          "bg-indigo-500/[0.15] border border-indigo-500": isActive,
         })}
       >
         {text}

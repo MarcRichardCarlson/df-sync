@@ -19,6 +19,8 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "ttcommons", sans-serif;
+  scrollbar-width: thin; /* "auto" or "thin" */
+  scrollbar-color: #403f3f #000; /* thumb color and transparent track color */
 }
 
 /*Global styles*/
@@ -28,7 +30,7 @@ body {
   background-size: cover;
   background-position: center;
   height: screen;
-  width: 100vw;
+  width: 100%
 }
 
 @layer utilities {

@@ -93,7 +93,7 @@ const DropDown: React.FC<DropDownProps> = ({ setValue, options, placeholder, max
       >
         <Listbox.Options
           static
-          className="absolute z-10 max-h-[40svh] w-full overflow-y-auto rounded bg-white text-link-medium text-dark-purple"
+          className="absolute z-10 max-h-[40svh] w-full overflow-y-auto rounded bg-CustomWhite text-CustomBlack text-link-medium"
         >
           {options.map(option => (
             <Listbox.Option
@@ -122,7 +122,7 @@ interface DropDownItemProps {
 const DropDownItem: React.FC<DropDownItemProps> = ({ open, text, onClick }) => {
   return (
     <span
-      className="inline-flex items-center justify-between space-x-2 rounded-3xl bg-white px-4 py-2 text-link-medium text-bright-red"
+      className="inline-flex items-center justify-between space-x-2 rounded-md bg-white text-CustomBlack px-4 py-2 text-link-medium text-bright-red"
       onClick={onClick}
       >
       <span>{text}</span>

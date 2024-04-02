@@ -7,23 +7,25 @@ import YDivider from "../YDivider";
 import Link from "next/dist/client/link";
 import { useCurrentLocale } from "@/hooks/locale";
 import { useTranslation } from "@/i18n/client";
+import Image from "next/image";
+import NavbarLogo from "../../public/assets/PhArrowsCounterClockwiseBold.svg";
 
 const Navbar = () => {
-  // Retrieve the initially selected tab from localStorage 
+  // Retrieve the initially selected tab from localStorage
   // or default to the first tab if not present
   const [selectedTab, setSelectedTab] = useState(() => {
     // Attempt to get the saved tab label from localStorage
-    const savedTabLabel = localStorage.getItem('selectedTab');
+    const savedTabLabel = localStorage.getItem("selectedTab");
     // If there's a saved tab, return that tab object from your tabs array
     if (savedTabLabel) {
-      return tabs.find(tab => tab.label === savedTabLabel) || tabs[0];
+      return tabs.find((tab) => tab.label === savedTabLabel) || tabs[0];
     }
     // Default to the first tab if nothing is saved
     return tabs[0];
   });
 
   useEffect(() => {
-    localStorage.setItem('selectedTab', selectedTab.label);
+    localStorage.setItem("selectedTab", selectedTab.label);
   }, [selectedTab]);
 
   const locale = useCurrentLocale();
@@ -32,10 +34,11 @@ const Navbar = () => {
   return (
     <div className="absolute top-0 w-full flex items-center bg-transparent py-12 px-6 md:px-24 z-50">
       <a className="flex items-center space-x-3 rtl:space-x-reverse">
-        <img
-          src="https://flowbite.com/docs/images/logo.svg"
-          className="h-8"
+        <Image
+          src={NavbarLogo}
+          className="h-8 w-8"
           alt="Digital fans Logo"
+          style={{ objectFit: "cover", filter: "brightness(0) invert(1)" }}
         />
         <span className="self-center text-3xl whitespace-nowrap text-CustomWhite font-ttcommons font-semibold">
           DF Sync
@@ -51,7 +54,9 @@ const Navbar = () => {
               } font-ttcommons text-CustomWhite relative cursor-pointer text-lg hover:text-CustomHover`}
               onClick={() => setSelectedTab(tab)}
             >
-              <Link href={tab.path} className="p-2">{t(tab.label)}</Link>
+              <Link href={tab.path} className="p-2">
+                {t(tab.label)}
+              </Link>
 
               {tab === selectedTab ? (
                 <motion.div
