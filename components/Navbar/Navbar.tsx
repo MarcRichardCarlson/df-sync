@@ -41,27 +41,29 @@ const Navbar: React.FC = () => {
   return (
     <div className="absolute top-0 w-full flex items-center bg-transparent py-12 px-6 md:px-24 z-50">
       <a className="flex items-center space-x-3 rtl:space-x-reverse">
-        <Image
-          src={NavbarLogo}
-          className="h-8 w-8"
-          alt="Digital fans Logo"
-          style={{ objectFit: "cover", filter: "brightness(0) invert(1)" }}
-        />
-        <span className="self-center text-3xl whitespace-nowrap text-CustomWhite font-ttcommons font-semibold">
+        <div className="w-4 h-4 md:h-8 md:w-8 hidden sm:block">
+          <Image
+            src={NavbarLogo}
+            className="w-4 h-4 md:h-8 md:w-8"
+            alt="Digital fans Logo"
+            style={{ objectFit: "cover", filter: "brightness(0) invert(1)" }}
+          />
+        </div>
+        <span className="self-center text-lg sm:text-xl  md:text-2xl lg:text-3xl whitespace-nowrap text-CustomWhite font-ttcommons font-semibold">
           DF Sync
         </span>
       </a>
-      <nav className="w-full flex justify-end items-center gap-8">
-        <ul className="flex justify-between items-center gap-8">
+      <nav className="w-full flex justify-end items-center gap-4 sm:gap-8">
+        <ul className="flex justify-between items-center gap-4 sm:gap-8">
           {tabs.map((tab) => (
             <li
               key={`${locale}-${tab.label}`}
               className={`${
                 tab === selectedTab ? "selected" : ""
-              } font-ttcommons text-CustomWhite relative cursor-pointer text-lg hover:text-CustomHover`}
+              } font-ttcommons text-CustomWhite relative cursor-pointer text-md md:text-lg hover:text-CustomHover`}
               onClick={() => setSelectedTab(tab)}
             >
-              <Link href={tab.path} className="p-2">
+              <Link href={tab.path} className="p-0 md:p-2">
                 {t(tab.label)}
               </Link>
 
@@ -74,23 +76,27 @@ const Navbar: React.FC = () => {
             </li>
           ))}
         </ul>
-        <YDivider />
-        <Link
-          href={selectedTab.path}
-          className="text-CustomWhite cursor-pointer hover:text-CustomHover"
-        >
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={selectedTab ? selectedTab.label : "empty"}
-              initial={{ y: 10, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              exit={{ y: -10, opacity: 0 }}
-              transition={{ duration: 0.1 }}
-            >
-              {selectedTab ? selectedTab.icon : ""}
-            </motion.div>
-          </AnimatePresence>
-        </Link>
+        <div className="hidden sm:block">
+          <YDivider />
+        </div>
+        <div className="hidden sm:block">
+          <Link
+            href={selectedTab.path}
+            className="w-6 h-6 md:w-8 md:h-8 text-CustomWhite cursor-pointer hover:text-CustomHover"
+          >
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={selectedTab ? selectedTab.label : "empty"}
+                initial={{ y: 10, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                exit={{ y: -10, opacity: 0 }}
+                transition={{ duration: 0.1 }}
+              >
+                {selectedTab ? selectedTab.icon : ""}
+              </motion.div>
+            </AnimatePresence>
+          </Link>
+        </div>
       </nav>
     </div>
   );

@@ -51,20 +51,21 @@
     "contact-icon-email": "Email:",
     "contact-icon-email-link": "marc@digitalfans.se",
     "contact-icon-instagram": "Instagram:",
-    "contact-icon-instagram-link": "https://www.instagram.com/marcrcarlson",
+    "contact-icon-instagram-link": "www.instagram.com",
     "contact-icon-facebook": "Facebook:",
-    "contact-icon-facebook-link": "https://www.facebook.com/marc.carlson/",
+    "contact-icon-facebook-link": "www.facebook.com",
     "contact-icon-linkedin": "LinkedIn:",
-    "contact-icon-linkedin-link": "https://www.linkedin.com/marcrcarlson",
+    "contact-icon-linkedin-link": "www.linkedin.com",
     "contact-icon-github": "GitHub:",
-    "contact-icon-github-link": "https://github.com/Marccarlson117",
+    "contact-icon-github-link": "github.com",
 
-
+    "question-field-error": "Fyll i alla obligatoriska fält",
     "question-btn": "Nästa",
     "question-also": "Också,",
     "question-enter": "Enter ↵",
     "question-works": "fungerar.",
 
+    "question-name-category": "Information",
     "question-name-title": "Välkommen",
     "question-name-text": "Vänligen ange ditt fullständiga namn",
     "question-name-placeholder": "Ange fullständigt namn",
@@ -73,6 +74,7 @@
     "question-company_name-text": "Vänligen ange ditt företagsnamn",
     "question-company_name-placeholder": "Ange företagsnamn",
 
+    "question-industry-category": "Verksamhetens natur",
     "question-industry-title": "Bransch",
     "question-industry-text": "Vilken bransch verkar du inom?",
     "question-industry-instruction": "Du kan välja flera alternativ",
@@ -80,6 +82,7 @@
     "question-industry-options": ["Jordbruk", "Arkitektur", "Konst och Underhållning", "Fordon", "Bioteknik", "Bygg", "Konsult", "Konsumentvaror", "Utbildning", "Energi", "Ingenjörskonst", "Miljö", "Mode", "Finans", "Livsmedel & Dryck", "Regering", "Hälsovård", "Hotell och Turism", "Informationsteknologi", "Försäkring", "Juridik", "Tillverkning", "Marknadsföring", "Media", "Ideellt", "Farmaceutiska", "Fastighet", "Detaljhandel", "Programvara", "Sport", "Telekommunikation", "Transport", "Resor", "Försörjning", "Annat"],
 
 
+    "question-type-category": "Projekt",
     "question-type-title": "Funktionalitet",
     "question-type-placeholder": "Välj huvudfunktioner",
     "question-type-text": "Vilken typ av webbplats planerar du att bygga?",
@@ -109,11 +112,13 @@
     "question-budget-title": "Budget",
     "question-budget-text": "Vilken är den ungefärliga budgeten för detta projekt?",
 
+    "question-brief-category": "Sammanfattning",
     "question-brief-title": "En kort sammanfattning",
     "question-brief-placeholder": "Skriv här..",
     "question-brief-text": "Vänligen förklara lite om det aktuella projektet",
     "question-brief-instruction": "Detta är frivilligt..",
 
+    "question-current_project-category": "Nuvarande projekt",
     "question-current_project-title": "Aktuellt projekt",
     "question-current_project-text": "Har du en befintlig webbplats/projekt?",
     "question-current_project-options": ["Ja", "Nej"],
@@ -128,6 +133,7 @@
     "question-hosting-text": "Vilken webbhotellstjänst använder du?",
     "question-hosting-instruction": "Detta är frivilligt..",
 
+    "question-content-category": "Innehåll",
     "question-content-title": "Aktuellt innehåll",
     "question-content-text": "Har du en befintlig webbplats/projekt?",
     "question-content-options": ["Ja", "Nej"],
@@ -136,6 +142,7 @@
     "question-updating-text": "Hur ofta kommer innehållet på sidan/projektet att uppdateras?",
     "question-updating-options": ["Mycket ofta","Varje 1-2 månader", "Varje 2-3 månader", "Varje 3-6 månader", "Aldrig"],
 
+    "question-cms-category": "CMS",
     "question-cms-title": "CMS",
     "question-cms-text": "Har du redan ett befintligt cms?",
     "question-cms-options": ["Ja", "Nej"],
@@ -148,11 +155,13 @@
     "question-selected_cms-placeholder": "Ange här...",
     "question-selected_cms-text": "Finns det något specifikt cms du skulle vilja använda?",
 
-    "question-third_party-title": "Om",
+    "question-third_party-category": "Tredjepart",
+    "question-third_party-title": "Tredjepart",
     "question-third_party-text": "Krävs det integrationer med tredjepartstjänster?",
     "question-third_party-placeholder": "(t.ex., betalningsgateways, CRM-system, hubspots)",
     "question-third_party-instruction": "Detta är frivilligt..",
 
+    "question-ecom-category": "E-handel",
     "question-ecom-title": "E-handel",
     "question-ecom-text": "Vilken e-handelsplattform använder du?",
     "question-ecom-placeholder": "Skriv här..",
@@ -165,6 +174,7 @@
     "question-payment_services-text": "Vilken betalningstjänst vill du använda?",
     "question-payment_services-placeholder": "Skriv här..",
 
+    "question-template-category": "Webbplats",
     "question-template-title": "Sidomallar",
     "question-template-text": "Vad är det ungefärliga antalet sidor/mallar för denna webbplats?",
 
@@ -175,6 +185,7 @@
     "question-accounts-text": "Kommer din webbplats att kräva användarkonton?",
     "question-accounts-options": ["Ja", "Nej"],
 
+    "question-hosting_package-category": "Packet",
     "question-hosting_package-title": "Webbhotellspaket",
     "question-hosting_package-text": "Vill du inkludera ett webbhotellspaket?",
     "question-hosting_package-options": ["Ja", "Nej"],
@@ -187,6 +198,7 @@
     "question-seo_marketing-text": "Har du redan en befintlig SEO- & eller marknadsföringshantering?",
     "question-seo_marketing-placeholder": "Skriv här..",
 
+    "question-maintenance-category": "Underhåll",
     "question-maintenance-title": "Underhåll och Support",
     "question-maintenance-text": "Kommer du att behöva kontinuerligt underhåll och support efter att webbplatsen har lanserats?",
     "question-maintenance-options": ["Inget", "Minimalt", "Måttligt", "Betydande"],
@@ -195,7 +207,8 @@
     "question-internal_resources-text": "Har du interna resurser tillgängliga för webbplatsunderhåll eller kommer du att behöva hjälp med detta?",
     "question-internal_resources-placeholder": "Skriv här..",
 
-    "question-other-title": "Andra",
+    "question-other-category": "Annat",
+    "question-other-title": "Annat",
     "question-other-text": "Här har du möjlighet att lägga till vad du vill om det behövs. Lägg till vad du vill",
     "question-other-placeholder": "Skriv här...",
     "question-other-instruction": "Detta är frivilligt..",
@@ -204,7 +217,8 @@
     "question-refrences-text": "Har du några referenser?",
     "question-refrences-placeholder": "Skriv här...",
 
-    "question-estimation-title": "Grov uppskattning",
+    "question-estimation-category": "Estimering",
+    "question-estimation-title": "Ungfärlig uppskattning",
     "question-estimation-text": "Behöver du en grov uppskattning av projektet?",
     "question-estimation-options": ["Ja", "Nej"]
 }

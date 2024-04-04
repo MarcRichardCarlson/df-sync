@@ -29,7 +29,7 @@ const TextField: React.FC<TextFieldProps> = ({ setValue, placeholder }) => {
       <input
         type="text"
         ref={inputRef}
-        className="w-full rounded-md border border-indigo-500 text-CustomBlack text-lg bg-White bg-opacity-50 px-6 py-6 outline-none"
+        className="w-full rounded-md border border-indigo-500 text-CustomBlack text-md md:text-lg bg-White bg-opacity-50 p-4 md:p-6 outline-none"
         placeholder={t(placeholder)}
         onChange={changeHandler}
       />

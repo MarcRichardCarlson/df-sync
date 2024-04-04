@@ -1,8 +1,8 @@
 /*buttons, textarea, range, dropdown, options, textfield*/
 
 export const QUESTIONS = [
-  /* {
-    category: "Information",
+  {
+    category: "question-name-category",
     questions: [
       {
         key: "name",
@@ -19,9 +19,9 @@ export const QUESTIONS = [
         placeholder: "question-company_name-placeholder",
       },
     ],
-  }, */
+  },
   {
-    category: "Nature of Business",
+    category: "question-industry-category",
     questions: [
       {
         key: "industry",
@@ -35,8 +35,8 @@ export const QUESTIONS = [
       },
     ],
   },
-  /* {
-    category: "Project",
+  {
+    category: "question-type-category",
     questions: [
       {
         key: "type",
@@ -96,9 +96,9 @@ export const QUESTIONS = [
         question: "What is the approximate budget for this project?",
       }
     ],
-  }, */
+  },
   {
-    category: "Brief",
+    category: "question-brief-category",
     questions: [
       {
         key: "brief",
@@ -112,7 +112,7 @@ export const QUESTIONS = [
     ]
   },
   {
-    category: "Current project",
+    category: "question-current_project-category",
     questions: [
       {
         key: "current_project",
@@ -142,7 +142,7 @@ export const QUESTIONS = [
     ]
   },
   {
-    category: "Content",
+    category: "question-content-category",
     questions: [
       {
         key: "content",
@@ -161,7 +161,7 @@ export const QUESTIONS = [
     ]
   },
   {
-    category: "CMS",
+    category: "question-cms-category",
     questions: [
       {
         key: "cms",
@@ -187,7 +187,7 @@ export const QUESTIONS = [
     ]
   },
   {
-    category: "Third-party",
+    category: "question-third_party-category",
     questions: [
       {
         key: "third_party",
@@ -201,7 +201,7 @@ export const QUESTIONS = [
     ]
   },
   {
-    category: "ecom",
+    category: "question-ecom-category",
     questions: [
       {
         key: "ecom",
@@ -255,7 +255,7 @@ export const QUESTIONS = [
     ]
   },
   {
-    category: "Packages",
+    category: "question-hosting_package-category",
     questions: [
       {
         key: "hosting_package",
@@ -281,7 +281,7 @@ export const QUESTIONS = [
     ]
   },
   {
-    category: "Maintenance",
+    category: "question-maintenance-category",
     questions: [
       {
         key: "maintenance",
@@ -300,7 +300,7 @@ export const QUESTIONS = [
     ]
   },
   {
-    category: "Other",
+    category: "question-other-category",
     questions: [
       {
         key: "other",
@@ -323,7 +323,7 @@ export const QUESTIONS = [
     ]
   },
   {
-    category: "Estimation",
+    category: "question-estimation-category",
     questions: [
       {
         key: "estimation",

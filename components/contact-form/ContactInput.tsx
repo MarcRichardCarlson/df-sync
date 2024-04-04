@@ -30,11 +30,11 @@ const ContactInput = () => {
           ref={fileInputRef}
           className="hidden"
         />
-        <div className="flex justify-between items-center w-full p-4 border border-indigo-500 rounded-md cursor-pointer">
+        <div className="flex justify-between items-center w-full px-4 py-2 border border-indigo-500 rounded-md cursor-pointer">
           <div className='flex gap-4 items-center'>
             <button
               onClick={handleButtonClick}
-              className="py-2 px-4 bg-CustomWhite bg-opacity-10 rounded-md hover:bg-opacity-30"
+              className="px-4 py-2 border border-transparent bg-CustomWhite bg-opacity-10 rounded-md hover:bg-opacity-0 hover:border hover:border-indigo-500"
             >
               {t("contact-input-file-btn")}
             </button>
@@ -42,7 +42,7 @@ const ContactInput = () => {
           </div>
           <Image
             onClick={handleButtonClick}
-            className="w-8 h-8 rounded-md"
+            className="w-6 h-6 rounded-md"
             src={ContactIconPapperclip}
             alt="Share Icon"
             style={{ objectFit: "cover", filter: "brightness(0) invert(1)" }}

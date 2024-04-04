@@ -44,7 +44,7 @@ export default function AppLocaleSwitcher() {
           <button
             key={locale}
             className={twMerge(
-              "text-CustomWhite relative cursor-pointer text-lg hover:text-CustomHover uppercase font-ttcommons",
+              "text-CustomWhite relative cursor-pointer text-base md:text-lg hover:text-CustomHover uppercase font-ttcommons",
               locale === activeLocale && "selected"
             )}
             onClick={handleClick}

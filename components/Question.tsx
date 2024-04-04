@@ -10,6 +10,8 @@ import TextField from "./question-form/TextField";
 import Button from "./Button";
 import { useCurrentLocale } from "@/hooks/locale";
 import { useTranslation } from "@/i18n/client";
+import { useQuestionState } from '@/store/selectors';
+import ProgressDots from "../components/Footer/ProgressDots";
 
 interface QuestionProps {
   type: "range" | "dropdown" | "options" | "buttons" | "textarea" | "textfield";
@@ -49,6 +51,7 @@ const Question: React.FC<QuestionProps> = ({
   const { next } = useQuestionActions();
   const locale = useCurrentLocale();
   const { t } = useTranslation(locale, 'translation');
+  const { showDots } = useQuestionState();
 
   useEffect(() => {
     const keyPressHandler = (e: KeyboardEvent) => {
@@ -134,53 +137,59 @@ const Question: React.FC<QuestionProps> = ({
   }
 
   return (
-    <QuestionsWrapper className="max-w-[750px] px-[50px]">
-      {/* Category */}
-      <span className="font-ttcommons text-xl text-pre-title-link-small uppercase text-CustomWhite">
-        {t(title)}
-      </span>
+    <>
+      <QuestionsWrapper className="max-w-[750px] px-[50px]">
+        {/* Category */}
+        <span className="font-ttcommons text-xl text-pre-title-link-small uppercase text-CustomWhite">
+          {t(title)}
+        </span>
 
-      {/* Actual Question / Message */}
-      <p className="font-ttcommons text-CustomWhite mt-1 text-header-4">
-        {t(question)}
-      </p>
+        {/* Actual Question / Message */}
+        <p className="font-ttcommons text-CustomWhite mt-1 text-header-4">
+          {t(question)}
+        </p>
 
-      {instruction && (
-        <span className="text-body-small text-CustomWhite">{instruction}</span>
-      )}
-
-      {/* Field */}
-      <div className="font-ttcommons text-CustomWhite relative mb-12 mt-6">
-        {questionField}
-
-        {showError && (
-          <span className="font-ttcommons absolute -bottom-6 left-0 z-0 !m-0 text-[12px] leading-[20px] text-CustomWhite">
-            Please answer all required fields
-          </span>
+        {instruction && (
+          <span className="text-body-small text-CustomWhite">{t(instruction)}</span>
         )}
-      </div>
 
-      {/* OK Button */}
-      <div className="flex items-center space-x-4">
-        <Button
-          label={t("question-btn")}
-          className="font-ttcommons"
-          onClick={() => {
-            if (optional || answer?.length > 0) {
-              setShowError(false);
-              next(answer);
-            } else {
-              setShowError(true);
-            }
-          }}
-        />
-        <div className="font-ttcommons text-CustomWhite text-[12px] leading-[20px]">
-          <span className="mr-1 font-light">{t("question-also")}</span>
-          <span className="mr-1 text-lg">{t("question-enter")}</span>
-          <span className="font-light">{t("question-works")}</span>
+        {/* Field */}
+        <div className="font-ttcommons text-CustomWhite relative mb-12 mt-6">
+          {questionField}
+
+          {showError && (
+            <span className="font-ttcommons absolute -bottom-6 left-0 z-0 !m-0 text-[12px] leading-[20px] text-CustomWhite">
+              {t("question-field-error")}
+            </span>
+          )}
         </div>
+
+        {/* Next Button */}
+        <div className="flex items-center space-x-4">
+          <Button
+            label={t("question-btn")}
+            className="font-ttcommons"
+            onClick={() => {
+              if (optional || answer?.length > 0) {
+                setShowError(false);
+                next(answer);
+              } else {
+                setShowError(true);
+              }
+            }}
+          />
+          <div className="font-ttcommons text-CustomWhite text-[12px] leading-[20px]">
+            <span className="mr-1 font-light">{t("question-also")}</span>
+            <span className="mr-1 text-md md:text-lg">{t("question-enter")}</span>
+            <span className="font-light">{t("question-works")}</span>
+          </div>
+        </div>
+      </QuestionsWrapper>
+
+      <div className="w-full px-6 md:p-24 absolute bottom-24 left-0">
+        {showDots && <ProgressDots />}
       </div>
-    </QuestionsWrapper>
+    </>
   );
 };
 

@@ -18,75 +18,75 @@ const AboutLayout = () => {
   const { t } = useTranslation(locale, "translation");
 
   return (
-    <div className="w-full h-full flex flex-col gap-4 md:gap-6 pb-16 md:pb-36">
-        <div className="flex flex-col gap-4 md:gap-6 md:flex md:flex-row">
-            <div className="overflow-hidden flex flex-col gap-0 border border-indigo-500 rounded-md bg-CustomWhite bg-opacity-10 text-CustomWhite w-full md:w-3/5 p-6 md:p-8 md:gap-4">
-                <span className="text-2xl lg:text-3xl font-semibold text-CustomWhite">
-                    {t("about-blurb-header")}
-                </span>
-                <TextWrapper>
-                    <span className="text-lg ">{t("about-blurb-text")}</span>
-                </TextWrapper>
-            </div>
+    <div className="w-full h-full flex flex-col gap-4 md:gap-6">
+      <div className="flex flex-col gap-4 md:gap-6 md:flex md:flex-row">
+          <div className="overflow-hidden flex flex-col gap-0 border border-indigo-500 rounded-md bg-CustomWhite bg-opacity-10 text-CustomWhite w-full md:w-3/5 py-4 px-6 md:p-8 md:gap-4">
+              <span className="text-2xl lg:text-3xl font-semibold text-CustomWhite">
+                  {t("about-blurb-header")}
+              </span>
+              <TextWrapper>
+                  <span className="text-md md:text-lg">{t("about-blurb-text")}</span>
+              </TextWrapper>
+          </div>
 
-            <div className="overflow-hidden w-full flex flex-col gap-4 border border-indigo-500 rounded-md bg-CustomWhite bg-opacity-10 px-8 py-8 text-CustomWhite">
-                <span className="text-2xl font-semibold text-CustomWhite">
-                    {t("about-overview-header")}
-                </span>
-                <TextWrapper>
-                <span className="text-lg">{t("about-overview-text")}</span>
-                </TextWrapper>
-            </div>
-        </div>
+          <div className="overflow-hidden w-full flex flex-col gap-4 border border-indigo-500 rounded-md bg-CustomWhite bg-opacity-10 p-6 md:p-8 text-CustomWhite">
+              <span className="text-2xl font-semibold text-CustomWhite">
+                  {t("about-overview-header")}
+              </span>
+              <TextWrapper>
+                <span className="text-md md:text-lg">{t("about-overview-text")}</span>
+              </TextWrapper>
+          </div>
+      </div>
 
-        <div className="flex flex-col w-full gap-4 md:gap-6 lg:flex-row">
-            <Image
-            className="w-full lg:w-1/2 rounded-md"
-            src={PlaceholderImage}
-            alt="Share Icon"
-            style={{ objectFit: "cover"}}
-            />
+      <div className="flex flex-col w-full gap-4 md:gap-6 lg:flex-row">
+          <Image
+          className="w-full lg:w-1/2 rounded-md"
+          src={PlaceholderImage}
+          alt="Share Icon"
+          style={{ objectFit: "cover"}}
+          />
 
-            <div className="overflow-hidden w-full flex flex-col gap-4 border border-indigo-500 rounded-md bg-CustomWhite bg-opacity-10 p-6 md:p-8 text-CustomWhite">
-            <span className="flex gap-6 text-3xl font-semibold text-CustomWhite">
+          <div className="overflow-hidden w-full flex flex-col gap-4 border border-indigo-500 rounded-md bg-CustomWhite bg-opacity-10 p-6 md:p-8 text-CustomWhite">
+            <span className="flex gap-4 md:gap-6 text-2xl md:text-3xl font-semibold text-CustomWhite">
                 {t("about-description-header")}
             </span>
             <div className="h-1/3">
                 <TextWrapper>
-                <span className="text-lg">{t("about-description-text")}</span>
+                <span className="text-md md:text-lg">{t("about-description-text")}</span>
                 </TextWrapper>
             </div>
             <div className="h-1/3">
                 <TextWrapper>
-                <span className="text-lg">{t("about-description-text-2")}</span>
+                <span className="text-md md:text-lg">{t("about-description-text-2")}</span>
                 </TextWrapper>
             </div>
             <div className="h-1/3">
                 <TextWrapper>
-                <span className="text-lg">{t("about-description-text-3")}</span>
+                <span className="text-md md:text-lg">{t("about-description-text-3")}</span>
                 </TextWrapper>
             </div>
-            </div>
-        </div>
+          </div>
+      </div>
 
       <div className="flex border border-indigo-500 rounded-md bg-CustomWhite bg-opacity-10 py-0 md:py-6 text-CustomWhite">
         <MarqueeScroll />
       </div>
 
       <div className="flex flex-col gap-4 lg:flex-row md:gap-6">
-        <div className="w-full lg:w-1/2 flex flex-col gap-4 border border-indigo-500 rounded-md bg-CustomWhite bg-opacity-10 px-8 py-12 text-CustomWhite">
-            <span className="text-3xl font-semibold text-CustomWhite">
+        <div className="w-full lg:w-1/2 flex flex-col gap-4 border border-indigo-500 rounded-md bg-CustomWhite bg-opacity-10 p-6 md:p-8 text-CustomWhite">
+            <span className="text-2xl md:text-3xl font-semibold text-CustomWhite">
                 {t("about-additional-header")}
             </span>
             <TextWrapper>
-              <span className="text-lg">{t("about-additional-text")}</span>
+              <span className="text-md md:text-lg">{t("about-additional-text")}</span>
             </TextWrapper>
 
-            <span className="text-2xl font-semibold text-CustomWhite">
+            <span className="text-xl md:text-2xl font-semibold text-CustomWhite">
                 {t("about-additional-header-2")}
             </span>
             <TextWrapper>
-              <span className="text-lg">{t("about-additional-text-2")}</span>
+              <span className="text-md md:text-lg">{t("about-additional-text-2")}</span>
             </TextWrapper>
         </div>
 
