@@ -60,24 +60,24 @@ const ContactLayout = () => {
             <div className="flex flex-col gap-4 sm:gap-6 md:gap-8 w-full">
                 <div className="flex flex-col gap-2">
                     <span>{t("contact-title-name")}</span>
-                    <input className="w-full p-3 rounded-md text-CustomBlack" type="text" placeholder={t("contact-placeholder-name")} />
+                    <input className="w-full p-3 rounded-md text-CustomWhite bg-CustomWhite bg-opacity-15" type="text" placeholder={t("contact-placeholder-name")} />
                 </div>
 
                 <div className="flex flex-col gap-2">    
                     <span>{t("contact-title-email")}</span>
-                    <input className="w-full p-3 rounded-md text-CustomBlack" type="email" placeholder={t("contact-placeholder-email")} />
+                    <input className="w-full p-3 rounded-md text-CustomWhite bg-CustomWhite bg-opacity-15" type="email" placeholder={t("contact-placeholder-email")} />
                 </div>
 
                 <div className="flex flex-col gap-2">
                     <span>{t("contact-title-subject")}</span>
-                    <input className="w-full p-3 rounded-md text-CustomBlack" type="text" placeholder={t("contact-placeholder-subject")} />
+                    <input className="w-full p-3 rounded-md text-CustomWhite bg-CustomWhite bg-opacity-15" type="text" placeholder={t("contact-placeholder-subject")} />
                 </div>
             </div>
 
             <div className="flex flex-col gap-8 w-full">
                 <div className="flex flex-col gap-2 min-h-48">
                     <span>{t("contact-title-textarea")}</span>
-                    <textarea className="w-full p-3 rounded-md text-CustomBlack" placeholder={t("contact-placeholder-textarea")} rows={5}></textarea>
+                    <textarea className="w-full p-3 rounded-md text-CustomWhite bg-CustomWhite bg-opacity-15" placeholder={t("contact-placeholder-textarea")} rows={5}></textarea>
                 </div>
 
                 <ContactInput />
