@@ -1,4 +1,6 @@
 import { useCallback, useRef } from "react"
+import { useCurrentLocale } from "@/hooks/locale";
+import { useTranslation } from "@/i18n/client";
 
 interface TextFieldProps {
   setValue: (value: string) => void;
@@ -8,6 +10,8 @@ interface TextFieldProps {
 const TextField: React.FC<TextFieldProps> = ({ setValue, placeholder }) => {
   const inputRef = useRef<HTMLInputElement>(null);
   const timer = useRef<NodeJS.Timeout | null>(null);
+  const locale = useCurrentLocale();
+  const { t } = useTranslation(locale, 'translation');
 
   const changeHandler = useCallback(() => {
     if (timer.current) {
@@ -26,7 +30,7 @@ const TextField: React.FC<TextFieldProps> = ({ setValue, placeholder }) => {
         type="text"
         ref={inputRef}
         className="w-full rounded-md border border-indigo-500 text-CustomBlack text-lg bg-White bg-opacity-50 px-6 py-6 outline-none"
-        placeholder={placeholder}
+        placeholder={t(placeholder)}
         onChange={changeHandler}
       />
     </div>

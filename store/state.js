@@ -14,6 +14,7 @@ export const useAppStore = create(() => ({
   status: QUESTIONS_STATUS.LOADING,
 }))
 
+
 export const useQuestionStore = create(
   immer((set, get) => ({
     assignmentId: null,
@@ -24,6 +25,7 @@ export const useQuestionStore = create(
     assignmentDetails: {},
     showDots: false,
     next: async answer => {
+      
       const {
         assignmentId,
         questions,
@@ -33,7 +35,7 @@ export const useQuestionStore = create(
       } = get()
       const status = useAppStore.getState().status
       let newStatus = status
-
+      
       // QUESTIONS_STATUS.QUESTIONS
       if (status === QUESTIONS_STATUS.QUESTIONS) {
         const currentQuestion = questions[categoryIndex].questions[questionIndex]

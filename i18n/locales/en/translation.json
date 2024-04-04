@@ -60,5 +60,154 @@
     "contact-icon-linkedin": "LinkedIn:",
     "contact-icon-linkedin-link": "https://www.linkedin.com/marcrcarlson",
     "contact-icon-github": "GitHub:",
-    "contact-icon-github-link": "https://github.com/Marccarlson117"
+    "contact-icon-github-link": "https://github.com/Marccarlson117",
+
+
+    "question-btn": "Next",
+    "question-also": "Also",
+    "question-enter": "Enter ↵",
+    "question-works": "works.",
+
+    "question-name-title": "Welcome",
+    "question-name-text": "Please enter your full name",
+    "question-name-placeholder": "Enter full name",
+
+    "question-company_name-title": "Company Name",
+    "question-company_name-text": "Please enter your company name",
+    "question-company_name-placeholder": "Enter company name",
+
+    "question-industry-title": "Industry",
+    "question-industry-text": "What industry do you operate in? ",
+    "question-industry-instruction": "You can select multiple options",
+    "question-industry-placeholder": "Select your industry",
+    "question-industry-options": ["Agriculture", "Architecture", "Arts and Entertainment", "Automotive", "Biotechnology", "Construction", "Consulting", "Consumer Goods", "Education", "Energy", "Engineering", "Environmental", "Fashion", "Finance", "Food & Beverage", "Government", "Healthcare", "Hospitality", "Information Technology", "Insurance", "Legal", "Manufacturing", "Marketing", "Media", "Non-Profit", "Pharmaceuticals", "Real Estate", "Retail", "Software", "Sports", "Telecommunications", "Transportation", "Travel", "Utilities", "Other"],
+
+    "question-type-title": "Functionality",
+    "question-type-placeholder": "Select key features",
+    "question-type-text": "What type of website are you planning to build?",
+
+    "question-type_of_work-title": "Type of work",
+    "question-type_of_work-placeholder": "Enter here...",
+    "question-type_of_work-text": "What type of work do you want to be done?",
+    "question-type_of_work-instruction": "Ex.. a new project, maintenance or maybe SEO",
+
+    "question-audience-title": "Targeted audience",
+    "question-audience-placeholder": "Enter here...",
+    "question-audience-text": "What is you're Targeted audience?",
+
+    "question-timeline-title": "Timeline",
+    "question-timeline-text": "What is the approximate timeline for this project?",
+    "question-timeline-options": ["Less than a month", "1-2 months", "2-3 months", "6+ months"],
+
+    "question-specific_date-title": "Specific Date",
+    "question-specific_date-text": "Do you have a specific date for when the project should be finished?",
+    "question-specific_date-options": ["Yes", "No"],
+
+    "question-specific_date_input-title": "Specific Date",
+    "question-specific_date_input-placeholder": "Enter Specific Date...",
+    "question-specific_date_input-text": "If you want to add that date you can do it here.",
+    "question-specific_date_input-instruction": "This is optional..",
+
+    "question-budget-title": "Budget",
+    "question-budget-text": "What is the approximate budget for this project?",
+
+    "question-brief-title": "A short brief",
+    "question-brief-placeholder": "Type here..",
+    "question-brief-text": "Please explain a litle about the project at hand",
+    "question-brief-instruction": "This is optional..",
+
+    "question-current_project-title": "Current Project",
+    "question-current_project-text": "Do you have a existing website/project?",
+    "question-current_project-options": ["Yes", "No"],
+
+    "question-domain-title": "Domain",
+    "question-domain-placeholder": "Enter domain...",
+    "question-domain-text": "Do you have a domain for the website/project?",
+    "question-domain-instruction": "This is optional..",
+
+    "question-hosting-title": "Hosting",
+    "question-hosting-placeholder": "Enter hosting service...",
+    "question-hosting-text": "What hosting service are you using?",
+    "question-hosting-instruction": "This is optional..",
+
+    "question-content-title": "Current Content",
+    "question-content-text": "Do you have a existing website/project?",
+    "question-content-options": ["Yes", "No"],
+
+    "question-updating-title": "Content update",
+    "question-updating-text": "How often will the content on the page/project be updated?",
+    "question-updating-options": ["Very often","Every 1-2 months", "Every 2-3 months", "Every 3-6 months", "Never"],
+
+    "question-cms-title": "CMS",
+    "question-cms-text": "Do you have an existing cms?",
+    "question-cms-options": ["Yes", "No"],
+
+    "question-usage-title": "CMS Usage",
+    "question-usage-text": "Do you intend to keep this cms?",
+    "question-usage-options": ["Yes", "No"],
+
+    "question-selected_cms-title": "Select CMS",
+    "question-selected_cms-placeholder": "Enter here...",
+    "question-selected_cms-text": "Is there any particular cms you would want to use?",
+
+    "question-third_party-title": "About",
+    "question-third_party-text": "Are there any integrations required with third-party services?",
+    "question-third_party-placeholder": "(e.g., payment gateways, CRM systems, hubspots)",
+    "question-third_party-instruction": "This is optional..",
+
+    "question-ecom-title": "E-commerce",
+    "question-ecom-text": "What ecom platform are you using?",
+    "question-ecom-placeholder": "Write here..",
+
+    "question-desired_ecom-title": "Desired E-commerce",
+    "question-desired_ecom-text": "What ecom platform do you want to use?",
+    "question-desired_ecom-placeholder": "Write here..",
+
+    "question-payment_services-title": "Payment Services",
+    "question-payment_services-text": "What payment service do you want to use?",
+    "question-payment_services-placeholder": "Write here..",
+
+    "question-template-title": "Page templates",
+    "question-template-text": "What is the approximate amount of, pages/templates for this website?",
+
+    "question-components_modules-title": "Components & Modules",
+    "question-components_modules-text": "What is the approximate amount of components/modules for this website?",
+
+    "question-accounts-title": "User accounts",
+    "question-accounts-text": "Will your website require user accounts?",
+    "question-accounts-options": ["Yes", "No"],
+
+    "question-hosting_package-title": "Hosting package",
+    "question-hosting_package-text": "Do you want to include a hosting package?",
+    "question-hosting_package-options": ["Yes", "No"],
+
+    "question-seo-title": "SEO package",
+    "question-seo-text": "Do you want to include a SEO package?",
+    "question-seo-options": ["Yes", "No"],
+
+    "question-seo_marketing-title": "Agency",
+    "question-seo_marketing-text": "Do you have an existing SEO & or marketing handling?",
+    "question-seo_marketing-placeholder": "Write here..",
+
+    "question-maintenance-title": "Maintenance and Support",
+    "question-maintenance-text": "Will you require ongoing maintenance and support after the website is launched?",
+    "question-maintenance-options": ["None", "Minimal", "Moderate", "Significant"],
+
+    "question-internal_resources-title": "Internal Resources",
+    "question-internal_resources-text": "Do you have internal resources available for website maintenance or will you need assistance with this?",
+    "question-internal_resources-placeholder": "Write here..",
+
+    "question-other-title": "Others",
+    "question-other-text": "Here you have the oppertunities to add anything you want if needed. Feel free to add anything",
+    "question-other-placeholder": "Write here...",
+    "question-other-instruction": "This is optional..",
+
+    "question-refrences-title": "Refrences",
+    "question-refrences-text": "Do you have any refrences?",
+    "question-refrences-placeholder": "Write here...",
+
+    "question-estimation-title": "Rough Estimation",
+    "question-estimation-text": "Do you need a rough estimation of the project?",
+    "question-estimation-options": ["Yes", "No"]
+
 }

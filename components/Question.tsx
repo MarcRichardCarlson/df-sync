@@ -8,6 +8,8 @@ import QuestionsWrapper from "./QuestionsWrapper";
 import OptionsField from "./question-form/Options";
 import TextField from "./question-form/TextField";
 import Button from "./Button";
+import { useCurrentLocale } from "@/hooks/locale";
+import { useTranslation } from "@/i18n/client";
 
 interface QuestionProps {
   type: "range" | "dropdown" | "options" | "buttons" | "textarea" | "textfield";
@@ -45,6 +47,8 @@ const Question: React.FC<QuestionProps> = ({
   const [showError, setShowError] = useState(false);
   const [answer, setAnswer] = useState<any>(null);
   const { next } = useQuestionActions();
+  const locale = useCurrentLocale();
+  const { t } = useTranslation(locale, 'translation');
 
   useEffect(() => {
     const keyPressHandler = (e: KeyboardEvent) => {
@@ -133,12 +137,12 @@ const Question: React.FC<QuestionProps> = ({
     <QuestionsWrapper className="max-w-[750px] px-[50px]">
       {/* Category */}
       <span className="font-ttcommons text-xl text-pre-title-link-small uppercase text-CustomWhite">
-        {title}
+        {t(title)}
       </span>
 
       {/* Actual Question / Message */}
       <p className="font-ttcommons text-CustomWhite mt-1 text-header-4">
-        {question}
+        {t(question)}
       </p>
 
       {instruction && (
@@ -159,7 +163,7 @@ const Question: React.FC<QuestionProps> = ({
       {/* OK Button */}
       <div className="flex items-center space-x-4">
         <Button
-          label="Next"
+          label={t("question-btn")}
           className="font-ttcommons"
           onClick={() => {
             if (optional || answer?.length > 0) {
@@ -171,9 +175,9 @@ const Question: React.FC<QuestionProps> = ({
           }}
         />
         <div className="font-ttcommons text-CustomWhite text-[12px] leading-[20px]">
-          <span className="mr-1 font-light">Also</span>
-          <span className="mr-1 font-medium">Enter ↵</span>
-          <span className="font-light">Works.</span>
+          <span className="mr-1 font-light">{t("question-also")}</span>
+          <span className="mr-1 text-lg">{t("question-enter")}</span>
+          <span className="font-light">{t("question-works")}</span>
         </div>
       </div>
     </QuestionsWrapper>

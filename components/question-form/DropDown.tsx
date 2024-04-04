@@ -1,5 +1,7 @@
 import { useState, useCallback, useRef, useEffect } from "react"
 import { Listbox, Transition } from "@headlessui/react"
+import { useCurrentLocale } from "@/hooks/locale";
+import { useTranslation } from "@/i18n/client";
 
 interface DropDownProps {
   setValue: (value: any) => void;
@@ -13,6 +15,8 @@ const DropDown: React.FC<DropDownProps> = ({ setValue, options, placeholder, max
   const fromSelectedOption = useRef(false)
   const [isOpen, setIsOpen] = useState(false)
   const [selectedOptions, setSelectedOptions] = useState<string[]>([]);
+  const locale = useCurrentLocale();
+  const { t } = useTranslation(locale, 'translation');
   console.log(options);
   
 
@@ -44,7 +48,7 @@ const DropDown: React.FC<DropDownProps> = ({ setValue, options, placeholder, max
       setIsOpen(false);
     }, 1000);
   }, []);
-  
+  console.log(options);
 
   return (
     <Listbox
@@ -97,12 +101,12 @@ const DropDown: React.FC<DropDownProps> = ({ setValue, options, placeholder, max
         >
           {options.map(option => (
             <Listbox.Option
-              key={option}
-              value={option}
-              className="link-transition cursor-pointer px-5 py-3 hover:bg-indigo-500 hover:bg-opacity-10"
-              onClick={closeHandler}
-            >
-              {option}
+            key={option}
+            value={option}
+            className="link-transition cursor-pointer px-5 py-3 hover:bg-indigo-500 hover:bg-opacity-10"
+            onClick={closeHandler}
+            >              
+              {t(option)}
             </Listbox.Option>
           ))}
         </Listbox.Options>

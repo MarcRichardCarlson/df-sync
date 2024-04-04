@@ -1,68 +1,68 @@
 /*buttons, textarea, range, dropdown, options, textfield*/
 
 export const QUESTIONS = [
-  {
+  /* {
     category: "Information",
     questions: [
       {
         key: "name",
         type: "textfield",
-        title: "Welcome",
-        question: "Please enter your full name",
-        placeholder: "Enter full name",
+        title: "question-name-title",
+        question: "question-name-text",
+        placeholder: "question-name-placeholder",
       },
       {
         key: "company_name",
         type: "textfield",
-        title: "Company Name",
-        question: "Please enter your company name",
-        placeholder: "Enter company name",
+        title: "question-company_name-title",
+        question: "question-company_name-text",
+        placeholder: "question-company_name-placeholder",
       },
     ],
-  },
+  }, */
   {
     category: "Nature of Business",
     questions: [
       {
         key: "industry",
         type: "dropdown",
-        options: ["Agriculture", "Architecture", "Arts and Entertainment", "Automotive", "Biotechnology", "Construction", "Consulting", "Consumer Goods", "Education", "Energy", "Engineering", "Environmental", "Fashion", "Finance", "Food & Beverage", "Government", "Healthcare", "Hospitality", "Information Technology", "Insurance", "Legal", "Manufacturing", "Marketing", "Media", "Non-Profit", "Pharmaceuticals", "Real Estate", "Retail", "Software", "Sports", "Telecommunications", "Transportation", "Travel", "Utilities", "Other"],
+        options: ["question-industry-options"],
         maxOptions: 2,
-        title: "Industry",
-        question: "What industry do you operate in? ",
-        instruction:"You can select multiple options",
-        placeholder: "Select your industry",
+        title: "question-industry-title",
+        question: "question-industry-text",
+        instruction: "question-industry-instruction",
+        placeholder: "question-industry-placeholder",
       },
     ],
   },
-  {
+  /* {
     category: "Project",
     questions: [
       {
         key: "type",
         type: "dropdown",
-        options: ["Blog", "E-commerce", "Booking System", "Portfolio Gallery", "Event Calendar", "Forums/Community Boards", "Educational/Courses Platform", "Social Networking Site", "News/Media Website", "Healthcare Services", "Real Estate Listings", "Job Board/Careers Portal", "Finance/Investment Platform", "Entertainment/Media Streaming", "Travel and Tourism Guide", "Restaurant/Food Service", "Government/Public Services", "Non-Profit/Charity Website", "Personal Branding/Resume Site", "Technology/Product Reviews", "Customer Support/FAQ", "Other"],
+        options: "question-industry-options",
         maxOptions: 6,
         title: "Functionality",
         question: "What type of website are you planning to build?",
         placeholder: "Select key features",
       },
       {
-       key: "type_of_work",
-       type: "textfield",
-       title: "Type of work",
-       placeholder: "Enter here...",
-       question: "What type of work do you want to be done?",
-       instruction: "Ex.. a new project, maintenance or maybe SEO",
-       optional: true,
+        key: "type_of_work",
+        type: "textfield",
+        title: "Type of work",
+        placeholder: "Enter here...",
+        question: "What type of work do you want to be done?",
+        instruction: "Ex.. a new project, maintenance or maybe SEO",
+        optional: true,
       },
       {
-       key: "audience",
-       type: "textfield",
-       title: "Targeted audience",
-       placeholder: "Enter here...",
-       question: "What is you're Targeted audience?",
-       optional: true,
+        key: "audience",
+        type: "textfield",
+        title: "Targeted audience",
+        placeholder: "Enter here...",
+        question: "What is you're Targeted audience?",
+        optional: true,
       },
       {
         key: "timeline",
@@ -96,7 +96,7 @@ export const QUESTIONS = [
         question: "What is the approximate budget for this project?",
       }
     ],
-  },
+  }, */
   {
     category: "Brief",
     questions: [
@@ -155,7 +155,7 @@ export const QUESTIONS = [
         key: "updating",
         type: "buttons",
         title: "Content update",
-        options: ["Very often","Every 1-2 months", "Every 2-3 months", "Every 3-6 months", "Never"],
+        options: ["Very often", "Every 1-2 months", "Every 2-3 months", "Every 3-6 months", "Never"],
         question: "How often will the content on the page/project be updated?",
       },
     ]

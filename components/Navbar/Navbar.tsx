@@ -10,26 +10,33 @@ import { useTranslation } from "@/i18n/client";
 import Image from "next/image";
 import NavbarLogo from "../../public/assets/PhArrowsCounterClockwiseBold.svg";
 
-const Navbar = () => {
-  // Retrieve the initially selected tab from localStorage
-  // or default to the first tab if not present
-  const [selectedTab, setSelectedTab] = useState(() => {
-    // Attempt to get the saved tab label from localStorage
-    const savedTabLabel = localStorage.getItem("selectedTab");
-    // If there's a saved tab, return that tab object from your tabs array
-    if (savedTabLabel) {
-      return tabs.find((tab) => tab.label === savedTabLabel) || tabs[0];
-    }
-    // Default to the first tab if nothing is saved
-    return tabs[0];
-  });
+interface Tab {
+  label: string;
+  path: string;
+  icon?: JSX.Element;
+}
+
+const Navbar: React.FC = () => {
+  const [selectedTab, setSelectedTab] = useState<Tab | null>(null);
+  const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
-    localStorage.setItem("selectedTab", selectedTab.label);
-  }, [selectedTab]);
+    setIsClient(true);
+    const savedTabLabel = localStorage.getItem('selectedTab');
+    const savedTab = tabs.find(tab => tab.label === savedTabLabel) || tabs[0];
+    setSelectedTab(savedTab);
+  }, []);
+
+  useEffect(() => {
+    if (isClient && selectedTab) {
+      localStorage.setItem('selectedTab', selectedTab.label);
+    }
+  }, [selectedTab, isClient]);
 
   const locale = useCurrentLocale();
-  const { t } = useTranslation(locale, "translation");
+  const { t } = useTranslation(locale, 'translation');
+
+  if (!selectedTab) return null; // or a loader
 
   return (
     <div className="absolute top-0 w-full flex items-center bg-transparent py-12 px-6 md:px-24 z-50">
