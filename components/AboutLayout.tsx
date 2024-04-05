@@ -11,6 +11,7 @@ import TextWrapper from "./TextWrapper";
 
 const MarqueeScroll = dynamic(() => import("@/components/Marquee"), {
   ssr: false,
+  loading: () => <p className="flex justify-center items-center p-3">Loading...</p>
 });
 
 const AboutLayout = () => {

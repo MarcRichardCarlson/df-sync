@@ -20,6 +20,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      {/* <head>
+        <link rel="icon" type="image/x-icon" sizes="32x32" href="/assets/favicon.ico" />
+      </head> */}
       <body className="m-0 p-0 background-style">
         <AppProviders locale={params.locale}>
             <Navbar />

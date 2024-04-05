@@ -31,13 +31,13 @@
     "contact-header-text": "För förfrågningar eller ytterligare hjälp, vänligen använd vårt kontaktformulär. Vi är engagerade i att erbjuda stöd och att snabbt bemöta dina behov. Dessutom inbjuder vi dig att ansluta till vårt professionella nätverk på sociala medier för de senaste uppdateringarna och möjligheterna till interaktion. Din koppling är värdefull.",
     
     "contact-title-name": "Namn:",
-    "contact-placeholder-name": "Skriv namn..",
+    "contact-placeholder-name": "Ditt förnamn*",
     
     "contact-title-email": "Email:",
-    "contact-placeholder-email": "Skriv email..",
+    "contact-placeholder-email": "Ditt efternamn*",
     
     "contact-title-subject": "Ämne:",
-    "contact-placeholder-subject": "Skriv ämne..",
+    "contact-placeholder-subject": "Ditt Ämne*",
     
     "contact-title-textarea": "Ditt Meddelande:",
     "contact-placeholder-textarea": "Skriv något..",
@@ -46,18 +46,13 @@
     "contact-input-file-btn": "Välj fil",
     "contact-send-btn": "Skicka",
     
-    "contact-icon-phone": "Telefon:",
+    "contact-icon-contact": "kontakt",
     "contact-icon-phone-link": "070-6323 610",
-    "contact-icon-email": "Email:",
     "contact-icon-email-link": "marc@digitalfans.se",
-    "contact-icon-instagram": "Instagram:",
-    "contact-icon-instagram-link": "www.instagram.com",
-    "contact-icon-facebook": "Facebook:",
-    "contact-icon-facebook-link": "www.facebook.com",
-    "contact-icon-linkedin": "LinkedIn:",
-    "contact-icon-linkedin-link": "www.linkedin.com",
-    "contact-icon-github": "GitHub:",
-    "contact-icon-github-link": "github.com",
+    "contact-icon-instagram-link": "Instagram",
+    "contact-icon-facebook-link": "Facebook",
+    "contact-icon-linkedin-link": "LinkedIn",
+    "contact-icon-github-link": "GitHub",
 
     "question-field-error": "Fyll i alla obligatoriska fält",
     "question-btn": "Nästa",

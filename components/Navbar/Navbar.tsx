@@ -40,7 +40,10 @@ const Navbar: React.FC = () => {
 
   return (
     <div className="absolute top-0 w-full flex items-center bg-transparent py-12 px-6 md:px-24 z-50">
-      <a className="flex items-center space-x-3 rtl:space-x-reverse">
+      <Link 
+        onClick={() => window.location.reload()}
+        href={selectedTab.path}
+        className="flex items-center space-x-3 rtl:space-x-reverse">
         <div className="w-4 h-4 md:h-8 md:w-8 hidden sm:block">
           <Image
             src={NavbarLogo}
@@ -52,7 +55,7 @@ const Navbar: React.FC = () => {
         <span className="self-center text-lg sm:text-xl  md:text-2xl lg:text-3xl whitespace-nowrap text-CustomWhite font-ttcommons font-semibold">
           DF Sync
         </span>
-      </a>
+      </Link>
       <nav className="w-full flex justify-end items-center gap-4 sm:gap-8">
         <ul className="flex justify-between items-center gap-4 sm:gap-8">
           {tabs.map((tab) => (
@@ -81,6 +84,7 @@ const Navbar: React.FC = () => {
         </div>
         <div className="hidden sm:block">
           <Link
+            onClick={() => window.location.reload()}
             href={selectedTab.path}
             className="w-6 h-6 md:w-8 md:h-8 text-CustomWhite cursor-pointer hover:text-CustomHover"
           >

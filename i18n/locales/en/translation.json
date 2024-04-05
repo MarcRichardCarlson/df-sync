@@ -12,7 +12,6 @@
     "summary-download-button": "Download",
     "summary-discard-button": "Discard",
 
-
     "about-blurb-header": "Welcome to DF Sync",
     "about-blurb-text": "Empowering Digital Fans to Make Smarter Business Choices. Our platform connects you with the insight.",
 
@@ -34,13 +33,13 @@
     "contact-header-text": "For inquiries or further assistance, please utilize our contact form. We are committed to providing support and addressing your needs promptly. Additionally, we invite you to join our professional network on social media for the latest updates and opportunities for engagement. Your connection is valued.",
     
     "contact-title-name": "Name:",
-    "contact-placeholder-name": "Write name..",
+    "contact-placeholder-name": "Your first name*",
     
     "contact-title-email": "Email:",
-    "contact-placeholder-email": "Write email..",
+    "contact-placeholder-email": "Your email*",
     
     "contact-title-subject": "Subject:",
-    "contact-placeholder-subject": "Write subject..",
+    "contact-placeholder-subject": "Your Subject*",
     
     "contact-title-textarea": "Your Message:",
     "contact-placeholder-textarea": "Write something..",
@@ -49,18 +48,13 @@
     "contact-input-file-btn": "Choose file",
     "contact-send-btn": "Send",
     
-    "contact-icon-phone": "Phone:",
+    "contact-icon-contact": "Contact",
     "contact-icon-phone-link": "070-6323 610",
-    "contact-icon-email": "Email:",
     "contact-icon-email-link": "marc@digitalfans.se",
-    "contact-icon-instagram": "Instagram:",
-    "contact-icon-instagram-link": "www.instagram.com",
-    "contact-icon-facebook": "Facebook:",
-    "contact-icon-facebook-link": "www.facebook.com",
-    "contact-icon-linkedin": "LinkedIn:",
-    "contact-icon-linkedin-link": "www.linkedin.com",
-    "contact-icon-github": "GitHub:",
-    "contact-icon-github-link": "github.com",
+    "contact-icon-instagram-link": "Instagram",
+    "contact-icon-facebook-link": "Facebook",
+    "contact-icon-linkedin-link": "LinkedIn",
+    "contact-icon-github-link": "GitHub",
 
     "question-field-error": "Please answer all required fields",
     "question-btn": "Next",

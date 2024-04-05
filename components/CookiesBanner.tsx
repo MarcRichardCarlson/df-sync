@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import { Dialog } from '@headlessui/react';
-import QuestionsWrapper from './QuestionsWrapper';
+import TextWrapper from './TextWrapper';
 
 const CookiesBanner = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -26,25 +26,22 @@ const CookiesBanner = () => {
     setIsOpen(false);
   };
 
-  //Uncomment the next line to clear the decision automatically on component mount
+  // Uncomment the next line to clear the decision automatically on component mount
   // useEffect(() => {
   //    localStorage.removeItem('cookiesDecision');
   // }, []);
 
   return (
     <Dialog open={isOpen} onClose={() => setIsOpen(false)} className="fixed bottom-0 left-0 w-full text-slate-950 z-50">
-      <div className='flex justify-around mt-4 bg-indigo-300 py-6 px-6'>
-        <div className='relative w-full'>
-          <QuestionsWrapper>
-            <span className='flex items-center justify-start'>
-                We use our own cookies as well as third-party cookies on our websites to enhance your experience, analyze our traffic, and for security and marketing. Select "Accept All" to allow them to be used. Read our Cookie Policy.
-            </span>
-          </QuestionsWrapper>
-        </div>
-
-        <div className='flex gap-6'>
-            <button onClick={blockCookies} className="rounded-md px-6 py-3 whitespace-nowrap bg-indigo-800 hover:bg-indigo-500 text-CustomWhite">Block All Cookies</button>
-            <button onClick={acceptCookies} className="rounded-md px-6 py-3 whitespace-nowrap bg-indigo-800 hover:bg-indigo-500 text-CustomWhite">Accept All</button>
+      <div className='flex flex-col sm:flex-row justify-around gap-6 md:gap-8 bg-indigo-300 p-6 md:p-8'>
+        <TextWrapper>
+          <span className='flex items-center justify-start h-full'>
+              We use our own cookies as well as third-party cookies on our websites to enhance your experience, analyze our traffic, and for security and marketing. Select "Accept All" to allow them to be used. Read our Cookie Policy.
+          </span>
+        </TextWrapper>
+        <div className='flex flex-col md:flex-row gap-4 md:gap-6 justify-center items-center'>
+            <button onClick={blockCookies} className="w-full h-fit rounded-md px-4 md:px-6 py-3 whitespace-nowrap bg-indigo-800 hover:bg-indigo-500 text-CustomWhite">Block All Cookies</button>
+            <button onClick={acceptCookies} className="w-full h-fit rounded-md px-4 md:px-6 py-3 whitespace-nowrap bg-indigo-800 hover:bg-indigo-500 text-CustomWhite">Accept All</button>
         </div>
           
       </div>
