@@ -8,7 +8,7 @@ import Link from "next/dist/client/link";
 import { useCurrentLocale } from "@/hooks/locale";
 import { useTranslation } from "@/i18n/client";
 import Image from "next/image";
-import NavbarLogo from "../../public/assets/PhArrowsCounterClockwiseBold.svg";
+import NavbarLogo from "../../public/assets/icons8-logo-64.png";
 
 interface Tab {
   label: string;

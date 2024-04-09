@@ -5,6 +5,7 @@ import { AppLocale } from "./locales";
 import Navbar from "@/components/Navbar/Navbar";
 import Footer from "@/components/Footer/Footer";
 import CookiesBanner from "@/components/CookiesBanner";
+import test from "../../public/assets/icons8-logo-16.png"
 
 export const metadata: Metadata = {
   title: "Digital fans sync",
@@ -21,7 +22,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       {/* <head>
-        <link rel="icon" type="image/x-icon" sizes="32x32" href="/assets/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons8-logo-16.png" />
       </head> */}
       <body className="m-0 p-0 background-style">
         <AppProviders locale={params.locale}>
