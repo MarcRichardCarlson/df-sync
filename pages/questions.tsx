@@ -12,7 +12,7 @@ import {
 } from "../store/selectors";
 import { QUESTIONS_STATUS } from "../store/state";
 import Summary from "./summary";
-import { createAssignment } from "../api/assignments";
+import { createAssignment } from "./api/assignments";
 
 const Questions = () => {
   const { status } = useAppState();

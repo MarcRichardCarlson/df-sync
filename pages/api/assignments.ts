@@ -1,4 +1,4 @@
-import { sleep } from "../utils"
+import { sleep } from "../../utils"
 
 // Get all assignments data for Home Page
 export async function getAllAssignments() {

@@ -29,8 +29,8 @@ body {
   background-image: url('../../public/assets/Background.jpg');
   background-size: cover;
   background-position: center;
-  height: screen;
-  width: 100%
+  height: 100%;
+  width: 100%;
 }
 
 @layer utilities {

@@ -1,7 +1,7 @@
 import { create } from "zustand"
 import { immer } from "zustand/middleware/immer"
 import { QUESTIONS } from "../data/questions"
-import { confirmAssignment, saveQuestion } from "../api/assignments"
+import { confirmAssignment, saveQuestion } from "../pages/api/assignments"
 
 export const QUESTIONS_STATUS = {
   LOADING: 0,

@@ -45,3 +45,4 @@ const SendButton: React.FC<SendButtonProps> = ({ onSubmit }) => {
 };
 
 export default SendButton;
+
