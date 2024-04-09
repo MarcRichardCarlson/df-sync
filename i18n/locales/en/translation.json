@@ -77,7 +77,45 @@
     "question-industry-text": "What industry do you operate in? ",
     "question-industry-instruction": "You can select multiple options",
     "question-industry-placeholder": "Select your industry",
-    "question-industry-options": ["Agriculture", "Architecture", "Arts and Entertainment", "Automotive", "Biotechnology", "Construction", "Consulting", "Consumer Goods", "Education", "Energy", "Engineering", "Environmental", "Fashion", "Finance", "Food & Beverage", "Government", "Healthcare", "Hospitality", "Information Technology", "Insurance", "Legal", "Manufacturing", "Marketing", "Media", "Non-Profit", "Pharmaceuticals", "Real Estate", "Retail", "Software", "Sports", "Telecommunications", "Transportation", "Travel", "Utilities", "Other"],
+    
+    "agriculture": "Agriculture",
+    "architecture": "Architecture",
+    "arts-and-entertainment": "Arts and Entertainment",
+    "automotive": "Automotive",
+    "biotechnology": "Biotechnology",
+    "construction": "Construction",
+    "consulting": "Consulting",
+    "consumer-goods": "Consumer Goods",
+    "education": "Education",
+    "energy": "Energy",
+    "engineering": "Engineering",
+    "environmental": "Environmental",
+    "fashion": "Fashion",
+    "finance": "Finance",
+    "food-and-beverage": "Food & Beverage",
+    "government": "Government",
+    "healthcare": "Healthcare",
+    "hospitality": "Hospitality",
+    "information-technology": "Information Technology",
+    "insurance": "Insurance",
+    "legal": "Legal",
+    "manufacturing": "Manufacturing",
+    "marketing": "Marketing",
+    "media": "Media",
+    "non-profit": "Non-Profit",
+    "pharmaceuticals": "Pharmaceuticals",
+    "real-estate": "Real Estate",
+    "retail": "Retail",
+    "software": "Software",
+    "sports": "Sports",
+    "telecommunications": "Telecommunications",
+    "transportation": "Transportation",
+    "travel": "Travel",
+    "utilities": "Utilities",
+    "other": "Other",
+
+    "yes": "Yes",
+    "no": "No",
 
     "question-type-category": "Project",
     "question-type-title": "Functionality",
@@ -95,11 +133,13 @@
 
     "question-timeline-title": "Timeline",
     "question-timeline-text": "What is the approximate timeline for this project?",
-    "question-timeline-options": ["Less than a month", "1-2 months", "2-3 months", "6+ months"],
+    "less":"Less than a month",
+    "one-two":"1-2 months",
+    "two-three":"2-3 months",
+    "six-or-more":"6+ months",
 
     "question-specific_date-title": "Specific Date",
     "question-specific_date-text": "Do you have a specific date for when the project should be finished?",
-    "question-specific_date-options": ["Yes", "No"],
 
     "question-specific_date_input-title": "Specific Date",
     "question-specific_date_input-placeholder": "Enter Specific Date...",
@@ -118,7 +158,6 @@
     "question-current_project-category": "Current project",
     "question-current_project-title": "Current Project",
     "question-current_project-text": "Do you have a existing website/project?",
-    "question-current_project-options": ["Yes", "No"],
 
     "question-domain-title": "Domain",
     "question-domain-placeholder": "Enter domain...",
@@ -133,20 +172,21 @@
     "question-content-category": "Content",
     "question-content-title": "Current Content",
     "question-content-text": "Do you have a existing website/project?",
-    "question-content-options": ["Yes", "No"],
 
     "question-updating-title": "Content update",
     "question-updating-text": "How often will the content on the page/project be updated?",
-    "question-updating-options": ["Very often","Every 1-2 months", "Every 2-3 months", "Every 3-6 months", "Never"],
+    "very-often": "Very often",
+    "every-one-two": "Every 1-2 months",
+    "every-two-three":"Every 2-3 months",
+    "every-six-or-more":"Every 3-6 months",
+    "never":"Never",
 
     "question-cms-category": "CMS",
     "question-cms-title": "CMS",
     "question-cms-text": "Do you have an existing cms?",
-    "question-cms-options": ["Yes", "No"],
 
     "question-usage-title": "CMS Usage",
     "question-usage-text": "Do you intend to keep this cms?",
-    "question-usage-options": ["Yes", "No"],
 
     "question-selected_cms-title": "Select CMS",
     "question-selected_cms-placeholder": "Enter here...",
@@ -180,16 +220,13 @@
 
     "question-accounts-title": "User accounts",
     "question-accounts-text": "Will your website require user accounts?",
-    "question-accounts-options": ["Yes", "No"],
 
     "question-hosting_package-category": "Packages",
     "question-hosting_package-title": "Hosting package",
     "question-hosting_package-text": "Do you want to include a hosting package?",
-    "question-hosting_package-options": ["Yes", "No"],
 
     "question-seo-title": "SEO package",
     "question-seo-text": "Do you want to include a SEO package?",
-    "question-seo-options": ["Yes", "No"],
 
     "question-seo_marketing-title": "Agency",
     "question-seo_marketing-text": "Do you have an existing SEO & or marketing handling?",
@@ -198,7 +235,10 @@
     "question-maintenance-category": "Maintenance",
     "question-maintenance-title": "Maintenance and Support",
     "question-maintenance-text": "Will you require ongoing maintenance and support after the website is launched?",
-    "question-maintenance-options": ["None", "Minimal", "Moderate", "Significant"],
+    "none": "None",
+    "minimal": "Minimal",
+    "moderate": "Moderate",
+    "significant": "Significant",
 
     "question-internal_resources-title": "Internal Resources",
     "question-internal_resources-text": "Do you have internal resources available for website maintenance or will you need assistance with this?",
@@ -216,7 +256,5 @@
 
     "question-estimation-category": "Estimation",
     "question-estimation-title": "Rough Estimation",
-    "question-estimation-text": "Do you need a rough estimation of the project?",
-    "question-estimation-options": ["Yes", "No"]
-
+    "question-estimation-text": "Do you need a rough estimation of the project?"
 }

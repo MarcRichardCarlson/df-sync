@@ -102,7 +102,7 @@ const ContactLayout = () => {
     };
 
   return (
-    <div className="flex flex-col gap-6 w-full h-full">
+    <div className="flex flex-col gap-6 w-full">
         <div className="w-full flex flex-col md:flex-row gap-0 lg:gap-8 border border-indigo-500 rounded-md bg-CustomWhite bg-opacity-10 p-0 sm:p-6 md:p-8">
             
             <div className="flex flex-col gap-6 justify-between w-full md:w-1/2 p-6 md:p-8">

@@ -2,6 +2,8 @@ import { useState, useCallback, useRef, useEffect } from "react"
 import { Listbox, Transition } from "@headlessui/react"
 import { useCurrentLocale } from "@/hooks/locale";
 import { useTranslation } from "@/i18n/client";
+import closeIcon from "../../public/assets/CarbonCloseFilled.svg"
+import Image from "next/image";
 
 interface DropDownProps {
   setValue: (value: any) => void;
@@ -124,12 +126,16 @@ interface DropDownItemProps {
 }
 
 const DropDownItem: React.FC<DropDownItemProps> = ({ open, text, onClick }) => {
+  const locale = useCurrentLocale();
+  const { t } = useTranslation(locale, 'translation');
+
   return (
-    <span
+    <div
       className="inline-flex items-center justify-between space-x-2 rounded-md bg-white text-CustomBlack px-4 py-2 text-link-medium text-bright-red"
       onClick={onClick}
       >
-      <span>{text}</span>
-    </span>
+      <span className="flex gap-2 justify-center items-center">{t(text)}</span>
+      <Image src={closeIcon} alt="close icon" className="h-4 w-4"/>
+    </div>
   )
-}
+};
