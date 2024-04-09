@@ -6,10 +6,10 @@ import { useCurrentLocale } from "@/hooks/locale";
 import { useTranslation } from "@/i18n/client";
 
 interface SendButtonProps {
-  onSubmit: () => void;
+  type?: string;
 }
 
-const SendButton: React.FC<SendButtonProps> = ({ onSubmit }) => {
+const SendButton = ({ type = "button" }: SendButtonProps) => {  
   const [isHovered, setIsHovered] = useState(false);
   const locale = useCurrentLocale();
   const { t } = useTranslation(locale, 'translation');
@@ -24,7 +24,7 @@ const SendButton: React.FC<SendButtonProps> = ({ onSubmit }) => {
       className="w-56 flex justify-start gap-4 items-center border border-transparent hover:border hover:border-indigo-500 rounded-md bg-indigo-500 p-3 cursor-pointer hover:bg-opacity-20 relative overflow-hidden"
       onHoverStart={() => setIsHovered(true)}
       onHoverEnd={() => setIsHovered(false)}
-      onClick={onSubmit}
+      type="submit"
     >
       {t("contact-send-btn")}
       <motion.div

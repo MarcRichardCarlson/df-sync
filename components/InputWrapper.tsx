@@ -26,11 +26,21 @@ const InputWrapper: React.FC<InputWrapperProps> = ({
 
   // Enhancing the input child with necessary props
   const enhancedChild = cloneElement(children, {
-    onFocus: handleFocus,
-    onBlur: handleBlur,
-    onChange: handleChange,
-    value,
-  });
+    onFocus: (e: any) => {
+        handleFocus();
+        children.props.onFocus && children.props.onFocus(e);
+    },
+    onBlur: (e: any) => {
+        handleBlur();
+        children.props.onBlur && children.props.onBlur(e);
+    },
+    onChange: (e: any) => {
+        handleChange(e);
+        children.props.onChange && children.props.onChange(e);
+    },
+    // Don't override `value` here; it should be managed by React Hook Form
+});
+
 
   return (
     <div className={classNames("relative w-full text-slate-400", className)}>

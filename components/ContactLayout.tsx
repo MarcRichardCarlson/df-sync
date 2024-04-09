@@ -7,68 +7,59 @@ import Link from "next/link";
 import SendButton from "../components/contact-form/SendButton";
 import ContactInput from "../components/contact-form/ContactInput";
 import InputWrapper from "./InputWrapper";
+import { z, ZodType } from "zod";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
 
-interface ContactProps {
+type FormData = {
     name: string;
     email: string;
     subject: string;
     message: string;
 }
+
 const ContactLayout = () => {
     const locale = useCurrentLocale();
     const { t } = useTranslation(locale, "translation");
 
-    const [formState, setFormState] = useState<ContactProps>({
-        name: '',
-        email: '',
-        subject: '',
-        message: '',
-    });
+    //Zod formData schema
+    const schema: ZodType<FormData> = z
+    .object({
+        name: z.string().min(2).max(30),
+        email: z.string().email(),
+        subject: z.string().min(2).max(60),
+        message: z.string()
+    })
 
-    const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-        const { name, value } = e.target;
-        setFormState(prevState => {
-            const newState = { ...prevState, [name]: value };
-            console.log(`Updating formState for ${name}: ${value}`, newState);
-            return newState;
-        });
-    };    
+    //Connecting Zod(validation) with react-hook-form
+    const { 
+        register,
+        handleSubmit,
+        formState: { errors, touchedFields }
+    } = useForm<FormData>({
+         resolver: zodResolver(schema),
+         mode: 'onChange',
+    }) 
 
-    const handleSubmit = async (e: any) => {
-        e.preventDefault();
-        console.log('Form submission initiated', formState);
+    const submitData = async (data: FormData) => {
+        console.log("Form Data:", data);
         try {
             const response = await fetch('/api/sendEmail', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(formState),
+                body: JSON.stringify(data),
             });
-            const data = await response.json();
-            console.log('Response data:', data);
+    
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+    
+            const responseData = await response.json();
+            console.log('Success:', responseData);
         } catch (error) {
             console.error('Error:', error);
         }
-    };
-
-    // const handleSubmit = async (e: any) => {
-    //     e.preventDefault();
-    //     const testFormData = { name: 'Test', email: 'test@example.com', subject: 'Test Subject', message: 'Test Message' };
-    //     console.log('Sending test form data', testFormData);
-    //     try {
-    //         const response = await fetch('/api/sendEmail', {
-    //             method: 'POST',
-    //             headers: { 'Content-Type': 'application/json' },
-    //             body: JSON.stringify(testFormData),
-    //         });
-    //         const data = await response.json();
-    //         console.log('Test response data:', data);
-    //     } catch (error) {
-    //         console.error('Test Error:', error);
-    //     }
-    // };
-    
-    
-    
+    }   
 
   return (
     <div className="flex flex-col gap-6 w-full h-full">
@@ -92,17 +83,17 @@ const ContactLayout = () => {
                 </div>
             </div>
 
-            <form onSubmit={handleSubmit} className="overflow-hidden w-full lg:w-3/5 flex flex-col justify-start items-start gap-4 md:gap-8 p-6 md:p-8 text-CustomWhite">
+            <form onSubmit={handleSubmit(submitData)} className="overflow-hidden w-full lg:w-3/5 flex flex-col justify-start items-start gap-4 md:gap-8 p-6 md:p-8 text-CustomWhite">
 
                 <div className="flex flex-col gap-4 sm:gap-6 md:gap-8 w-full">
                     <div className="flex flex-col gap-2">
                         <span>{t("contact-title-name")}</span>
                         <InputWrapper placeholder={t("contact-placeholder-name")}>
                         <input
-                            name="name"
-                            value={formState.name}
-                            onChange={handleChange}
-                            className="w-full py-4 px-3 rounded-md text-CustomWhite bg-CustomWhite bg-opacity-15"
+                            {...register("name")}
+                            className={`w-full py-4 px-3 rounded-md text-CustomWhite bg-CustomWhite bg-opacity-15 ${
+                                errors.name ? 'border-red-500' : touchedFields.name && !errors.name ? 'border-green-500' : 'border-transparent'
+                            } border`}                                                      
                             type="text"
                         />
                         </InputWrapper>
@@ -112,23 +103,24 @@ const ContactLayout = () => {
                         <span>{t("contact-title-email")}</span>
                         <InputWrapper placeholder={t("contact-placeholder-email")}>
                         <input
-                            name="email"
-                            value={formState.email}
-                            onChange={handleChange}
-                            className="w-full py-4 px-3 rounded-md text-CustomWhite bg-CustomWhite bg-opacity-15"
+                            {...register("email")}
+                            className={`w-full py-4 px-3 rounded-md text-CustomWhite bg-CustomWhite bg-opacity-15 ${
+                                errors.email ? 'border-red-500' : touchedFields.email && !errors.email ? 'border-green-500' : 'border-transparent'
+                            } border`} 
                             type="email"
                         />
                         </InputWrapper>
+                        {errors.email && <span>{errors.email.message}</span>}
                     </div>
 
                     <div className="flex flex-col gap-2">
                         <span>{t("contact-title-subject")}</span>
                         <InputWrapper placeholder={t("contact-placeholder-subject")}>
                         <input
-                            name="subject"
-                            value={formState.subject}
-                            onChange={handleChange}
-                            className="w-full py-4 px-3 rounded-md text-CustomWhite bg-CustomWhite bg-opacity-15"
+                            {...register("subject")}
+                            className={`w-full py-4 px-3 rounded-md text-CustomWhite bg-CustomWhite bg-opacity-15 ${
+                                errors.subject ? 'border-red-500' : touchedFields.subject && !errors.subject ? 'border-green-500' : 'border-transparent'
+                            } border`} 
                             type="text"
                         />
                         </InputWrapper>
@@ -140,9 +132,7 @@ const ContactLayout = () => {
                         <span>{t("contact-title-textarea")}</span>
                         <InputWrapper placeholder={t("contact-placeholder-textarea")}>
                         <textarea
-                            name="message"
-                            value={formState.message}
-                            onChange={handleChange}
+                            {...register("message")}
                             className="max-h-[270px] min-h-[100px] w-full py-4 px-3 rounded-md text-CustomWhite bg-CustomWhite bg-opacity-15"
                             rows={5}
                         ></textarea>
@@ -150,8 +140,8 @@ const ContactLayout = () => {
                     </div>
 
                     <ContactInput />
-                    <button type="submit" className="cursor-pointer bg-slate-400 w-8 h-8 hover:bg-black">send</button>
-                    {/* <SendButton/> */}
+                    
+                    <SendButton type="submit"/>
                 </div>
             </form>
         </div>

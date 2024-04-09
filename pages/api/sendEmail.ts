@@ -4,6 +4,7 @@ import nodemailer from 'nodemailer';
 import util from 'util';
 import { readFileSync, existsSync } from 'fs';
 import { SentMessageInfo } from 'nodemailer';
+import backgroundImage from "../../public/assets/Background.jpg"
 
 interface Files {
     [key: string]: File | File[] | undefined;
@@ -58,11 +59,21 @@ export default async function sendEmail(req: NextApiRequest, res: NextApiRespons
     });
 
     const mailOptions = {
-      from: `"DF Sync Contact: Form <${fields.name}> | <${fields.email}>"`,
+      from: fields.subject as unknown as string,
       to: 'marc.carlson117@gmail.com',
-      subject: fields.subject as unknown as string,
-      text: fields.message as unknown as string,
-      html: `<b>${fields.message}</b>`,
+      subject: "DF Sync Contact Form",
+      text: `You have received a new message from ${fields.name} (${fields.email}):\n\n${fields.subject}\n\n${fields.message}\n\nThis message was sent via the DF Sync Contact Form. Please be aware that DF Sync is not liable for any spam or unauthorized usage of this email service. Legal actions may be taken against misuse.`,
+      html: `
+      <div style="font-family: Arial, sans-serif; font-size: 16px;">
+        <p>You have received a new message via the <strong>DF Sync Contact Form</strong>:</p>
+        <p><strong>Sender:</strong> ${fields.name} | ${fields.email}</p>
+        <p><strong>Subject:</strong> ${fields.subject}</p>
+        <p><strong>Message:</strong></p>
+        <p>${fields.message}</p>
+      </div>
+      
+      <p style="font-size: 12px">Please be aware that DF Sync is not liable for any spam or unauthorized usage of this email service. Legal actions may be taken against misuse.</p>
+      `,
       // Attachments are added only if they exist
       ...(attachments.length > 0 && { attachments }),
     };
