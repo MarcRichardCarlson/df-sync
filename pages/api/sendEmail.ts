@@ -4,7 +4,6 @@ import nodemailer from 'nodemailer';
 import util from 'util';
 import { readFileSync, existsSync } from 'fs';
 import { SentMessageInfo } from 'nodemailer';
-import backgroundImage from "../../public/assets/Background.jpg"
 
 interface Files {
     [key: string]: File | File[] | undefined;
