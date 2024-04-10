@@ -1,3 +1,4 @@
+import { createWithEqualityFn } from 'zustand/traditional';
 import { shallow } from "zustand/shallow"
 
 import { useAppStore, useQuestionStore } from "./state"

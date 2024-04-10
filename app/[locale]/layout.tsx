@@ -8,7 +8,7 @@ import CookiesBanner from "@/components/CookiesBanner";
 import test from "../../public/assets/icons8-logo-16.png"
 
 export const metadata: Metadata = {
-  title: "Digital fans sync",
+  title: "DF Sync",
   description: "An consulting application",
 };
 

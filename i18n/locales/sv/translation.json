@@ -115,7 +115,37 @@
     "yes": "Ja",
     "no": "Nej",
 
-    "question-type-category": "Projekt",
+    "question-type-category": "Project",
+    "question-type_of_project-title": "",
+    "question-type_of_project-placeholder": "Select Option",
+    "question-type_of_project-text": "What specific part or aspect of your project are you focusing on at this stage?",
+        "question-type_of_project-full_website_build": "Hela webbplatsbyggnaden",
+        "question-type_of_project-mobile_application_development": "Utveckling av mobilapplikation",
+        "question-type_of_project-software_development": "Programvaruutveckling",
+        "question-type_of_project-web_page_design": "Webbsidesdesign",
+        "question-type_of_project-mobile_page_design": "Design av mobilsidor",
+        "question-type_of_project-content_creation_text": "Innehållsskapande (text)",
+        "question-type_of_project-content_creation_graphics": "Innehållsskapande (grafik)",
+        "question-type_of_project-content_creation_video": "Innehållsskapande (video)",
+        "question-type_of_project-ui_ux_design": "UI/UX-design",
+        "question-type_of_project-database_design_and_management": "Databasdesign och hantering",
+        "question-type_of_project-api_development_and_integration": "API-utveckling och integration",
+        "question-type_of_project-e_commerce_platform": "E-handelsplattform",
+        "question-type_of_project-social_media_campaign": "Sociala medier-kampanj",
+        "question-type_of_project-email_marketing_setup": "Uppsättning av e-postmarknadsföring",
+        "question-type_of_project-search_engine_optimization_seo": "Sökmotoroptimering (SEO)",
+        "question-type_of_project-pay_per_click_ppc_advertising": "Betal-per-klick (PPC) annonsering",
+        "question-type_of_project-branding_and_identity_design": "Varumärkes- och identitetsdesign",
+        "question-type_of_project-digital_marketing_strategy": "Digital marknadsföringsstrategi",
+        "question-type_of_project-cloud_computing_and_storage_solutions": "Molnbaserade datortjänster och lagringslösningar",
+        "question-type_of_project-blockchain_development": "Blockchain-utveckling",
+        "question-type_of_project-augmented_reality_ar_or_virtual_reality_vr_content": "Förstärkt verklighet (AR) eller virtuell verklighet (VR) innehåll",
+        "question-type_of_project-iot_internet_of_things_solutions": "IoT (Internet of Things) lösningar",
+        "question-type_of_project-cybersecurity_measures": "Cybersäkerhetsåtgärder",
+        "question-type_of_project-other": "Annat (Vänligen specificera)",
+      
+      
+
     "question-type-title": "Funktionalitet",
     "question-type-placeholder": "Välj huvudfunktioner",
     "question-type-text": "Vilken typ av webbplats planerar du att bygga?",
@@ -168,16 +198,22 @@
     "question-hosting-instruction": "Detta är frivilligt..",
 
     "question-content-category": "Innehåll",
-    "question-content-title": "Aktuellt innehåll",
-    "question-content-text": "Har du en befintlig webbplats/projekt?",
+    "question-content-title": "Innehåll",
+    "question-content-text": "Har du något befintlig INNEHÅLL till webbplats/projekt? du skulle vilja använda dig av?",
+
+    "question-content-information-title": "Innehåll Information",
+    "question-content-information-text": "Här kan du skriva om vilket slags innehåll du har som du vill använda.",
+    "question-content-information-instruction": "Detta är frivilligt..",
+    "question-content-information-placeholder": "Skriv här..",
 
     "question-updating-title": "Uppdatering av innehåll",
-    "question-updating-text": "Hur ofta kommer innehållet på sidan/projektet att uppdateras?",
+    "question-updating-text": "Hur ofta kommer innehållet på din webbplats/projektet att uppdateras?",
     "very-often": "Mycket ofta",
     "every-one-two": "Varje 1-2 månader",
     "every-two-three":"Varje 2-3 månader",
     "every-six-or-more":"Varje 3-6 månader",
     "never":"Aldrig",
+    "dont-know":"I nuvarande stadie är detta inget jag kan svara på.",
 
     "question-cms-category": "CMS",
     "question-cms-title": "CMS",
@@ -189,6 +225,7 @@
     "question-selected_cms-title": "Välj CMS",
     "question-selected_cms-placeholder": "Ange här...",
     "question-selected_cms-text": "Finns det något specifikt cms du skulle vilja använda?",
+    "question-selected_cms-instruction": "Detta är frivilligt..",
 
     "question-third_party-category": "Tredjepart",
     "question-third_party-title": "Tredjepart",
@@ -252,7 +289,7 @@
     "question-refrences-text": "Har du några referenser?",
     "question-refrences-placeholder": "Skriv här...",
 
-    "question-estimation-category": "Estimering",
+    "question-estimation-category": "Est",
     "question-estimation-title": "Ungfärlig uppskattning",
     "question-estimation-text": "Behöver du en grov uppskattning av projektet?"
 }

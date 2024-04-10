@@ -50,16 +50,16 @@ export default async function sendEmail(req: NextApiRequest, res: NextApiRespons
     }
 
     let transporter = nodemailer.createTransport({
-      service: 'Gmail',
+      service: process.env.EMAIL_SERVICE,
       auth: {
-        user: 'marc.carlson116@gmail.com',
-        pass: process.env.EMAIL_PASSWORD,
+        user: process.env.EMAIL,
+        pass: process.env.PASSWORD,
       },
     });
 
     const mailOptions = {
       from: fields.subject as unknown as string,
-      to: 'marc.carlson117@gmail.com',
+      to: process.env.RECIVER_EMAIL,
       subject: "DF Sync Contact Form",
       text: `You have received a new message from ${fields.name} (${fields.email}):\n\n${fields.subject}\n\n${fields.message}\n\nThis message was sent via the DF Sync Contact Form. Please be aware that DF Sync is not liable for any spam or unauthorized usage of this email service. Legal actions may be taken against misuse.`,
       html: `

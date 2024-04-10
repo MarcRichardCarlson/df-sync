@@ -69,7 +69,7 @@ export const useQuestionStore = create(
             // If Yes / No question and the answer is NO, proceed to next category
             // But this must be updated if an optional question is
             // followed by a mandatory question in the same category
-            else if (currentQuestion.ifYes && Array.isArray(answer) && answer[0] === "No") {
+            else if (currentQuestion.ifYes && Array.isArray(answer) && answer[0] === "no") {
               console.log("Conditional Yes/No question and the answer is No")
               newCategoryIndex += 1
               newQuestionIndex = 0
@@ -78,29 +78,130 @@ export const useQuestionStore = create(
             // Special case for 'visa_sponsorship'
             // for it to proceed to the next sub-question
             // the answer must be NO and 'language_required' must be YES
-            else if (
-              currentQuestion.key === "visa_sponsorship" &&
-              ((Array.isArray(answer) && answer[0] === "Yes") || assignmentDetails.language_required[0] === "No")
-            ) {
-              newCategoryIndex += 1
-              newQuestionIndex = 0
-            } else {
-              // If last question for this category, increment the category index
-              // and reset question index
-              if (questionIndex === questions[categoryIndex].questions.length - 1) {
-                newCategoryIndex += 1
-                newQuestionIndex = 0
-              } else {
-                newQuestionIndex += 1
+            // else if (
+            //   currentQuestion.key === "visa_sponsorship" &&
+            //   ((Array.isArray(answer) && answer[0] === "Yes") || assignmentDetails.language_required[0] === "No")
+            // ) {
+            //   newCategoryIndex += 1
+            //   newQuestionIndex = 0
+            // } else {
+            //   // If last question for this category, increment the category index
+            //   // and reset question index
+            //   if (questionIndex === questions[categoryIndex].questions.length - 1) {
+            //     newCategoryIndex += 1
+            //     newQuestionIndex = 0
+            //   } else {
+            //     newQuestionIndex += 1
+            //   }
+            // }
+
+            // Special case for 'specific_date'
+            else if (currentQuestion.key === "specific_date" ) {
+              if (Array.isArray(answer) && answer[0] === "yes") {
+                // If answer is Yes, go to the next question. Increment is already set to 1.
+                newQuestionIndex += 1; // This moves to the next question
+              } else if (Array.isArray(answer) && answer[0] === "no") {
+                // If answer is No, go two questions forward
+                newQuestionIndex += 2; // This skips an additional question
+              }
+
+              // Check if we've exceeded the number of questions in the category
+              if (newQuestionIndex >= questions[categoryIndex].questions.length) {
+                // Move to the next category if there are no more questions in the current category
+                newCategoryIndex += 1;
+                newQuestionIndex = 0; // Reset to the first question of the next category
               }
             }
+
+            // Special case for 'specific_date'
+            else if (currentQuestion.key === "current_project") {
+              if (Array.isArray(answer) && answer[0] === "yes") {
+                // If answer is Yes, go to the next question index
+                newQuestionIndex += 1; // This moves to the next question
+              } else if (Array.isArray(answer) && answer[0] === "no") {
+                // If answer is No, go to the next category index
+                newCategoryIndex += 1;
+              }
+
+              // Check if we've exceeded the number of questions in the category
+              if (newQuestionIndex >= questions[categoryIndex].questions.length) {
+                // Move to the next category if there are no more questions in the current category
+                newCategoryIndex += 1;
+                newQuestionIndex = 0; // Reset to the first question of the next category
+              }
+            }
+
+            // Special case for 'content'
+            else if (currentQuestion.key === "content" ) {
+              if (Array.isArray(answer) && answer[0] === "yes") {
+                // If answer is Yes, go to the next question. Increment is already set to 1.
+                newQuestionIndex += 1; // This moves to the next question
+              } else if (Array.isArray(answer) && answer[0] === "no") {
+                // If answer is No, go two questions forward
+                newQuestionIndex += 2; // This skips an additional question
+              }
+
+              // Check if we've exceeded the number of questions in the category
+              if (newQuestionIndex >= questions[categoryIndex].questions.length) {
+                // Move to the next category if there are no more questions in the current category
+                newCategoryIndex += 1;
+                newQuestionIndex = 0; // Reset to the first question of the next category
+              }
+            }
+
+            // Special case for 'cms'
+            else if (currentQuestion.key === "cms" ) {
+              if (Array.isArray(answer) && answer[0] === "yes") {
+                // If answer is Yes, go to the next category index
+                newQuestionIndex += 1;
+              } else if (Array.isArray(answer) && answer[0] === "no") {
+                // If answer is No, go 2 indexes forawrd
+                newQuestionIndex += 2;
+              }
+
+              // Check if we've exceeded the number of questions in the category
+              if (newQuestionIndex >= questions[categoryIndex].questions.length) {
+                // Move to the next category if there are no more questions in the current category
+                newCategoryIndex += 1;
+                newQuestionIndex = 0; // Reset to the first question of the next category
+              }
+            }
+            // Special case for 'usage'
+            else if (currentQuestion.key === "usage" ) {
+              if (Array.isArray(answer) && answer[0] === "yes") {
+                // If answer is Yes, go to the next category index and reset question index
+                newCategoryIndex += 1;
+                newQuestionIndex = 0;
+              } else if (Array.isArray(answer) && answer[0] === "no") {
+                // If answer is No, go to the next question index
+                newQuestionIndex += 1;
+              }
+
+              // Check if we've exceeded the number of questions in the category
+              if (newQuestionIndex >= questions[categoryIndex].questions.length) {
+                // Move to the next category if there are no more questions in the current category
+                newCategoryIndex += 1;
+                newQuestionIndex = 0; // Reset to the first question of the next category
+              }
+            }
+            
+            // Existing else block to handle the transition to the next category or question
+            else {
+              if (questionIndex === questions[categoryIndex].questions.length - 1) {
+                newCategoryIndex += 1;
+                newQuestionIndex = 0;
+              } else {
+                newQuestionIndex += 1;
+              }
+            }
+
 
             if (newCategoryIndex === questions.length) {
               newStatus = QUESTIONS_STATUS.SUMMARY
             } else {
               const nextQuestion = questions[newCategoryIndex].questions[newQuestionIndex]
 
-              console.log({ nextQuestion })
+              //console.log({ nextQuestion })
 
               // Peek to the next question, and see if it has dependencies and skip if necessary
               if (

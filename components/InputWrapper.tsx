@@ -1,10 +1,10 @@
-import React, { useState, cloneElement, ReactElement } from 'react';
 import { motion } from 'framer-motion';
+import React, { useState, cloneElement, ReactElement } from 'react';
 import classNames from 'classnames';
 
 interface InputWrapperProps {
   children: ReactElement;
-  placeholder: string;
+  placeholder?: string;
   className?: string;
   duration?: number;
 }

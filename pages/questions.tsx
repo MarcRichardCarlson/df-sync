@@ -19,7 +19,9 @@ const Questions = () => {
   const { initState } = useQuestionActions();
   const { questions, categoryIndex, questionIndex } = useQuestionData();
 
-  console.log({ questionIndex, q: questions[questionIndex] });
+  console.log({"Question-index": questionIndex});
+  console.log({"Category-index": categoryIndex});
+  console.log({"Questions": [questionIndex]});
 
   // Initialize state by creating a new assignment.
   useEffect(() => {
@@ -39,6 +41,13 @@ const Questions = () => {
     () => `${categoryIndex}_${questionIndex}`,
     [categoryIndex, questionIndex]
   );
+  
+  // Destructures `currentQuestion` to separate `key` (which is ignored) and the rest of the properties.
+  // If `currentQuestion` is undefined, it defaults to an empty object to prevent errors during destructuring.
+  // The remaining properties, excluding `key`, are then spread into the <Question /> component.
+  // This ensures that `currentQuestion` can be safely accessed and used even if it's initially undefined,
+  // avoiding runtime errors and maintaining the component's functionality.
+  const { key: ignoredKey, ...questionProps } = currentQuestion || {};
 
   return (
     <Layout
@@ -53,7 +62,8 @@ const Questions = () => {
         {/* TODO: {...currentQuestion} is throwing an error because its a spread and
         wants all keys to be defined directly on <Question/> */}
         {status === QUESTIONS_STATUS.QUESTIONS && (
-          <Question key={questionKey} {...currentQuestion} />
+          // <Question key={questionKey} {...currentQuestion} />
+          <Question key={questionKey} {...questionProps} />
         )}
         {/* TODO: Change the data summary if needed */}
         {status === QUESTIONS_STATUS.SUMMARY && <Summary />}

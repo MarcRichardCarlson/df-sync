@@ -39,13 +39,20 @@ export const QUESTIONS = [
     category: "question-type-category",
     questions: [
       {
-        key: "type",
-        type: "dropdown",
-        options: ["yes", "no"],
-        maxOptions: 6,
+        key: "type_of_project",
+        type: "textarea",
         title: "question-type-title",
         question: "question-type-text",
         placeholder: "question-type-placeholder",
+        optional: true,
+      },
+      {
+        key: "type",
+        type: "textarea",
+        title: "question-type-title",
+        question: "question-type-text",
+        placeholder: "question-type-placeholder",
+        optional: true,
       },
       {
         key: "type_of_work",
@@ -152,6 +159,15 @@ export const QUESTIONS = [
         question: "question-content-text",
       },
       {
+        key: "content_info",
+        type: "textarea",
+        title: "question-content-information-title",
+        placeholder: "question-content-information-placeholder",
+        question: "question-content-information-text",
+        instruction: "question-content-information-instruction",
+        optional: true,
+      },
+      {
         key: "updating",
         type: "buttons",
         title: "question-updating-title",
@@ -183,6 +199,8 @@ export const QUESTIONS = [
         title: "question-selected_cms-title",
         question: "question-selected_cms-text",
         placeholder: "question-selected_cms-placeholder",
+        instruction: "question-selected_cms-instruction",
+        optional: true,
       }
     ]
   },

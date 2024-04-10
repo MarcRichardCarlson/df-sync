@@ -44,11 +44,11 @@ const RangeSlider: React.FC<RangeSliderProps> = ({
           >
             <div
               ref={props.ref}
-              className="hello-22 h-2 w-full rounded-lg bg-bright-red"
+              className="hello-22 h-2 w-full rounded-lg bg-green-500"
               style={{
                 background: getTrackBackground({
                   values: rangeValues,
-                  colors: ["#FFFFFF", "#E82155", "#FFFFFF"],
+                  colors: ["#FFFFFF", "#54D418", "#FFFFFF"],
                   min: min,
                   max: max,
                   rtl: RTL,
@@ -65,9 +65,9 @@ const RangeSlider: React.FC<RangeSliderProps> = ({
           return (
             <div
               {...props}
-              className="flex h-6 w-6 items-center justify-center rounded-full border border-bright-red !bg-white"
+              className="flex h-6 w-6 items-center justify-center rounded-full bg-white"
             >
-              <div className="tootltip absolute top-0 -translate-y-[120%] rounded-lg bg-bright-red px-3 py-2 text-[12px] font-semibold leading-[18px] text-white">
+              <div className="tootltip absolute top-0 -translate-y-[120%] rounded-lg bg-indigo-500 px-3 py-2 text-[12px] font-semibold leading-[18px] text-white">
                 {value + (rawVal === max ? "+" : "")}
               </div>
             </div>

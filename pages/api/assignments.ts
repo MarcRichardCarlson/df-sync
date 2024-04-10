@@ -40,8 +40,8 @@ export async function createAssignment() {
 
 // Save question data every step
 export async function saveQuestion(params: any) {
-  console.log("API:Save Question Parameters : ")
-  console.log({ params })
+  //console.log("API:Save Question Parameters : ")
+  //console.log({ params })
   // Simulating fetch call
   // await sleep(750)
   return Promise.resolve(true)
@@ -49,9 +49,9 @@ export async function saveQuestion(params: any) {
 
 // Confirm Assigment in Summary Page
 export async function confirmAssignment(assignmentId: any, satisfaction: any) {
-  console.log("API:Confirm Assigment Parameters : ")
-  console.log({ assignment_id: assignmentId, satisfaction })
+  // console.log("API:Confirm Assigment Parameters : ")
+  // console.log({ assignment_id: assignmentId, satisfaction })
   // Simulating fetch call
-  await sleep(1000)
+  //await sleep(1000)
   return Promise.resolve(true)
 }

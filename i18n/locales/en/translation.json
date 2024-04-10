@@ -118,6 +118,36 @@
     "no": "No",
 
     "question-type-category": "Project",
+    "question-type_of_project-title": "",
+    "question-type_of_project-placeholder": "Select Option",
+    "question-type_of_project-text": "What specific part or aspect of your project are you focusing on at this stage?",
+        "question-type_of_project-full_website_build": "Full website build",
+        "question-type_of_project-mobile_application_development": "Mobile application development",
+        "question-type_of_project-software_development": "Software development",
+        "question-type_of_project-web_page_design": "Web page design",
+        "question-type_of_project-mobile_page_design": "Mobile page design",
+        "question-type_of_project-content_creation_text": "Content creation (text)",
+        "question-type_of_project-content_creation_graphics": "Content creation (graphics)",
+        "question-type_of_project-content_creation_video": "Content creation (video)",
+        "question-type_of_project-ui_ux_design": "UI/UX design",
+        "question-type_of_project-database_design_and_management": "Database design and management",
+        "question-type_of_project-api_development_and_integration": "API development and integration",
+        "question-type_of_project-e_commerce_platform": "E-commerce platform",
+        "question-type_of_project-social_media_campaign": "Social media campaign",
+        "question-type_of_project-email_marketing_setup": "Email marketing setup",
+        "question-type_of_project-search_engine_optimization_seo": "Search Engine Optimization (SEO)",
+        "question-type_of_project-pay_per_click_ppc_advertising": "Pay-Per-Click (PPC) advertising",
+        "question-type_of_project-branding_and_identity_design": "Branding and identity design",
+        "question-type_of_project-digital_marketing_strategy": "Digital marketing strategy",
+        "question-type_of_project-cloud_computing_and_storage_solutions": "Cloud computing and storage solutions",
+        "question-type_of_project-blockchain_development": "Blockchain development",
+        "question-type_of_project-augmented_reality_ar_or_virtual_reality_vr_content": "Augmented reality (AR) or Virtual reality (VR) content",
+        "question-type_of_project-iot_internet_of_things_solutions": "IoT (Internet of Things) solutions",
+        "question-type_of_project-cybersecurity_measures": "Cybersecurity measures",
+        "question-type_of_project-other": "Other (Please specify)",
+      
+      
+
     "question-type-title": "Functionality",
     "question-type-placeholder": "Select key features",
     "question-type-text": "What type of website are you planning to build?",
@@ -170,16 +200,22 @@
     "question-hosting-instruction": "This is optional..",
 
     "question-content-category": "Content",
-    "question-content-title": "Current Content",
-    "question-content-text": "Do you have a existing website/project?",
+    "question-content-title": "Content",
+    "question-content-text": "Do you have any existing website/project CONTENT you would want to use?",
+
+    "question-content-information-title": "Content Information",
+    "question-content-information-text": "Here you can write about what kind of content you would like to use.",
+    "question-content-information-instruction": "This is optional..",
+    "question-content-information-placeholder": "Type here..",
 
     "question-updating-title": "Content update",
-    "question-updating-text": "How often will the content on the page/project be updated?",
+    "question-updating-text": "How often will the content on the website/project be updated?",
     "very-often": "Very often",
     "every-one-two": "Every 1-2 months",
     "every-two-three":"Every 2-3 months",
     "every-six-or-more":"Every 3-6 months",
     "never":"Never",
+    "dont-know":"In this current state this is something i cant answer",
 
     "question-cms-category": "CMS",
     "question-cms-title": "CMS",
@@ -191,6 +227,7 @@
     "question-selected_cms-title": "Select CMS",
     "question-selected_cms-placeholder": "Enter here...",
     "question-selected_cms-text": "Is there any particular cms you would want to use?",
+    "question-selected_cms-instruction": "This is optional..",
 
     "question-third_party-category": "Third-party",
     "question-third_party-title": "Third-party",
@@ -254,7 +291,7 @@
     "question-refrences-text": "Do you have any refrences?",
     "question-refrences-placeholder": "Write here...",
 
-    "question-estimation-category": "Estimation",
+    "question-estimation-category": "Est",
     "question-estimation-title": "Rough Estimation",
     "question-estimation-text": "Do you need a rough estimation of the project?"
 }

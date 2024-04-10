@@ -8,7 +8,7 @@ import Link from "next/dist/client/link";
 import { useCurrentLocale } from "@/hooks/locale";
 import { useTranslation } from "@/i18n/client";
 import Image from "next/image";
-import NavbarLogo from "../../public/assets/icons8-logo-64.png";
+import NavbarLogo from "../../public/assets/Df- icon (1).png";
 
 interface Tab {
   label: string;
@@ -19,6 +19,8 @@ interface Tab {
 const Navbar: React.FC = () => {
   const [selectedTab, setSelectedTab] = useState<Tab | null>(null);
   const [isClient, setIsClient] = useState(false);
+  const locale = useCurrentLocale();
+  const { t } = useTranslation(locale, 'translation');
 
   useEffect(() => {
     setIsClient(true);
@@ -33,9 +35,6 @@ const Navbar: React.FC = () => {
     }
   }, [selectedTab, isClient]);
 
-  const locale = useCurrentLocale();
-  const { t } = useTranslation(locale, 'translation');
-
   if (!selectedTab) return null; // or a loader
 
   return (
@@ -49,7 +48,7 @@ const Navbar: React.FC = () => {
             src={NavbarLogo}
             className="w-4 h-4 md:h-8 md:w-8"
             alt="Digital fans Logo"
-            style={{ objectFit: "cover", filter: "brightness(0) invert(1)" }}
+            style={{ objectFit: "cover",}}
           />
         </div>
         <span className="self-center text-lg sm:text-xl  md:text-2xl lg:text-3xl whitespace-nowrap text-CustomWhite font-ttcommons font-semibold">

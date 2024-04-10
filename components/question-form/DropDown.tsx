@@ -18,9 +18,7 @@ const DropDown: React.FC<DropDownProps> = ({ setValue, options, placeholder, max
   const [isOpen, setIsOpen] = useState(false)
   const [selectedOptions, setSelectedOptions] = useState<string[]>([]);
   const locale = useCurrentLocale();
-  const { t } = useTranslation(locale, 'translation');
-  console.log(options);
-  
+  const { t } = useTranslation(locale, 'translation');  
 
   useEffect(() => {
     if (selectedOptions.length === 0) setIsOpen(false)
@@ -50,7 +48,8 @@ const DropDown: React.FC<DropDownProps> = ({ setValue, options, placeholder, max
       setIsOpen(false);
     }, 1000);
   }, []);
-  console.log(options);
+
+  const translatedPlaceholder = placeholder ? t(placeholder) : '';
 
   return (
     <Listbox
@@ -65,7 +64,7 @@ const DropDown: React.FC<DropDownProps> = ({ setValue, options, placeholder, max
       }}
     >
       <Listbox.Button
-      className="z-20 flex min-h-[56px] w-full items-center space-x-4 rounded border border-bright-red bg-dropdown-bg px-4 py-2 text-left"
+      className="z-20 flex min-h-[56px] w-full items-center space-x-4 rounded border border-indigo-500 bg-CustomWhite bg-opacity-10 px-4 py-2 text-left"
       onClick={() => {
         if (!fromSelectedOption.current) {
           setIsOpen(open => !open)
@@ -76,7 +75,7 @@ const DropDown: React.FC<DropDownProps> = ({ setValue, options, placeholder, max
     >
         <div className="flex w-full flex-wrap gap-2">
           {selectedOptions.length <= 0 ? (
-            <span className="py-[7px] text-body-large opacity-50">{placeholder}</span>
+            <span className="py-[7px] text-body-large opacity-50">{translatedPlaceholder}</span>
           ) : maxOptions === 1 ? (
             <DropDownItem text={selectedOptions[0]} onClick={() => clickHandler(selectedOptions[0])} open={isOpen} />
           ) : (

@@ -1,6 +1,8 @@
 import PropTypes from "prop-types";
 import classNames from "classnames";
 import { useCallback, useEffect, useState } from "react";
+import { useCurrentLocale } from "@/hooks/locale";
+import { useTranslation } from "@/i18n/client";
 
 interface ButtonsProps {
   setValue: (value: string[]) => void;
@@ -47,6 +49,8 @@ interface ButtonProps {
 
 function Button({ text, clickHandler, activeOptions }: ButtonProps) {
   const isActive = activeOptions.includes(text);
+  const locale = useCurrentLocale();
+  const { t } = useTranslation(locale, 'translation');
 
   return (
     <button
@@ -65,7 +69,7 @@ function Button({ text, clickHandler, activeOptions }: ButtonProps) {
           "bg-indigo-500/[0.15] border border-indigo-500": isActive,
         })}
       >
-        {text}
+        {t(text)}
       </span>
     </button>
   );
