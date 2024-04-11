@@ -36,7 +36,7 @@ const CookiesBanner = () => {
       <div className='flex flex-col sm:flex-row justify-around gap-6 md:gap-8 bg-indigo-300 p-6 md:p-8'>
         <TextWrapper>
           <span className='flex items-center justify-start h-full'>
-              We use our own cookies as well as third-party cookies on our websites to enhance your experience, analyze our traffic, and for security and marketing. Select "Accept All" to allow them to be used. Read our Cookie Policy.
+              We use our own cookies as well as third-party cookies on our websites to enhance your experience, analyze our traffic, and for security and marketing. Select &quot;Accept All&quot; to allow them to be used. Read our Cookie Policy.
           </span>
         </TextWrapper>
         <div className='flex flex-col md:flex-row gap-4 md:gap-6 justify-center items-center'>

@@ -17,7 +17,7 @@ const OptionsField: React.FC<OptionsFieldProps> = ({ setValue, options, dependen
   const { assignmentDetails } = useQuestionState();
   const [selectedOptions, setSelectedOptions] = useState<OptionData[]>([]);
 
-  const prevAnswers = useMemo(() => assignmentDetails[dependency], []);
+  const prevAnswers = useMemo(() => assignmentDetails[dependency], [assignmentDetails, dependency]);
 
   useEffect(() => {
     const hasEmpty = selectedOptions.find(option => option.rating.length === 0) ? true : false;

@@ -186,7 +186,7 @@ const Question: React.FC<QuestionProps> = ({
         </div>
       </QuestionsWrapper>
 
-      <div className="w-full px-6 md:p-24 absolute bottom-24 left-0">
+      <div className="w-full px-6 md:py-8 md:px-24 absolute bottom-24 left-0">
         {showDots && <ProgressDots />}
       </div>
     </>

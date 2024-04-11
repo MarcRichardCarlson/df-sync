@@ -18,12 +18,12 @@ function Summary() {
   const { t } = useTranslation(locale, "translation");
 
   return (
-    <QuestionsWrapper className="h-screen w-full flex flex-col py-36 gap-8 backdrop-blur-md px-8 md:px-24" duration={1}>
+    <QuestionsWrapper className="h-screen w-full flex flex-col pb-16 pt-36 lg:py-36 gap-8 backdrop-blur-md px-8 md:px-24" duration={1}>
       <div className="flex flex-col items-center justify-end h-full gap-8 md:flex md:flex-row">
 
         <div className="relative bg-indigo-500 bg-opacity-15 h-full w-full border border-indigo-500 rounded-md flex flex-col overflow-y-auto scrollbar-thin scrollbar-track-transparent">
           {/* Questions Summary */}
-          <h2 className="p-12 text-CustomWhite text-3xl font-bold">{t("summary-main-title")}</h2>
+          <h2 className="p-3 sm:p-6 md:p-12 text-CustomWhite text-xl md:text-3xl font-bold">{t("summary-main-title")}</h2>
           {summary?.assignment_detail &&
             Object.keys(SUMMARY_ASSIGNMENTS).map((key, i) => {
               const initialValue = summary.assignment_detail[key];
@@ -53,26 +53,24 @@ function Summary() {
 
               return null;
             })}
-            <div className="text-CustomWhite absolute bottom-0 left-0  bg-indigo-500 w-full h-16 flex justify-between items-center px-3">
+            <div className="text-CustomWhite absolute bottom-0 left-0  bg-indigo-500 w-full h-14 sm:h-16 flex justify-between items-center px-3">
               <button
-                className="flex items-center gap-2 border border-CustomWhite rounded-md px-6 py-2 font-bold uppercase tracking-[2.8px] hover:bg-indigo-900 hover:bg-opacity-50"
+                className="flex items-center gap-2 border border-CustomWhite rounded-md px-2 sm:px-6 py-2 font-semibold sm:font-bold uppercase tracking-[2px] sm:tracking-[2.8px] hover:bg-indigo-900 hover:bg-opacity-50"
               > <Image width={18} height={18} src={trashIcon} alt="Trash Icon"/>
                 {t("summary-discard-button")}
               </button>
               <button
-                className="flex items-center gap-2 border border-CustomWhite rounded-md px-6 py-2 font-bold uppercase tracking-[2.8px] hover:bg-indigo-900 hover:bg-opacity-50"
+                className="flex items-center gap-2 border border-CustomWhite rounded-md px-2 sm:px-6 py-2 font-semibold sm:font-bold uppercase tracking-[2px] sm:tracking-[2.8px] hover:bg-indigo-900 hover:bg-opacity-50"
               > <Image width={18} height={18} src={contactIcon} alt="Contact Icon"/>
                 {t("summary-contact-button")}
               </button>
             </div>
         </div>
 
-        <div className="relative w-full md:max-w-[450px] min-w-[300px] bg-indigo-500 bg-opacity-15 h-full border border-indigo-500 rounded-md overflow-y-auto scrollbar-thin scrollbar-track-transparent">
-          <ConfirmationForm />
-        </div>
+        <ConfirmationForm />
 
       </div>
-      <Carousel />
+      {/* <Carousel /> */}
 
       </QuestionsWrapper>
   );
@@ -106,12 +104,12 @@ function ConfirmationForm() {
   }, [confirm, router, satisfaction]);
 
   return (
-    <div className="text-CustomWhite w-full">
-      <div className="p-12 space-y-6">
-        <h3 className="font-bold text-2xl">
+    <div className="relative w-full md:max-w-[450px] min-w-[300px] bg-indigo-500 bg-opacity-15 h-full border border-indigo-500 rounded-md overflow-y-auto scrollbar-thin scrollbar-track-transparent text-CustomWhite">
+      <div className="p-3 sm:p-6 md:p-12 space-y-6">
+        <h3 className="font-bold text-xl sm:text-2xl">
           {t("summary-title")}
         </h3>
-        <p className="text-xl">{t("summary-text")}</p>
+        <p className="text-base sm:text-xl">{t("summary-text")}</p>
 
         <p>
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
@@ -136,15 +134,15 @@ function ConfirmationForm() {
         </p>
       </div>
 
-      <div className="bg-indigo-500 w-full h-16 absolute bottom-0 left-0 flex justify-between items-center px-3">
+      <div className="bg-indigo-500 w-full h-14 sm:h-16 sticky bottom-0 left-0 flex justify-between items-center px-3">
         <button
-          className="flex items-center gap-2 border border-CustomWhite rounded-md px-6 py-2 font-bold uppercase tracking-[2.8px] hover:bg-indigo-900 hover:bg-opacity-50"
+          className="flex items-center gap-2 border border-CustomWhite rounded-md px-2 sm:px-6 py-2 font-semibold sm:font-bold uppercase tracking-[2px] sm:tracking-[2.8px] hover:bg-indigo-900 hover:bg-opacity-50"
           onClick={handleDownload}
         > <Image width={18} height={18} src={downloadIcon} alt="Download Icon"/>
           {t("summary-download-button")}
         </button>
         <button
-          className="flex items-center gap-2 border border-CustomWhite rounded-md px-6 py-2 font-bold uppercase tracking-[2.8px] hover:bg-indigo-900 hover:bg-opacity-50"
+          className="flex items-center gap-2 border border-CustomWhite rounded-md px-2 sm:px-6 py-2 font-semibold sm:font-bold uppercase tracking-[2px] sm:tracking-[2.8px] hover:bg-indigo-900 hover:bg-opacity-50"
           onClick={confirmHandler}
         > <Image width={18} height={18} src={shareIcon} alt="Share Icon"/>
           {t("summary-share-button")}

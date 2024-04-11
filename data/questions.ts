@@ -35,75 +35,75 @@ export const QUESTIONS = [
       },
     ],
   },
-  {
-    category: "question-type-category",
-    questions: [
-      {
-        key: "type_of_project",
-        type: "textarea",
-        title: "question-type-title",
-        question: "question-type-text",
-        placeholder: "question-type-placeholder",
-        optional: true,
-      },
-      {
-        key: "type",
-        type: "textarea",
-        title: "question-type-title",
-        question: "question-type-text",
-        placeholder: "question-type-placeholder",
-        optional: true,
-      },
-      {
-        key: "type_of_work",
-        type: "textfield",
-        title: "question-type_of_work-title",
-        placeholder: "question-type_of_work-placeholder",
-        question: "question-type_of_work-text",
-        instruction: "question-type_of_work-instruction",
-        optional: true,
-      },
-      {
-        key: "audience",
-        type: "textfield",
-        title: "question-audience-title",
-        placeholder: "question-audience-placeholder",
-        question: "question-audience-text",
-        optional: true,
-      },
-      {
-        key: "timeline",
-        type: "buttons",
-        options: ["less", "one-two", "two-three", "six-or-more"],
-        title: "question-timeline-title",
-        question: "question-timeline-text",
-      },
-      {
-        key: "specific_date",
-        type: "buttons",
-        options: ["yes", "no"],
-        title: "question-specific_date-title",
-        question: "question-specific_date-text",
-      },
-      {
-        key: "specific_date_input",
-        type: "textfield",
-        title: "question-specific_date_input-title",
-        placeholder: "question-specific_date_input-placeholder",
-        question: "question-specific_date_input-text",
-        instruction: "question-specific_date_input-instruction",
-        optional: true,
-      },
-      {
-        key: "budget",
-        type: "range",
-        min: 0,
-        max: 500.000,
-        title: "question-budget-title",
-        question: "question-budget-text",
-      }
-    ],
-  },
+  // {
+  //   category: "question-type-category",
+  //   questions: [
+  //     {
+  //       key: "type_of_project",
+  //       type: "textarea",
+  //       title: "question-type-title",
+  //       question: "question-type-text",
+  //       placeholder: "question-type-placeholder",
+  //       optional: true,
+  //     },
+  //     {
+  //       key: "type",
+  //       type: "textarea",
+  //       title: "question-type-title",
+  //       question: "question-type-text",
+  //       placeholder: "question-type-placeholder",
+  //       optional: true,
+  //     },
+  //     {
+  //       key: "type_of_work",
+  //       type: "textfield",
+  //       title: "question-type_of_work-title",
+  //       placeholder: "question-type_of_work-placeholder",
+  //       question: "question-type_of_work-text",
+  //       instruction: "question-type_of_work-instruction",
+  //       optional: true,
+  //     },
+  //     {
+  //       key: "audience",
+  //       type: "textfield",
+  //       title: "question-audience-title",
+  //       placeholder: "question-audience-placeholder",
+  //       question: "question-audience-text",
+  //       optional: true,
+  //     },
+  //     {
+  //       key: "timeline",
+  //       type: "buttons",
+  //       options: ["less", "one-two", "two-three", "six-or-more"],
+  //       title: "question-timeline-title",
+  //       question: "question-timeline-text",
+  //     },
+  //     {
+  //       key: "specific_date",
+  //       type: "buttons",
+  //       options: ["yes", "no"],
+  //       title: "question-specific_date-title",
+  //       question: "question-specific_date-text",
+  //     },
+  //     {
+  //       key: "specific_date_input",
+  //       type: "textfield",
+  //       title: "question-specific_date_input-title",
+  //       placeholder: "question-specific_date_input-placeholder",
+  //       question: "question-specific_date_input-text",
+  //       instruction: "question-specific_date_input-instruction",
+  //       optional: true,
+  //     },
+  //     {
+  //       key: "budget",
+  //       type: "range",
+  //       min: 0,
+  //       max: 500.000,
+  //       title: "question-budget-title",
+  //       question: "question-budget-text",
+  //     }
+  //   ],
+  // },
   {
     category: "question-brief-category",
     questions: [
@@ -218,105 +218,105 @@ export const QUESTIONS = [
       },
     ]
   },
-  {
-    category: "question-ecom-category",
-    questions: [
-      {
-        key: "ecom",
-        type: "textfield",
-        title: "question-ecom-title",
-        question: "question-ecom-text",
-        placeholder: "question-ecom-placeholder",
-      },
-      {
-        key: "desired_ecom",
-        type: "textfield",
-        title: "question-desired_ecom-title",
-        question: "question-desired_ecom-text",
-        placeholder: "question-desired_ecom-placeholder",
-      },
-      {
-        key: "payment_services",
-        type: "textfield",
-        title: "question-payment_services-title",
-        question: "question-payment_services-text",
-        placeholder: "question-payment_services-placeholder",
-      },
-    ]
-  },
-  {
-    category: "Website",
-    questions: [
-      {
-        key: "template",
-        type: "range",
-        min: 0,
-        max: 25,
-        title: "question-template-title",
-        question: "question-template-text",
-      },
-      {
-        key: "components_modules",
-        type: "range",
-        min: 0,
-        max: 50,
-        title: "question-components_modules-title",
-        question: "question-components_modules-text",
-      },
-      {
-        key: "accounts",
-        type: "buttons",
-        options: ["yes", "no"],
-        title: "question-accounts-title",
-        question: "question-accounts-text",
-      },
-    ]
-  },
-  {
-    category: "question-hosting_package-category",
-    questions: [
-      {
-        key: "hosting_package",
-        type: "buttons",
-        options: ["yes", "no"],
-        title: "question-hosting_package-title",
-        question: "question-hosting_package-text",
-      },
-      {
-        key: "seo",
-        type: "buttons",
-        options: ["yes", "no"],
-        title: "question-seo-title",
-        question: "question-seo-text",
-      },
-      {
-        key: "seo_marketing",
-        type: "textfield",
-        title: "question-seo_marketing-title",
-        question: "question-seo_marketing-text",
-        placeholder: "question-seo_marketing-placeholder",
-      }
-    ]
-  },
-  {
-    category: "question-maintenance-category",
-    questions: [
-      {
-        key: "maintenance",
-        type: "buttons",
-        options: ["none", "minimal", "moderate", "significant"],
-        title: "question-maintenance-title",
-        question: "question-maintenance-text",
-      },
-      {
-        key: "internal_resources",
-        type: "textfield",
-        title: "question-internal_resources-title",
-        question: "question-internal_resources-text",
-        placeholder: "question-internal_resources-placeholder",
-      }
-    ]
-  },
+  // {
+  //   category: "question-ecom-category",
+  //   questions: [
+  //     {
+  //       key: "ecom",
+  //       type: "textfield",
+  //       title: "question-ecom-title",
+  //       question: "question-ecom-text",
+  //       placeholder: "question-ecom-placeholder",
+  //     },
+  //     {
+  //       key: "desired_ecom",
+  //       type: "textfield",
+  //       title: "question-desired_ecom-title",
+  //       question: "question-desired_ecom-text",
+  //       placeholder: "question-desired_ecom-placeholder",
+  //     },
+  //     {
+  //       key: "payment_services",
+  //       type: "textfield",
+  //       title: "question-payment_services-title",
+  //       question: "question-payment_services-text",
+  //       placeholder: "question-payment_services-placeholder",
+  //     },
+  //   ]
+  // },
+  // {
+  //   category: "Website",
+  //   questions: [
+  //     {
+  //       key: "template",
+  //       type: "range",
+  //       min: 0,
+  //       max: 25,
+  //       title: "question-template-title",
+  //       question: "question-template-text",
+  //     },
+  //     {
+  //       key: "components_modules",
+  //       type: "range",
+  //       min: 0,
+  //       max: 50,
+  //       title: "question-components_modules-title",
+  //       question: "question-components_modules-text",
+  //     },
+  //     {
+  //       key: "accounts",
+  //       type: "buttons",
+  //       options: ["yes", "no"],
+  //       title: "question-accounts-title",
+  //       question: "question-accounts-text",
+  //     },
+  //   ]
+  // },
+  // {
+  //   category: "question-hosting_package-category",
+  //   questions: [
+  //     {
+  //       key: "hosting_package",
+  //       type: "buttons",
+  //       options: ["yes", "no"],
+  //       title: "question-hosting_package-title",
+  //       question: "question-hosting_package-text",
+  //     },
+  //     {
+  //       key: "seo",
+  //       type: "buttons",
+  //       options: ["yes", "no"],
+  //       title: "question-seo-title",
+  //       question: "question-seo-text",
+  //     },
+  //     {
+  //       key: "seo_marketing",
+  //       type: "textfield",
+  //       title: "question-seo_marketing-title",
+  //       question: "question-seo_marketing-text",
+  //       placeholder: "question-seo_marketing-placeholder",
+  //     }
+  //   ]
+  // },
+  // {
+  //   category: "question-maintenance-category",
+  //   questions: [
+  //     {
+  //       key: "maintenance",
+  //       type: "buttons",
+  //       options: ["none", "minimal", "moderate", "significant"],
+  //       title: "question-maintenance-title",
+  //       question: "question-maintenance-text",
+  //     },
+  //     {
+  //       key: "internal_resources",
+  //       type: "textfield",
+  //       title: "question-internal_resources-title",
+  //       question: "question-internal_resources-text",
+  //       placeholder: "question-internal_resources-placeholder",
+  //     }
+  //   ]
+  // },
   {
     category: "question-other-category",
     questions: [
@@ -329,15 +329,15 @@ export const QUESTIONS = [
         instruction: "question-other-instruction",
         question: "question-other-text",
       },
-      {
-        key: "refrences",
-        type: "textarea",
-        placeholder: "question-refrences-placeholder",
-        optional: true,
-        title: "question-refrences-title",
-        instruction: "This is optional..",
-        question: "question-refrences-text",
-      },
+      // {
+      //   key: "refrences",
+      //   type: "textarea",
+      //   placeholder: "question-refrences-placeholder",
+      //   optional: true,
+      //   title: "question-refrences-title",
+      //   instruction: "This is optional..",
+      //   question: "question-refrences-text",
+      // },
     ]
   },
   {
