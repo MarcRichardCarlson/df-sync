@@ -59,9 +59,9 @@
 
     "question-field-error": "Please answer all required fields",
     "question-btn": "Next",
-    "question-also": "Also",
     "question-enter": "Enter ↵",
-    "question-works": "works.",
+    "question-back": "Back",
+    "question-skip": "Skip",
 
     "question-name-category": "Information",
     "question-name-title": "Welcome",

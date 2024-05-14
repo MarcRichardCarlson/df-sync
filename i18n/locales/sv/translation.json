@@ -57,9 +57,9 @@
 
     "question-field-error": "Fyll i alla obligatoriska fält",
     "question-btn": "Nästa",
-    "question-also": "Också,",
     "question-enter": "Enter ↵",
-    "question-works": "fungerar.",
+    "question-back": "Tillbaka",
+    "question-skip": "Hoppa över",
 
     "question-name-category": "Information",
     "question-name-title": "Välkommen",

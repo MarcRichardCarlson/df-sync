@@ -1,7 +1,7 @@
 import classNames from "classnames";
 import QuestionsWrapper from "../components/QuestionsWrapper";
 import { useQuestionActions, useSummaryState } from "../store/selectors";
-import { useCallback, useState } from "react";
+import { useCallback, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import { useCurrentLocale } from "@/hooks/locale";
 import { useTranslation } from "@/i18n/client";
@@ -10,12 +10,97 @@ import downloadIcon from "../public/assets/HeroiconsArrowDownTray.svg"
 import shareIcon from "../public/assets/HeroiconsArrowRightOnRectangle.svg"
 import trashIcon from "../public/assets/HeroiconsTrash.svg"
 import contactIcon from "../public/assets/HeroiconsChatBubbleBottomCenterText.svg"
-import Carousel from "@/components/Carousel";
+// components/MyComponent.tsx
+import React, { useEffect } from 'react';
+import { collection, getDocs, addDoc } from 'firebase/firestore';
+import { db } from '../firebase';
+
+const postSummaryToFirestore = async (summary: any) => {
+  try {
+    // Directly use the summary data assuming it's already in a suitable format for Firestore
+    const docRef = await addDoc(collection(db, 'summaries'), { summary });
+    console.log('Document written with ID:', docRef.id);
+    return docRef.id;
+  } catch (e) {
+    console.error('Error adding document to Firestore:', e);
+    return null;
+  }
+};
 
 function Summary() {
   const { summary } = useSummaryState();
   const locale = useCurrentLocale();
   const { t } = useTranslation(locale, "translation");
+  const hasPostedRef = useRef(false);
+  //console.log(summary);
+
+  /*GET*/
+  useEffect(() => {
+    const fetchData = async () => {
+      const colRef = collection(db, 'summaries');
+      const snapshot = await getDocs(colRef);
+      snapshot.docs.forEach(doc => {
+        console.log(doc.id, '=>', doc.data());
+      });
+    };
+
+    fetchData().catch(console.error);
+  }, []);
+
+  /*POST*/
+  useEffect(() => {
+    // Only post if we haven't posted yet
+    if (summary && !hasPostedRef.current) {
+      hasPostedRef.current = true; // Mark as posted
+      postSummaryToFirestore(summary).then(docId => {
+        if (docId) {
+          console.log('Summary posted successfully!', docId);
+        } else {
+          console.error('Failed to post summary.');
+        }
+      });
+    }
+  }, [summary]);
+
+  const renderSummaryDetails = (summary: any) => {
+    const renderValue = (value: any) => {
+      if (value === undefined) {
+        return <span>Not available</span>;
+      } else if (value === null) {
+        return <span>Null</span>;
+      } else if (Array.isArray(value)) {
+        return value.map((item, index) => (
+          <span key={index}>
+            {renderValue(item)}
+            {index < value.length - 1 ? ', ' : ''}
+          </span>
+        ));
+      } else if (typeof value === 'object') {
+        return (
+          <div className="ml-4 border-l-2 border-gray-200 pl-2">
+            {Object.entries(value).map(([key, subvalue], index) => (
+              <div key={index}>
+                <strong>{key}:</strong> {renderValue(subvalue)}
+              </div>
+            ))}
+          </div>
+        );
+      } else {
+        return <span>{value.toString()}</span>;
+      }
+    };
+  
+    return (
+      <div className="gap-4 px-6 md:px-12 py-2 text-CustomWhite flex flex-col w-full">
+        {Object.entries(summary).map(([key, value], index) => (
+          <div key={index} className="flex w-full bg-slate-700 p-3 rounded-md">
+            <strong>{key}:</strong> {renderValue(value)}
+          </div>
+        ))}
+      </div>
+    );
+  };
+  
 
   return (
     <QuestionsWrapper className="h-screen w-full flex flex-col pb-16 pt-36 lg:py-36 gap-8 backdrop-blur-md px-8 md:px-24" duration={1}>
@@ -24,37 +109,37 @@ function Summary() {
         <div className="relative bg-indigo-500 bg-opacity-15 h-full w-full border border-indigo-500 rounded-md flex flex-col overflow-y-auto scrollbar-thin scrollbar-track-transparent">
           {/* Questions Summary */}
           <h2 className="p-3 sm:p-6 md:p-12 text-CustomWhite text-xl md:text-3xl font-bold">{t("summary-main-title")}</h2>
-          {summary?.assignment_detail &&
+          {summary && Object.keys(SUMMARY_ASSIGNMENTS).length > 0 &&
             Object.keys(SUMMARY_ASSIGNMENTS).map((key, i) => {
-              const initialValue = summary.assignment_detail[key];
-              
-              if (initialValue) {
-                const value = getSummaryValue(
-                  key,
-                  summary.assignment_detail[key]
-                );
+              // Directly access the value from summary using the key
+              const value = summary[key];
+              // Ensure the value exists before trying to display it
+              if (value !== undefined && value !== null) {
+                const formattedValue = getSummaryValue(key, value);
 
                 return (
-                  <div
-                  key={i}
-                  className="bg-white shrink-0 overflow-hidden"
-                  >
+                  <div key={i} className="bg-CustomWhite shrink-0 overflow-hidden">
                     <div className="flex items-center justify-between bg-gradient-border p-3">
                       <div className="flex max-w-[475px] flex-col space-y-2">
                         <span className="text-pre-title-link-small uppercase text-magenta">
-                          {SUMMARY_ASSIGNMENTS[key]}
+                          {SUMMARY_ASSIGNMENTS[key]} {/* Display the label for the key */}
                         </span>
-                        {value}
+                        {formattedValue} {/* Display the formatted value */}
                       </div>
                     </div>
                   </div>
                 );
               }
+              return null; // Return null if the value is undefined or null
+            })
+          }
 
-              return null;
-            })}
-            <div className="text-CustomWhite absolute bottom-0 left-0  bg-indigo-500 w-full h-14 sm:h-16 flex justify-between items-center px-3">
+          {summary && renderSummaryDetails(summary)}
+
+
+            <div className="text-CustomWhite sticky bottom-0 left-0 bg-indigo-500 w-full min-h-14 sm:min-h-16 flex justify-between items-center px-3">
               <button
+                onClick={() => window.location.reload()}
                 className="flex items-center gap-2 border border-CustomWhite rounded-md px-2 sm:px-6 py-2 font-semibold sm:font-bold uppercase tracking-[2px] sm:tracking-[2.8px] hover:bg-indigo-900 hover:bg-opacity-50"
               > <Image width={18} height={18} src={trashIcon} alt="Trash Icon"/>
                 {t("summary-discard-button")}

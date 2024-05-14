@@ -6,8 +6,8 @@ import { confirmAssignment, saveQuestion } from "../pages/api/assignments"
 export const QUESTIONS_STATUS = {
   LOADING: 0,
   QUESTIONS: 1,
-  SUMMARY: 3,
-  DONE: 4,
+  SUMMARY: 2,
+  DONE: 3,
 }
 
 export const useAppStore = create(() => ({
@@ -25,7 +25,7 @@ export const useQuestionStore = create(
     assignmentDetails: {},
     showDots: false,
     next: async answer => {
-      
+
       const {
         assignmentId,
         questions,
@@ -35,7 +35,7 @@ export const useQuestionStore = create(
       } = get()
       const status = useAppStore.getState().status
       let newStatus = status
-      
+
       // QUESTIONS_STATUS.QUESTIONS
       if (status === QUESTIONS_STATUS.QUESTIONS) {
         const currentQuestion = questions[categoryIndex].questions[questionIndex]
@@ -96,7 +96,7 @@ export const useQuestionStore = create(
             // }
 
             // Special case for 'specific_date'
-            else if (currentQuestion.key === "specific_date" ) {
+            else if (currentQuestion.key === "specific_date") {
               if (Array.isArray(answer) && answer[0] === "yes") {
                 // If answer is Yes, go to the next question. Increment is already set to 1.
                 newQuestionIndex += 1; // This moves to the next question
@@ -132,7 +132,7 @@ export const useQuestionStore = create(
             }
 
             // Special case for 'content'
-            else if (currentQuestion.key === "content" ) {
+            else if (currentQuestion.key === "content") {
               if (Array.isArray(answer) && answer[0] === "yes") {
                 // If answer is Yes, go to the next question. Increment is already set to 1.
                 newQuestionIndex += 1; // This moves to the next question
@@ -150,7 +150,7 @@ export const useQuestionStore = create(
             }
 
             // Special case for 'cms'
-            else if (currentQuestion.key === "cms" ) {
+            else if (currentQuestion.key === "cms") {
               if (Array.isArray(answer) && answer[0] === "yes") {
                 // If answer is Yes, go to the next category index
                 newQuestionIndex += 1;
@@ -167,7 +167,7 @@ export const useQuestionStore = create(
               }
             }
             // Special case for 'usage'
-            else if (currentQuestion.key === "usage" ) {
+            else if (currentQuestion.key === "usage") {
               if (Array.isArray(answer) && answer[0] === "yes") {
                 // If answer is Yes, go to the next category index and reset question index
                 newCategoryIndex += 1;
@@ -184,7 +184,7 @@ export const useQuestionStore = create(
                 newQuestionIndex = 0; // Reset to the first question of the next category
               }
             }
-            
+
             // Existing else block to handle the transition to the next category or question
             else {
               if (questionIndex === questions[categoryIndex].questions.length - 1) {
@@ -236,6 +236,18 @@ export const useQuestionStore = create(
           }
           useAppStore.setState({ status: newStatus })
         }
+        if (newCategoryIndex >= questions.length) {
+          newStatus = QUESTIONS_STATUS.SUMMARY;
+          set(state => {
+            // Here you might want to construct a summary from all answered questions
+            state.summary = Object.entries(state.assignmentDetails).map(([key, value]) => ({
+              question: key,
+              answer: value // Ensure this is the format you want in your summary
+            }));
+            state.status = newStatus;
+          });
+        }
+
       }
     },
 

@@ -19,9 +19,9 @@ const Questions = () => {
   const { initState } = useQuestionActions();
   const { questions, categoryIndex, questionIndex } = useQuestionData();
 
-  console.log({"Question-index": questionIndex});
+  /* console.log({"Question-index": questionIndex});
   console.log({"Category-index": categoryIndex});
-  console.log({"Questions": [questionIndex]});
+  console.log({"Questions": [questionIndex]}); */
 
   // Initialize state by creating a new assignment.
   useEffect(() => {

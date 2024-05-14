@@ -44,13 +44,15 @@ export async function saveQuestion(params: any) {
   //console.log({ params })
   // Simulating fetch call
   // await sleep(750)
+  //console.log("Asignments params:", params);
+  
   return Promise.resolve(true)
 }
 
 // Confirm Assigment in Summary Page
 export async function confirmAssignment(assignmentId: any, satisfaction: any) {
   // console.log("API:Confirm Assigment Parameters : ")
-  // console.log({ assignment_id: assignmentId, satisfaction })
+  //console.log("Confirm assignment:", { assignment_id: assignmentId, satisfaction })
   // Simulating fetch call
   //await sleep(1000)
   return Promise.resolve(true)

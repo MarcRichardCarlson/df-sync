@@ -39,15 +39,6 @@ body {
   }
 }
 
-.underline {
-  position: absolute;
-  bottom: -1px;
-  left: 0;
-  right: 0;
-  height: 1px;
-  background: var(--accent);
-}
-
 .color-transition {
   @apply transition-colors duration-300 ease-in-out;
 }

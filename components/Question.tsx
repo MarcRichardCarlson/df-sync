@@ -179,9 +179,7 @@ const Question: React.FC<QuestionProps> = ({
             }}
           />
           <div className="font-ttcommons text-CustomWhite text-[12px] leading-[20px]">
-            <span className="mr-1 font-light">{t("question-also")}</span>
             <span className="mr-1 text-md md:text-lg">{t("question-enter")}</span>
-            <span className="font-light">{t("question-works")}</span>
           </div>
         </div>
       </QuestionsWrapper>

@@ -2,7 +2,7 @@ import { useState, useCallback, useRef, useEffect } from "react"
 import { Listbox, Transition } from "@headlessui/react"
 import { useCurrentLocale } from "@/hooks/locale";
 import { useTranslation } from "@/i18n/client";
-import closeIcon from "../../public/assets/CarbonCloseFilled.svg"
+import closeIcon from "../../public/assets/CarbonCloseOutline.svg"
 import Image from "next/image";
 
 interface DropDownProps {
@@ -104,7 +104,7 @@ const DropDown: React.FC<DropDownProps> = ({ setValue, options, placeholder, max
             <Listbox.Option
             key={option}
             value={option}
-            className="link-transition cursor-pointer px-5 py-3 hover:bg-indigo-500 hover:bg-opacity-10"
+            className="link-transition cursor-pointer px-5 py-3 hover:bg-indigo-500 hover:bg-opacity-15"
             onClick={closeHandler}
             >              
               {t(option)}
@@ -130,11 +130,11 @@ const DropDownItem: React.FC<DropDownItemProps> = ({ open, text, onClick }) => {
 
   return (
     <div
-      className="inline-flex items-center justify-between space-x-2 rounded-md bg-white text-CustomBlack px-4 py-2 text-link-medium text-bright-red"
+      className="inline-flex items-center justify-between space-x-2 rounded-md bg-white bg-opacity-15 text-CustomBlack px-4 py-2 text-link-medium text-CustomWhite"
       onClick={onClick}
       >
       <span className="flex gap-2 justify-center items-center">{t(text)}</span>
-      <Image src={closeIcon} alt="close icon" className="h-4 w-4"/>
+      <Image src={closeIcon} alt="close icon" className="h-4 w-4" style={{filter: "brightness(0) invert(1)" }}/>
     </div>
   )
 };
