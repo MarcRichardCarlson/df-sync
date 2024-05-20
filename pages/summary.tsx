@@ -137,7 +137,7 @@ function Summary() {
           {summary && renderSummaryDetails(summary)}
 
 
-            <div className="text-CustomWhite sticky bottom-0 left-0 bg-indigo-500 w-full min-h-14 sm:min-h-16 flex justify-between items-center px-3">
+            <div className="text-CustomWhite absolute bottom-0 left-0 bg-indigo-500 w-full min-h-14 sm:min-h-16 flex justify-between items-center px-3">
               <button
                 onClick={() => window.location.reload()}
                 className="flex items-center gap-2 border border-CustomWhite rounded-md px-2 sm:px-6 py-2 font-semibold sm:font-bold uppercase tracking-[2px] sm:tracking-[2.8px] hover:bg-indigo-900 hover:bg-opacity-50"
@@ -155,7 +155,6 @@ function Summary() {
         <ConfirmationForm />
 
       </div>
-      {/* <Carousel /> */}
 
       </QuestionsWrapper>
   );
@@ -219,7 +218,7 @@ function ConfirmationForm() {
         </p>
       </div>
 
-      <div className="bg-indigo-500 w-full h-14 sm:h-16 sticky bottom-0 left-0 flex justify-between items-center px-3">
+      <div className="bg-indigo-500 w-full h-14 sm:h-16 absolute bottom-0 left-0 flex justify-between items-center px-3">
         <button
           className="flex items-center gap-2 border border-CustomWhite rounded-md px-2 sm:px-6 py-2 font-semibold sm:font-bold uppercase tracking-[2px] sm:tracking-[2.8px] hover:bg-indigo-900 hover:bg-opacity-50"
           onClick={handleDownload}
